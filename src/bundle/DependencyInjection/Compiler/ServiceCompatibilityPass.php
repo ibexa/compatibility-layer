@@ -1,0 +1,64 @@
+<?php
+
+/**
+ * @copyright Copyright (C) Ibexa AS. All rights reserved.
+ * @license For full copyright and license information view LICENSE file distributed with this source code.
+ */
+declare(strict_types=1);
+
+namespace Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler;
+
+use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
+use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\Form\FormTypeInterface;
+
+final class ServiceCompatibilityPass implements CompilerPassInterface
+{
+    /** @var \Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface */
+    private $nameResolver;
+
+    public function __construct(FullyQualifiedNameResolverInterface $nameResolver)
+    {
+        $this->nameResolver = $nameResolver;
+    }
+
+    public function process(ContainerBuilder $container): void
+    {
+        foreach ($container->getAliases() as $name => $definition) {
+            $oldClassName = $this->nameResolver->resolve($name);
+
+            if (!empty($oldClassName) && !$container->hasAlias($oldClassName)) {
+                $container->setAlias($oldClassName, $name);
+            }
+        }
+
+        foreach ($container->getDefinitions() as $name => $definition) {
+            $oldClassName = $this->nameResolver->resolve($name);
+
+            if (!empty($oldClassName) && !$container->hasDefinition($oldClassName)) {
+                if ($this->isFormType($name)) {
+                    $classExists = class_exists($name) && class_exists($oldClassName, false);
+                    if ($classExists) {
+                        if ($container->hasAlias($oldClassName)) {
+                            $container->removeAlias($oldClassName);
+                        }
+
+                        $newDefinition = clone $definition;
+                        $newDefinition->setClass($oldClassName);
+                        $container->setDefinition($oldClassName, $newDefinition);
+                    }
+                }
+
+                if (!$container->hasDefinition($oldClassName)) {
+                    $container->setAlias($oldClassName, $name);
+                }
+            }
+        }
+    }
+
+    private function isFormType(string $name): bool
+    {
+        return is_a($name, FormTypeInterface::class, true);
+    }
+}

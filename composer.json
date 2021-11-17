@@ -1,0 +1,44 @@
+{
+    "name": "ibexa/compatibility-layer",
+    "description": "Compatibility layer between old code from organisation ezsystems and version 4.0 code from organisation ibexa",
+    "autoload": {
+        "psr-4": {
+            "Ibexa\\Bundle\\CompatibilityLayer\\": "src/bundle/",
+            "Ibexa\\CompatibilityLayer\\": "src/lib/"
+        },
+        "files": [
+            "register_autoloader.php"
+        ]
+    },
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "nikic/php-parser": "^4.10",
+        "symfony/config": "^5.0",
+        "symfony/console": "^5.0",
+        "symfony/dependency-injection": "^5.0",
+        "symfony/filesystem": "^5.0",
+        "symfony/finder": "^5.0",
+        "symfony/http-kernel": "^5.0",
+        "symfony/yaml": "^5.0",
+        "symfony/process": "^5.3",
+        "symfony/form": "^5.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.0",
+        "ezsystems/ezplatform-code-style": "^1.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^4.3",
+        "phpunit/phpunit":  "^9.5.10",
+        "phpstan/phpstan": "^0.12.99"
+    },
+    "scripts": {
+        "fix-cs": "php-cs-fixer fix --config=.php-cs-fixer.php --show-progress=dots",
+        "check-cs": "@fix-cs --dry-run",
+        "phpstan": "phpstan analyse -c phpstan.neon"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "4.0.x-dev"
+        }
+    }
+}
