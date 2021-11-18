@@ -12,6 +12,7 @@ use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AliasDecoratorC
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensionCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ValueObjectVisitorTagCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Extension\PlatformExtension;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
@@ -26,6 +27,8 @@ final class IbexaCompatibilityLayerBundle extends Bundle
     public function build(ContainerBuilder $container)
     {
         parent::build($container);
+
+        $container->registerExtension(new PlatformExtension());
 
         $fullyQualifiedNameResolver = new AggregateResolver([
             new ClassMapResolver(),
