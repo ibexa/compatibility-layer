@@ -2976,6 +2976,10 @@ return [
   'Siso\\Bundle\\TestToolsBundle\\DependencyInjection\\SisoTestToolsExtension' => 'Ibexa\\Bundle\\Commerce\\TestTools\\DependencyInjection\\IbexaCommerceTestToolsExtension',
   'Siso\\Bundle\\VoucherBundle\\SisoVoucherBundle' => 'Ibexa\\Bundle\\Commerce\\Voucher\\IbexaCommerceVoucherBundle',
   'Siso\\Bundle\\VoucherBundle\\DependencyInjection\\SisoVoucherExtension' => 'Ibexa\\Bundle\\Commerce\\Voucher\\DependencyInjection\\IbexaCommerceVoucherExtension',
-  'Ibexa\Platform\Bundle\Assets\Twig\Extension\IconSetExtension' => 'Ibexa\Bundle\AdminUi\Templating\Twig\IconPathExtension',
-  'Ibexa\Platform\Assets\Resolver\IconPathResolverInterface' => 'Ibexa\Contracts\AdminUi\Resolver\IconPathResolverInterface'
+  'Ibexa\\Platform\\Tests\\Assets\\Resolver\\IconPathResolverTest' => 'Ibexa\\Tests\\AdminUi\\Resolver\\IconPathResolverTest',
+  'Ibexa\\Platform\\Bundle\\Assets\\Twig\\Extension\\IconSetExtension' => 'Ibexa\\Bundle\\AdminUi\\Templating\\Twig\\IconPathExtension',
+  'Ibexa\\Platform\\Bundle\\Assets\\DependencyInjection\\Configuration\\Parser\\Assets' => 'Ibexa\\Bundle\\AdminUi\\DependencyInjection\\Configuration\\Parser\\Assets',
+  'Ibexa\\Platform\\Assets\\Resolver\\IconPathResolverInterface' => 'Ibexa\\Contracts\\AdminUi\\Resolver\\IconPathResolverInterface',
+  'Ibexa\\Platform\\Assets\\Resolver\\IconPathResolver' => 'Ibexa\\AdminUi\\Resolver\\IconPathResolver',
+  'EzSystems\\EzPlatformEncoreBundle\\Command\\CompileAssetsCommand' => 'Ibexa\\Bundle\\AdminUi\\Command\\CompileAssetsCommand',
 ];
