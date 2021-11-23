@@ -11,8 +11,10 @@ namespace Ibexa\Bundle\CompatibilityLayer;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AliasDecoratorCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensionCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\TwigPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ValueObjectVisitorTagCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Extension\PlatformExtension;
+use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
@@ -62,6 +64,14 @@ final class IbexaCompatibilityLayerBundle extends Bundle
             new ValueObjectVisitorTagCompatibilityPass($fullyQualifiedNameResolver),
             PassConfig::TYPE_BEFORE_OPTIMIZATION,
             128
+        );
+
+        $bundleNameResolver = new BundleNameResolver(true);
+
+        $container->addCompilerPass(
+            new TwigPass($bundleNameResolver),
+            PassConfig::TYPE_BEFORE_OPTIMIZATION,
+            5 //Run after Twig one
         );
     }
 }
