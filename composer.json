@@ -10,6 +10,12 @@
             "register_autoloader.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Ibexa\\Tests\\Bundle\\CompatibilityLayer\\": "tests/bundle",
+            "Ibexa\\Tests\\CompatibilityLayer\\": "tests/lib"
+        }
+    },
     "require": {
         "php": "^7.4",
         "ext-json": "*",
