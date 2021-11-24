@@ -26,12 +26,13 @@ trait BundleNameCompatibilityTrait
         }
 
         $newBundleName = $this->bundleNameResolver->resolve($name, true);
-        if ($newBundleName) {
+        if (null !== $newBundleName) {
             trigger_deprecation(
                 'ibexa/compatibility-layer',
                 '4.0.0',
                 sprintf('Support for old bundle names is deprecated, please update from %s, to %s', $name, $newBundleName)
             );
+
             return parent::getBundle($newBundleName);
         }
 

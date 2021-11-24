@@ -13,7 +13,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 
 final class BundleNameResolver
 {
-    /** @var array[] */
+    /** @var array<string, string> */
     private $bundleNamesMap;
 
     public function __construct(bool $reverse = false)
