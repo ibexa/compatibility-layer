@@ -10,6 +10,9 @@ namespace Ibexa\Bundle\CompatibilityLayer\Kernel;
 
 use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 
+/**
+ * Meant to be used in App Kernel extending {@see \Symfony\Component\HttpKernel\Kernel}.
+ */
 trait BundleNameCompatibilityTrait
 {
     protected ?BundleNameResolver $bundleNameResolver = null;
