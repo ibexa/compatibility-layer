@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 /**
  * @internal
  */
-class ContainerBuilder extends SymfonyContainerBuilder
+final class ContainerBuilder extends SymfonyContainerBuilder
 {
     public const EXTENSION_NAME_BC_MAP = [
         'ezpublish' => 'ibexa',
