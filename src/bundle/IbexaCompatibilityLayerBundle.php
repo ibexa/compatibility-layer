@@ -13,7 +13,6 @@ use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensi
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\TwigPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ValueObjectVisitorTagCompatibilityPass;
-use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Extension\PlatformExtension;
 use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
@@ -29,8 +28,6 @@ final class IbexaCompatibilityLayerBundle extends Bundle
     public function build(ContainerBuilder $container)
     {
         parent::build($container);
-
-        $container->registerExtension(new PlatformExtension());
 
         $fullyQualifiedNameResolver = new AggregateResolver([
             new ClassMapResolver(),
