@@ -26,8 +26,8 @@ class EventDispatcher implements EventDispatcherInterface
     {
         $this->innerEventDispatcher = $innerEventDispatcher;
         $this->fullyQualifiedNameResolver = new AggregateResolver([
-            new PSR4PrefixResolver(),
             new ClassMapResolver(),
+            new PSR4PrefixResolver(),
         ]);
     }
 
