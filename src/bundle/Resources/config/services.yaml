@@ -8,3 +8,5 @@ services:
         decorates: 'event_dispatcher'
         arguments:
             $innerEventDispatcher: '@.inner'
+
+    Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDebugCommand: ~
