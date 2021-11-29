@@ -30,4 +30,9 @@ final class ClassMapResolver implements FullyQualifiedNameResolverInterface
     {
         return $this->classMap[$fullyQualifiedName] ?? null;
     }
+
+    public function getMap(): array
+    {
+        return $this->classMap;
+    }
 }
