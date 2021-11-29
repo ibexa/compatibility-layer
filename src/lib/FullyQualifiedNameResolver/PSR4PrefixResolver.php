@@ -33,6 +33,10 @@ final class PSR4PrefixResolver implements FullyQualifiedNameResolverInterface
     public function resolve(string $fullyQualifiedName): ?string
     {
         foreach ($this->psr4map as $legacyPrefix => $newPrefix) {
+            if ($fullyQualifiedName === rtrim($legacyPrefix, '\\')) {
+                return rtrim($newPrefix, '\\');
+            }
+
             if (0 !== strpos($fullyQualifiedName, $legacyPrefix)) {
                 continue;
             }
@@ -41,5 +45,10 @@ final class PSR4PrefixResolver implements FullyQualifiedNameResolverInterface
         }
 
         return null;
+    }
+
+    public function getMap(): array
+    {
+        return $this->psr4map;
     }
 }

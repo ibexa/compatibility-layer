@@ -6,11 +6,14 @@
  */
 declare(strict_types=1);
 
-namespace Ibexa\CompatibilityLayer;
+namespace Ibexa\CompatibilityLayer\Rebranding;
 
-interface FullyQualifiedNameResolverInterface
+class TwigRebranding extends ResourceRebranding
 {
-    public function resolve(string $fullyQualifiedName): ?string;
-
-    public function getMap(): array;
+    public function getFileNamePatterns(): array
+    {
+        return [
+            '*.twig',
+        ];
+    }
 }
