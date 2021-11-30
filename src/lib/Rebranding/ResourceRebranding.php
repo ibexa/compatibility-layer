@@ -49,7 +49,7 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         foreach ($this->bundleMap as $oldBundle => $newBundle) {
-            $output = preg_replace('/([^[a-zA-Z0-9\\\\])' . preg_quote($oldBundle) . '/', '${1}' . $newBundle, $output);
+            $output = preg_replace('/([^[a-zA-Z0-9\\\\\/])' . preg_quote($oldBundle) . '/', '${1}' . $newBundle, $output);
         }
 
         foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {

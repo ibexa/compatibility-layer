@@ -10,6 +10,23 @@ namespace Ibexa\CompatibilityLayer\Rebranding;
 
 class JsRebranding extends ResourceRebranding
 {
+    public function rebrand(string $input): string
+    {
+        $output = $input;
+
+        foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {
+            $output = str_replace(
+                'bundles/' . strtolower($oldBundleName),
+                'bundles/' . strtolower($newBundleName),
+                $output
+            );
+        }
+
+        $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
+
+        return $output;
+    }
+
     public function getFileNamePatterns(): array
     {
         return [
