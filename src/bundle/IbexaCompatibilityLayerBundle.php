@@ -23,7 +23,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 final class IbexaCompatibilityLayerBundle extends Bundle
 {
-    const MAPPINGS_PATH = __DIR__ . '/Resources/mappings';
+    public const MAPPINGS_PATH = __DIR__ . '/Resources/mappings';
 
     public function build(ContainerBuilder $container)
     {

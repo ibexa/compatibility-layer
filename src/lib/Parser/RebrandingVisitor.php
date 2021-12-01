@@ -16,7 +16,8 @@ abstract class RebrandingVisitor extends NodeVisitorAbstract
 {
     protected FullyQualifiedNameResolverInterface $nameResolver;
 
-    public function __construct(FullyQualifiedNameResolverInterface $nameResolver) {
+    public function __construct(FullyQualifiedNameResolverInterface $nameResolver)
+    {
         $this->nameResolver = $nameResolver;
     }
 

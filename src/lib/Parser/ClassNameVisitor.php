@@ -21,7 +21,7 @@ class ClassNameVisitor extends RebrandingVisitor
             if ($node->alias) {
                 $this->namespaceAliases[(string)$node->alias->name] = $node->name;
             }
-        } else if ($node instanceof Node\Name) {
+        } elseif ($node instanceof Node\Name) {
             return $this->getResolvedNameNode($node);
         }
 

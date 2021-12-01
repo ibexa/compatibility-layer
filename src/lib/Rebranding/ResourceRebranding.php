@@ -17,8 +17,11 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 abstract class ResourceRebranding implements RebrandingInterface
 {
     protected FullyQualifiedNameResolverInterface $nameResolver;
+
     protected array $bundleMap;
+
     protected array $bundleNameMap;
+
     protected array $extensionMap;
 
     public function __construct()
@@ -27,12 +30,12 @@ abstract class ResourceRebranding implements RebrandingInterface
         $psr4PrefixResolver = new PSR4PrefixResolver();
         $this->nameResolver = new AggregateResolver([
             $classMapResolver,
-            $psr4PrefixResolver
+            $psr4PrefixResolver,
         ]);
 
         $this->bundleMap = $this->getBundleMap($classMapResolver->getMap());
         $this->bundleNameMap = $this->getBundleMap($classMapResolver->getMap(), true);
-        $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . DIRECTORY_SEPARATOR . "symfony-extension-name-map.php";
+        $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
     }
 
     public function rebrand(string $input): string
@@ -75,7 +78,7 @@ abstract class ResourceRebranding implements RebrandingInterface
     protected function getBundleMap(array $classMap, bool $short = false): array
     {
         $bundleMap = [];
-        $rawBundleMap = array_filter($classMap, static function(string $className): bool {
+        $rawBundleMap = array_filter($classMap, static function (string $className): bool {
             return preg_match('/Bundle$/', $className) === 1;
         });
 

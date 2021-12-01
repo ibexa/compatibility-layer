@@ -29,9 +29,13 @@ use PhpParser\PrettyPrinterAbstract;
 class PhpRebranding implements RebrandingInterface
 {
     private Parser $parser;
+
     private PrettyPrinterAbstract $printer;
+
     private Lexer $lexer;
+
     private AggregateResolver $nameResolver;
+
     private array $extensionMap;
 
     public function __construct()
@@ -49,7 +53,7 @@ class PhpRebranding implements RebrandingInterface
         ]);
         $this->parser = (new ParserFactory())->create(ParserFactory::ONLY_PHP7, $this->lexer);
         $this->printer = new Standard();
-        $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . DIRECTORY_SEPARATOR . "symfony-extension-name-map.php";
+        $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
     }
 
     public function rebrand(string $input): string

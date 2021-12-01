@@ -11,11 +11,12 @@ namespace Ibexa\Bundle\CompatibilityLayer\Command;
 use Ibexa\CompatibilityLayer\Rebranding\ComposerRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\CssRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\JsRebranding;
-use Ibexa\CompatibilityLayer\Rebranding\RebrandingInterface;
 use Ibexa\CompatibilityLayer\Rebranding\PhpRebranding;
+use Ibexa\CompatibilityLayer\Rebranding\RebrandingInterface;
+use Ibexa\CompatibilityLayer\Rebranding\TwigRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\XmlRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\YamlRebranding;
-use Ibexa\CompatibilityLayer\Rebranding\TwigRebranding;
+use InvalidArgumentException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\ProgressBar;
 use Symfony\Component\Console\Input\InputArgument;
@@ -23,7 +24,6 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Filesystem\Filesystem;
-use InvalidArgumentException;
 use Symfony\Component\Finder\Finder;
 
 class IbexaRebrandingCommand extends Command
@@ -65,7 +65,7 @@ class IbexaRebrandingCommand extends Command
 
     private function process(RebrandingInterface $rebranding, string $sourcePath, bool $dryRun = false): void
     {
-        $this->style->info("Rebranding " . implode(', ', $rebranding->getFileNamePatterns()) . ":");
+        $this->style->info('Rebranding ' . implode(', ', $rebranding->getFileNamePatterns()) . ':');
 
         $finder = new Finder();
         $files = $finder->files()->in($sourcePath)->name($rebranding->getFileNamePatterns());

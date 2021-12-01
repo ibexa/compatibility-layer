@@ -16,6 +16,7 @@ use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 trait BundleNameCompatibilityTrait
 {
     protected ?BundleNameResolver $bundleNameResolver = null;
+
     protected string $compatibilityLayerBundleName = 'IbexaCompatibilityLayerBundle';
 
     public function getBundle(string $name)
