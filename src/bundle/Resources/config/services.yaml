@@ -10,3 +10,5 @@ services:
             $innerEventDispatcher: '@.inner'
 
     Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDebugCommand: ~
+
+    Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDumpReferenceCommand: ~
