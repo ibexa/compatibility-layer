@@ -13,6 +13,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
 use Ibexa\CompatibilityLayer\Parser\ClassNameVisitor;
+use Ibexa\CompatibilityLayer\Parser\DocblockVisitor;
 use Ibexa\CompatibilityLayer\Parser\ExtensionVisitor;
 use PhpParser\Lexer;
 use PhpParser\Lexer\Emulative;
@@ -57,6 +58,7 @@ class PhpRebranding implements RebrandingInterface
         ]));
         $traverser->addVisitor(new ExtensionVisitor());
         $traverser->addVisitor(new ClassNameVisitor($this->nameResolver));
+        $traverser->addVisitor(new DocblockVisitor($this->nameResolver));
 
         try {
             $parsed = $this->parser->parse($input);
