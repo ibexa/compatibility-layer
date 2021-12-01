@@ -13,10 +13,12 @@ use PhpParser\NodeVisitorAbstract;
 
 class ExtensionVisitor extends NodeVisitorAbstract
 {
-    private const EXTENSION_MAP = [
-        'ezplatform' => 'ibexa',
-        'ezpublish' => 'ibexa'
-    ];
+    private array $extensionMap;
+
+    public function __construct(array $extensionMap)
+    {
+        $this->extensionMap = $extensionMap;
+    }
 
     public function leaveNode(Node $node)
     {
@@ -58,6 +60,6 @@ class ExtensionVisitor extends NodeVisitorAbstract
 
     public function getExtensionName(string $extension): ?string
     {
-        return self::EXTENSION_MAP[$extension] ?? null;
+        return $this->extensionMap[$extension] ?? null;
     }
 }
