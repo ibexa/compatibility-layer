@@ -25,6 +25,7 @@ return [
     'ezrichtext' => 'ibexa_fieldtype_richtext',
     'ez_search_engine_legacy' => 'ibexa_legacy_search_engine',
     'ez_search_engine_solr' => 'ibexa_solr',
+    'ezplatform_site_factory' => 'ibexa_site_factory',
     'ibexa_platform_commerce_field_types' => 'ibexa_commerce_field_types',
     'one_sky' => 'ibexa_commerce_one_sky',
     'ses_specificationstypefieldtype' => 'ibexa_commerce_specifications_type',
