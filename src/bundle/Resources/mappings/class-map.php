@@ -2920,6 +2920,7 @@ return [
   'eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Suggestion\\Tests\\Collector\\SuggestionCollectorTest' => 'Ibexa\\Tests\\Bundle\\Core\\DependencyInjection\\Configuration\\Suggestion\\Collector\\SuggestionCollectorTest',
   'eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\Configuration\\Suggestion\\Tests\\Formatter\\YamlSuggestionFormatterTest' => 'Ibexa\\Tests\\Bundle\\Core\\DependencyInjection\\Configuration\\Suggestion\\Formatter\\YamlSuggestionFormatterTest',
   'eZ\\Bundle\\EzPublishCoreBundle\\EzPublishCoreBundle' => 'Ibexa\\Bundle\\Core\\IbexaCoreBundle',
+  'eZ\\Bundle\\EzPublishCoreBundle\\DependencyInjection\\EzPublishCoreExtension' => 'Ibexa\\Bundle\\Core\\DependencyInjection\\IbexaCoreExtension',
   'eZ\\Bundle\\EzPublishDebugBundle\\Tests\\Collector\\EzPublishCoreCollectorTest' => 'Ibexa\\Tests\\Bundle\\Debug\\Collector\\IbexaCoreCollectorTest',
   'eZ\\Bundle\\EzPublishDebugBundle\\Tests\\DependencyInjection\\Compiler\\DataCollectorPassTest' => 'Ibexa\\Tests\\Bundle\\Debug\\DependencyInjection\\Compiler\\DataCollectorPassTest',
   'eZ\\Bundle\\EzPublishDebugBundle\\Collector\\EzPublishCoreCollector' => 'Ibexa\\Bundle\\Debug\\Collector\\IbexaCoreCollector',

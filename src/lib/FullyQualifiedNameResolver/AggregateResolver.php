@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Ibexa\CompatibilityLayer\FullyQualifiedNameResolver;
 
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
+use RuntimeException;
 
 final class AggregateResolver implements FullyQualifiedNameResolverInterface
 {
@@ -33,5 +34,10 @@ final class AggregateResolver implements FullyQualifiedNameResolverInterface
         }
 
         return null;
+    }
+
+    public function getMap(): array
+    {
+        throw new RuntimeException("Can't call method on aggregate.");
     }
 }

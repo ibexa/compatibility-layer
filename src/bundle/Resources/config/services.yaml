@@ -12,3 +12,5 @@ services:
     Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDebugCommand: ~
 
     Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDumpReferenceCommand: ~
+
+    Ibexa\Bundle\CompatibilityLayer\Command\IbexaRebrandingCommand: ~

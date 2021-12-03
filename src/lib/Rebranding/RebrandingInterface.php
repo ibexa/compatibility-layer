@@ -6,11 +6,11 @@
  */
 declare(strict_types=1);
 
-namespace Ibexa\CompatibilityLayer;
+namespace Ibexa\CompatibilityLayer\Rebranding;
 
-interface FullyQualifiedNameResolverInterface
+interface RebrandingInterface
 {
-    public function resolve(string $fullyQualifiedName): ?string;
+    public function rebrand(string $input): string;
 
-    public function getMap(): array;
+    public function getFileNamePatterns(): array;
 }
