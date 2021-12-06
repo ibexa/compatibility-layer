@@ -16,4 +16,13 @@ class TwigRebranding extends ResourceRebranding
             '*.twig',
         ];
     }
+
+    public function rebrand(string $input): string
+    {
+        $output = parent::rebrand($input);
+
+        $output = preg_replace('/@ezdesign\//', '@ibexadesign/', $output);
+
+        return $output;
+    }
 }
