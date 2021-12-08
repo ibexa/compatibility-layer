@@ -14,3 +14,13 @@ services:
     Ibexa\Bundle\CompatibilityLayer\Command\SymfonyConfigDumpReferenceCommand: ~
 
     Ibexa\Bundle\CompatibilityLayer\Command\IbexaRebrandingCommand: ~
+
+    Ibexa\Bundle\CompatibilityLayer\Twig\LegacyDesignThemeTemplateNameResolver: ~
+
+    ibexa.compatibility.design_engine.legacy_twig_theme_loader:
+        class: Ibexa\DesignEngine\Templating\Twig\TwigThemeLoader
+        public: false
+        arguments:
+            $templateNameResolver: '@Ibexa\Bundle\CompatibilityLayer\Twig\LegacyDesignThemeTemplateNameResolver'
+            $templatePathRegistry: '@ezdesign.template_path_registry'
+            $innerFilesystemLoader: '@twig.loader.filesystem'
