@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Ibexa\Bundle\CompatibilityLayer;
 
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AliasDecoratorCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AssetThemeCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensionCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\TwigPass;
@@ -69,6 +70,12 @@ final class IbexaCompatibilityLayerBundle extends Bundle
             new TwigPass($bundleNameResolver),
             PassConfig::TYPE_BEFORE_OPTIMIZATION,
             5 //Run after Twig one
+        );
+
+        $container->addCompilerPass(
+            new AssetThemeCompatibilityPass(),
+            PassConfig::TYPE_OPTIMIZE,
+            -1
         );
     }
 }
