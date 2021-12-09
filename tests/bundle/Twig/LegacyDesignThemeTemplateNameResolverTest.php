@@ -41,7 +41,6 @@ final class LegacyDesignThemeTemplateNameResolverTest extends TestCase
             $expectedIsNamespaced,
             $this->templateNameResolver->isTemplateDesignNamespaced($name)
         );
-
     }
 
     public function getDataForTestIsTemplateDesignNamespaced(): iterable
