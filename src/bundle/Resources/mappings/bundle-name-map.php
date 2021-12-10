@@ -36,7 +36,7 @@ return [
     'PlatformPermissions' => 'IbexaPermissions',
     'IbexaPlatformPersonalization' => 'IbexaPersonalization',
     'EzSystemsEzPlatformQueryFieldType' => 'IbexaFieldTypeQuery',
-    'EzRecommendationClient' => 'IbexaPersonalizationClient',
+    'EzRecommendationClient' => 'IbexaPersonalization',
     'EzPlatformRest' => 'IbexaRest',
     'EzPlatformRichText' => 'IbexaFieldTypeRichText',
     'IbexaPlatformSearch' => 'IbexaSearch',
