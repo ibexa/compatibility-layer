@@ -165,6 +165,7 @@ return [
   'EzSystems\\DateBasedPublisherBundle\\DependencyInjection\\EzSystemsDateBasedPublisherExtension' => 'Ibexa\\Bundle\\Scheduler\\DependencyInjection\\IbexaSchedulerExtension',
   'EzSystems\\EzPlatformDesignEngineBundle\\EzPlatformDesignEngineBundle' => 'Ibexa\\Bundle\\DesignEngine\\IbexaDesignEngineBundle',
   'EzSystems\\EzPlatformDesignEngineBundle\\DependencyInjection\\EzPlatformDesignEngineExtension' => 'Ibexa\\Bundle\\DesignEngine\\DependencyInjection\\IbexaDesignEngineExtension',
+  'EzSystems\\EzPlatformDesignEngine\\DesignAwareInterface' => 'Ibexa\\Contracts\\DesignEngine\\DesignAwareInterface',
   'EzSystems\\DoctrineSchema\\API\\Exception\\InvalidConfigurationException' => 'Ibexa\\Contracts\\DoctrineSchema\\Exception\\InvalidConfigurationException',
   'EzSystems\\DoctrineSchema\\API\\Event\\SchemaBuilderEvent' => 'Ibexa\\Contracts\\DoctrineSchema\\Event\\SchemaBuilderEvent',
   'EzSystems\\DoctrineSchema\\API\\Event\\SchemaBuilderEvents' => 'Ibexa\\Contracts\\DoctrineSchema\\SchemaBuilderEvents',
