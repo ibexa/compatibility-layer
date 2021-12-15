@@ -12,6 +12,7 @@ use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AliasDecoratorC
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AssetThemeCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensionCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceTagCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\TwigPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ValueObjectVisitorTagCompatibilityPass;
 use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
@@ -76,6 +77,12 @@ final class IbexaCompatibilityLayerBundle extends Bundle
             new AssetThemeCompatibilityPass(),
             PassConfig::TYPE_OPTIMIZE,
             -1
+        );
+
+        $container->addCompilerPass(
+            new ServiceTagCompatibilityPass(),
+            PassConfig::TYPE_BEFORE_OPTIMIZATION,
+            255
         );
     }
 }
