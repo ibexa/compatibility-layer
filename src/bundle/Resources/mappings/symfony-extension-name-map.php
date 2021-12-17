@@ -21,7 +21,7 @@ return [
     'ezplatform_page_fieldtype' => 'ibexa_fieldtype_page',
     'ez_platform_standard_design' => 'ibexa_standard_design',
     'ezplatform_support_tools' => 'ibexa_system_info',
-    'ezrecommendation' => 'ibexa_personalization_client',
+    'ezrecommendation' => 'ibexa_personalization',
     'ezrichtext' => 'ibexa_fieldtype_richtext',
     'ez_platform_version_comparison' => 'ibexa_version_comparison',
     'ez_publish_rest' => 'ibexa_rest',
