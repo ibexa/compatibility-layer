@@ -126,7 +126,6 @@ return [
     'ezrichtext.converter.output.xhtml5' => 'ibexa.field_type.richtext.converter.output.xhtml5',
     'ezrichtext.validator.input.ezxhtml5' => 'ibexa.field_type.richtext.validator.input.ezxhtml5',
     'ez.spi.persistence.cache.inmemory' => 'ibexa.cache.persistence.inmemory',
-    'ezsystems.platformui.application_config_provider' => 'ibexa.field_type.page.legacy.application.config.provider',
     'ibexa.platform.connector.dam.query_factory' => 'ibexa.connector.dam.query.factory',
     'ibexa.platform.render.strategy' => 'ibexa.view.render.strategy',
     'ibexa.view_builder' => 'ibexa.view.builder',
