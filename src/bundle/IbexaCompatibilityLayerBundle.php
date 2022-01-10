@@ -19,6 +19,7 @@ use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
+use Ibexa\CompatibilityLayer\ServiceResolver\ServiceNameResolver;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -41,7 +42,8 @@ final class IbexaCompatibilityLayerBundle extends Bundle
                 new AggregateResolver([
                     new ClassMapResolver(true),
                     new PSR4PrefixResolver(true),
-                ])
+                ]),
+                new ServiceNameResolver(true)
             ),
             PassConfig::TYPE_BEFORE_OPTIMIZATION,
             128
