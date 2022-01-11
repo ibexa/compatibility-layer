@@ -125,7 +125,7 @@ return [
     'ezrichtext.configuration.custom_tag.mapper' => 'ibexa.field_type.richtext.configuration.custom_tag.mapper',
     'ezrichtext.converter.input.xhtml5' => 'ibexa.field_type.richtext.converter.input.xhtml5',
     'ezrichtext.converter.output.xhtml5' => 'ibexa.field_type.richtext.converter.output.xhtml5',
-    'ezrichtext.validator.input.ezxhtml5' => 'ibexa.field_type.richtext.validator.input.ezxhtml5',
+    'ezrichtext.validator.input.ezxhtml5' => 'ibexa.field_type.richtext.validator.input.xhtml5',
     'ez.spi.persistence.cache.inmemory' => 'ibexa.cache.persistence.inmemory',
     'ibexa.platform.connector.dam.query_factory' => 'ibexa.connector.dam.query.factory',
     'ibexa.platform.render.strategy' => 'ibexa.view.render.strategy',
