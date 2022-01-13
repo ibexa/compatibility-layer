@@ -51,7 +51,9 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
             $this->setAlias($oldClassName, $container, $name, $definition);
 
             $oldServiceName = $this->serviceNameResolver->resolve($name);
-            $this->setAlias($oldServiceName, $container, $name, $definition);
+            if ($oldServiceName !== null) {
+                $container->setAlias($oldServiceName, $name);
+            }
         }
     }
 

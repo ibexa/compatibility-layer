@@ -26,8 +26,13 @@ class ServicesRebranding extends ResourceRebranding
         $output = $input;
         foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
             $output = preg_replace(
-                '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\'\":]|$)/m',
+                '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\':]|$)/m',
                 '${1}' . $newServiceName,
+                $output
+            );
+            $output = preg_replace(
+                '/"@' . preg_quote($oldServiceName) . '"/m',
+                '\'@${1}' . $newServiceName . '\'',
                 $output
             );
         }
