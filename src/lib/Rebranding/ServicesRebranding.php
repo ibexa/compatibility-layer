@@ -35,6 +35,11 @@ class ServicesRebranding extends ResourceRebranding
                 '\'@${1}' . $newServiceName . '\'',
                 $output
             );
+            $output = preg_replace(
+                '/id="' . preg_quote($oldServiceName) . '"/m',
+                'id="${1}' . $newServiceName . '"',
+                $output
+            );
         }
 
         return $output;
@@ -46,6 +51,7 @@ class ServicesRebranding extends ResourceRebranding
             '*.yml',
             '*.yaml',
             '*.twig',
+            '*.xml',
         ];
     }
 }
