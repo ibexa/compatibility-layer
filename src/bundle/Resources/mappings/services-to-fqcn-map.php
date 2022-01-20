@@ -1157,7 +1157,7 @@ return [
     'ezpublish_debug.persistence_collector' => 'Ibexa\\Bundle\\Debug\\Collector\\PersistenceCacheCollector',
     'ezpublish_debug.siteaccess_collector' => 'Ibexa\\Bundle\\Debug\\Collector\\SiteAccessCollector',
     'ezpublish_rest.controller.base' => 'Ibexa\\Rest\\Server\\Controller',
-    'ezpublish_rest.controller.binary_content' => 'alias for "Ibexa\\Bundle\\Connector\\Dam\\Controller\\AssetVariationController"',
+    'ezpublish_rest.controller.binary_content' => 'Ibexa\\Rest\\Server\\Controller\\BinaryContent',
     'ezpublish_rest.controller.bookmark' => 'Ibexa\\Rest\\Server\\Controller\\Bookmark',
     'ezpublish_rest.controller.content' => 'Ibexa\\Rest\\Server\\Controller\\Content',
     'ezpublish_rest.controller.content_type' => 'Ibexa\\Rest\\Server\\Controller\\ContentType',
