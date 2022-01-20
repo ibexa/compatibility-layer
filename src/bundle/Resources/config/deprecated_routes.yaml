@@ -1,3 +1,9 @@
+_ez_user_hash:
+    alias: ibexa.user_hash
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
 _ez_content_translation_view:
     alias: ibexa.content.translation.view
     deprecated:
@@ -2018,6 +2024,18 @@ ezplatform.workflow.content_edit.reviewer_suggest:
     alias: ibexa.workflow.content_edit.reviewer_suggest
     deprecated:
         package: ibexa/workflow
+        version: 4.0.0
+
+ibexa_stored_baskets_list_data:
+    alias: ibexa.commerce.basket.list_data
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+
+ibexa_add_to_basket_data:
+    alias: ibexa.commerce.basket.add_data
+    deprecated:
+        package: ibexa/commerce-checkout
         version: 4.0.0
 
 silversolutions_phalanx:
