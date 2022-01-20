@@ -65,7 +65,7 @@ class EventDispatcher implements EventDispatcherInterface
         return $this->innerEventDispatcher->getListeners($eventName);
     }
 
-    public function getListenerPriority(string $eventName, callable $listener): ?int
+    public function getListenerPriority(string $eventName, $listener): ?int
     {
         return $this->innerEventDispatcher->getListenerPriority($eventName, $listener);
     }

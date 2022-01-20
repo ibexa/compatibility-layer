@@ -22,5 +22,5 @@ services:
         public: false
         arguments:
             $templateNameResolver: '@Ibexa\Bundle\CompatibilityLayer\Twig\LegacyDesignThemeTemplateNameResolver'
-            $templatePathRegistry: '@ezdesign.template_path_registry'
+            $templatePathRegistry: '@Ibexa\DesignEngine\Templating\TemplatePathRegistry'
             $innerFilesystemLoader: '@twig.loader.filesystem'
