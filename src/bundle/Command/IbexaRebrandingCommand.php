@@ -11,10 +11,8 @@ namespace Ibexa\Bundle\CompatibilityLayer\Command;
 use Ibexa\CompatibilityLayer\Rebranding\ComposerRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\CssRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\JsRebranding;
-use Ibexa\CompatibilityLayer\Rebranding\PhpFqcnServicesRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\PhpRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\RebrandingInterface;
-use Ibexa\CompatibilityLayer\Rebranding\ServicesRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\TwigRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\XmlRebranding;
 use Ibexa\CompatibilityLayer\Rebranding\YamlRebranding;
@@ -59,8 +57,6 @@ class IbexaRebrandingCommand extends Command
         $this->process(new JsRebranding(), $sourcePath);
         $this->process(new CssRebranding(), $sourcePath);
         $this->process(new ComposerRebranding(), $sourcePath);
-        $this->process(new ServicesRebranding(), $sourcePath);
-        $this->process(new PhpFqcnServicesRebranding(), $sourcePath);
 
         $this->style->success('Done.');
 
@@ -79,6 +75,10 @@ class IbexaRebrandingCommand extends Command
         $progressBar->display();
 
         foreach ($files as $file) {
+            if (strpos($file->getPathname(), 'vendor/ibexa/compatibility-layer/') === 0) {
+                $progressBar->advance();
+                continue;
+            }
             $input = file_get_contents($file->getPathname());
             $output = $rebranding->rebrand($input);
 

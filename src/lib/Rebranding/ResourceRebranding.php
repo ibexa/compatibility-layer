@@ -24,6 +24,10 @@ abstract class ResourceRebranding implements RebrandingInterface
 
     protected array $extensionMap;
 
+    protected array $routeNamesMap;
+
+    protected array $servicesMap;
+
     public function __construct()
     {
         $classMapResolver = new ClassMapResolver();
@@ -36,6 +40,8 @@ abstract class ResourceRebranding implements RebrandingInterface
         $this->bundleMap = $this->getBundleMap($classMapResolver->getMap());
         $this->bundleNameMap = $this->getBundleMap($classMapResolver->getMap(), true);
         $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
+        $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
+        $this->servicesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'services-to-fqcn-map.php';
     }
 
     public function rebrand(string $input): string
@@ -66,6 +72,24 @@ abstract class ResourceRebranding implements RebrandingInterface
             $output = str_replace(
                 'bundles/' . strtolower($oldBundleName),
                 'bundles/' . strtolower($newBundleName),
+                $output
+            );
+        }
+
+        foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
+            $output = preg_replace(
+                '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\':]|$)/m',
+                '${1}' . $newServiceName,
+                $output
+            );
+            $output = preg_replace(
+                '/"@' . preg_quote($oldServiceName) . '"/m',
+                '\'@${1}' . $newServiceName . '\'',
+                $output
+            );
+            $output = preg_replace(
+                '/id="' . preg_quote($oldServiceName) . '"/m',
+                'id="${1}' . $newServiceName . '"',
                 $output
             );
         }
