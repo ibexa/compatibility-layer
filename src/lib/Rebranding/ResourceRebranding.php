@@ -24,6 +24,8 @@ abstract class ResourceRebranding implements RebrandingInterface
 
     protected array $extensionMap;
 
+    protected array $routeNamesMap;
+
     public function __construct()
     {
         $classMapResolver = new ClassMapResolver();
@@ -36,6 +38,7 @@ abstract class ResourceRebranding implements RebrandingInterface
         $this->bundleMap = $this->getBundleMap($classMapResolver->getMap());
         $this->bundleNameMap = $this->getBundleMap($classMapResolver->getMap(), true);
         $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
+        $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
     }
 
     public function rebrand(string $input): string

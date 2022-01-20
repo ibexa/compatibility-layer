@@ -38,6 +38,8 @@ class PhpRebranding implements RebrandingInterface
 
     private array $extensionMap;
 
+    private array $routeNamesMap;
+
     public function __construct()
     {
         $this->nameResolver = new AggregateResolver([
@@ -54,6 +56,7 @@ class PhpRebranding implements RebrandingInterface
         $this->parser = (new ParserFactory())->create(ParserFactory::ONLY_PHP7, $this->lexer);
         $this->printer = new Standard();
         $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
+        $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
     }
 
     public function rebrand(string $input): string
