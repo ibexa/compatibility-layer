@@ -1877,4 +1877,3 @@ return [
     'ibexa.platform.view.connector.dam.image_asset.matcher_factory.dynamically_configured.inner' => 'ibexa.view.connector.dam.image_asset.matcher_factory.dynamically_configured.inner',
     'ibexa.platform.view.search.matcher_factory' => 'ibexa.view.search.matcher_factory',
 ];
-

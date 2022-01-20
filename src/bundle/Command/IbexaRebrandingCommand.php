@@ -52,13 +52,13 @@ class IbexaRebrandingCommand extends Command
             throw new InvalidArgumentException("Path ${sourcePath} does not exist or is not readable.");
         }
 
-        $this->process(new PhpRebranding(), $sourcePath);
-        $this->process(new YamlRebranding(), $sourcePath);
-        $this->process(new XmlRebranding(), $sourcePath);
-        $this->process(new TwigRebranding(), $sourcePath);
-        $this->process(new JsRebranding(), $sourcePath);
-        $this->process(new CssRebranding(), $sourcePath);
-        $this->process(new ComposerRebranding(), $sourcePath);
+//        $this->process(new PhpRebranding(), $sourcePath);
+//        $this->process(new YamlRebranding(), $sourcePath);
+//        $this->process(new XmlRebranding(), $sourcePath);
+//        $this->process(new TwigRebranding(), $sourcePath);
+//        $this->process(new JsRebranding(), $sourcePath);
+//        $this->process(new CssRebranding(), $sourcePath);
+//        $this->process(new ComposerRebranding(), $sourcePath);
         $this->process(new ServicesRebranding(), $sourcePath);
         $this->process(new PhpFqcnServicesRebranding(), $sourcePath);
 

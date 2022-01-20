@@ -28,7 +28,7 @@ class PhpFqcnServicesRebranding extends ResourceRebranding
             if (class_exists($newServiceName)) {
                 $output = preg_replace(
                     '/(?<!\.|_)' . '\'' . preg_quote($oldServiceName) . '\'' . '/',
-                    '${1}' . '\\'. $newServiceName . '::class',
+                    '${1}' . '\\' . $newServiceName . '::class',
                     $output
                 );
             } else {

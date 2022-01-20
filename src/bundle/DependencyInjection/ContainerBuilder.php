@@ -96,9 +96,9 @@ final class ContainerBuilder extends SymfonyContainerBuilder
         if (!$hasDefinition && isset(self::$serviceNameMap[$id])) {
             return parent::hasDefinition(self::$serviceNameMap[$id]);
         }
+
         return $hasDefinition;
     }
-
 
     public function has(string $id)
     {
@@ -112,6 +112,7 @@ final class ContainerBuilder extends SymfonyContainerBuilder
         if (!$has && isset(self::$serviceNameMap[$id])) {
             return parent::has(self::$serviceNameMap[$id]);
         }
+
         return $has;
     }
 

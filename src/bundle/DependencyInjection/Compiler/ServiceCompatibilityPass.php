@@ -8,8 +8,8 @@ declare(strict_types=1);
 
 namespace Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler;
 
-use Ibexa\CompatibilityLayer\ServiceResolver\ServiceNameResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
+use Ibexa\CompatibilityLayer\ServiceResolver\ServiceNameResolver;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -62,7 +62,7 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
         return is_a($name, FormTypeInterface::class, true);
     }
 
-    protected function setAlias(
+    private function setAlias(
         ?string $oldClassName,
         ContainerBuilder $container,
         string $name,
