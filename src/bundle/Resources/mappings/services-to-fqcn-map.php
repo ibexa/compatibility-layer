@@ -117,7 +117,7 @@ return [
     'ezplatform.core.translation.file_visitor.translatable_exceptions' => 'Ibexa\\Core\\MVC\\Symfony\\Translation\\TranslatableExceptionsFileVisitor',
     'ezplatform.core.translation.file_visitor.validation_errors' => 'Ibexa\\Core\\MVC\\Symfony\\Translation\\ValidationErrorFileVisitor',
     'ezplatform.cron.registry.cronjobs' => 'Ibexa\\Bundle\\Cron\\Registry\\CronJobsRegistry',
-    'ezplatform.date_based_publisher.build_schema_subscriber' => 'Ibexa\\Bundle\\RepositoryInstaller\\Event\\Subscriber\\BuildSchemaSubscriber',
+    'ezplatform.date_based_publisher.build_schema_subscriber' => 'ibexa.scheduler.build_schema_subscriber',
     'ezplatform.form_builder.attribute_form_type_mapper.action' => 'ibexa.form_builder.attribute_form_type_mapper.action',
     'ezplatform.form_builder.attribute_form_type_mapper.checkbox' => 'ibexa.form_builder.attribute_form_type_mapper.checkbox',
     'ezplatform.form_builder.attribute_form_type_mapper.choices' => 'ibexa.form_builder.attribute_form_type_mapper.choices',
