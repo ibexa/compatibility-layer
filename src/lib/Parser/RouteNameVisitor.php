@@ -22,14 +22,19 @@ class RouteNameVisitor extends NodeVisitorAbstract
 
     public function leaveNode(Node $node)
     {
-        if ($node instanceof Node\Identifier) {
+        if ($node instanceof Node\Scalar\String_) {
+            $newRouteName = $this->getRouteName($node->value);
+
+            if (!empty($newRouteName)) {
+                $node->value = $newRouteName;
+            }
         }
 
         return $node;
     }
 
-    public function getRouteNameName(string $routeName): ?string
+    public function getRouteName(string $routeName): ?string
     {
-        return $this->routeNameMap[$routeName] ?? null;
+        return $this->routeNamesMap[$routeName] ?? null;
     }
 }
