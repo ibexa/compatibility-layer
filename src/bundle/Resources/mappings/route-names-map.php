@@ -468,8 +468,6 @@ return [
     'ibexa.platform.connector.dam.asset_view' => 'ibexa.connector.dam.asset_view',
     'ibexa.platform.connector.dam.asset' => 'ibexa.connector.dam.asset',
     'ibexa.platform.connector.dam.asset_variation' => 'ibexa.connector.dam.asset_variation',
-    'ibexa.personalization.report.recommendation_detailed' => 'ibexa.personalization.report.personalization_detailed',
-    'ibexa.personalization.recommendation.preview' => 'ibexa.personalization.personalization.preview',
     'ibexa.platform.rest.create_token' => 'ibexa.rest.create_token',
     'ibexa.platform.segmentation.group.list' => 'ibexa.segmentation.group.list',
     'ibexa.platform.segmentation.group.view' => 'ibexa.segmentation.group.view',

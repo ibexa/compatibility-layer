@@ -2782,18 +2782,6 @@ ibexa.platform.connector.dam.asset_variation:
         package: ibexa/connector-dam
         version: 4.0.0
 
-ibexa.personalization.report.recommendation_detailed:
-    alias: ibexa.personalization.report.personalization_detailed
-    deprecated:
-        package: ibexa/personalization
-        version: 4.0.0
-
-ibexa.personalization.recommendation.preview:
-    alias: ibexa.personalization.personalization.preview
-    deprecated:
-        package: ibexa/personalization
-        version: 4.0.0
-
 ibexa.platform.rest.create_token:
     alias: ibexa.rest.create_token
     deprecated:
