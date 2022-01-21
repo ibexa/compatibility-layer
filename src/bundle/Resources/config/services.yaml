@@ -38,3 +38,7 @@ services:
             - [setConfigResolver, ['@ibexa.config.resolver']]
         tags:
             - {name: router, priority: 200}
+
+    Ibexa\CompatibilityLayer\Event\Subscriber\RestMimeTypeSubscriber:
+        tags:
+            - { name: kernel.event_subscriber }
