@@ -15,6 +15,7 @@ use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatib
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceTagCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\TwigPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ValueObjectVisitorTagCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Security\RestSessionBasedFactory;
 use Ibexa\CompatibilityLayer\BundleResolver\BundleNameResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
@@ -86,5 +87,9 @@ final class IbexaCompatibilityLayerBundle extends Bundle
             PassConfig::TYPE_BEFORE_OPTIMIZATION,
             255
         );
+
+        /** @var \Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension $securityExtension */
+        $securityExtension = $container->getExtension('security');
+        $securityExtension->addSecurityListenerFactory(new RestSessionBasedFactory());
     }
 }
