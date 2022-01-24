@@ -1,0 +1,1793 @@
+ezplatform.systeminfo:
+    alias: ibexa.systeminfo
+    deprecated:
+        package: ibexa/system-info
+        version: 4.0.0
+
+ezplatform.systeminfo.php:
+    alias: ibexa.systeminfo.php
+    deprecated:
+        package: ibexa/system-info
+        version: 4.0.0
+
+ezplatform.dashboard:
+    alias: ibexa.dashboard
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.list:
+    alias: ibexa.section.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.create:
+    alias: ibexa.section.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.view:
+    alias: ibexa.section.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.update:
+    alias: ibexa.section.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.delete:
+    alias: ibexa.section.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.bulk_delete:
+    alias: ibexa.section.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.section.assign_content:
+    alias: ibexa.section.assign_content
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.list:
+    alias: ibexa.language.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.view:
+    alias: ibexa.language.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.create:
+    alias: ibexa.language.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.edit:
+    alias: ibexa.language.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.delete:
+    alias: ibexa.language.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.language.bulk_delete:
+    alias: ibexa.language.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.list:
+    alias: ibexa.role.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.view:
+    alias: ibexa.role.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.create:
+    alias: ibexa.role.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.copy:
+    alias: ibexa.role.copy
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.update:
+    alias: ibexa.role.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.delete:
+    alias: ibexa.role.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role.bulk_delete:
+    alias: ibexa.role.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.list:
+    alias: ibexa.policy.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.create:
+    alias: ibexa.policy.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.update:
+    alias: ibexa.policy.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.create_with_limitation:
+    alias: ibexa.policy.create_with_limitation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.delete:
+    alias: ibexa.policy.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.policy.bulk_delete:
+    alias: ibexa.policy.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role_assignment.list:
+    alias: ibexa.role_assignment.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role_assignment.create:
+    alias: ibexa.role_assignment.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role_assignment.delete:
+    alias: ibexa.role_assignment.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.role_assignment.bulk_delete:
+    alias: ibexa.role_assignment.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.list:
+    alias: ibexa.content_type_group.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.view:
+    alias: ibexa.content_type_group.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.create:
+    alias: ibexa.content_type_group.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.update:
+    alias: ibexa.content_type_group.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.delete:
+    alias: ibexa.content_type_group.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type_group.bulk_delete:
+    alias: ibexa.content_type_group.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.trash.list:
+    alias: ibexa.trash.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.trash.empty:
+    alias: ibexa.trash.empty
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.trash.restore:
+    alias: ibexa.trash.restore
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.trash.delete:
+    alias: ibexa.trash.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.list:
+    alias: ibexa.content_type.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.add:
+    alias: ibexa.content_type.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.edit:
+    alias: ibexa.content_type.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.copy:
+    alias: ibexa.content_type.copy
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.update:
+    alias: ibexa.content_type.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.delete:
+    alias: ibexa.content_type.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.bulk_delete:
+    alias: ibexa.content_type.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.view:
+    alias: ibexa.content_type.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.add_translation:
+    alias: ibexa.content_type.add_translation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_type.remove_translation:
+    alias: ibexa.content_type.remove_translation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.move:
+    alias: ibexa.location.move
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.copy:
+    alias: ibexa.location.copy
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.trash:
+    alias: ibexa.location.trash
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.update:
+    alias: ibexa.location.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.copy_subtree:
+    alias: ibexa.location.copy_subtree
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.relation:
+    alias: ibexa.relation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.translation.add:
+    alias: ibexa.translation.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.translation.remove:
+    alias: ibexa.translation.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.update_main_translation:
+    alias: ibexa.content.update_main_translation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.update_visibility:
+    alias: ibexa.content.update_visibility
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.version.remove:
+    alias: ibexa.version.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.version.has_no_conflict:
+    alias: ibexa.version.has_no_conflict
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.version_draft.has_no_conflict:
+    alias: ibexa.version_draft.has_no_conflict
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.add:
+    alias: ibexa.location.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.remove:
+    alias: ibexa.location.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.swap:
+    alias: ibexa.location.swap
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.update_visibility:
+    alias: ibexa.location.update_visibility
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.assign_section:
+    alias: ibexa.location.assign_section
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.update_main_location:
+    alias: ibexa.content.update_main_location
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.edit:
+    alias: ibexa.content.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.create:
+    alias: ibexa.content.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.create.proxy:
+    alias: ibexa.content.create.proxy
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.preview:
+    alias: ibexa.content.preview
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.translate.proxy:
+    alias: ibexa.content.translate.proxy
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.translate:
+    alias: ibexa.content.translate
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.check_edit_permission:
+    alias: ibexa.content.check_edit_permission
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.link_manager.edit:
+    alias: ibexa.link_manager.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.link_manager.view:
+    alias: ibexa.link_manager.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user.delete:
+    alias: ibexa.user.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.custom_url.add:
+    alias: ibexa.custom_url.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.custom_url.remove:
+    alias: ibexa.custom_url.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.url_wildcard.add:
+    alias: ibexa.url_wildcard.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.url_wildcard.update:
+    alias: ibexa.url_wildcard.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.url_wildcard.bulk_delete:
+    alias: ibexa.url_wildcard.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.url_management:
+    alias: ibexa.url_management
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_on_the_fly.create:
+    alias: ibexa.content.on_the_fly.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_on_the_fly.edit:
+    alias: ibexa.content.on_the_fly.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_on_the_fly.has_access:
+    alias: ibexa.content.on_the_fly.has_access
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user_on_the_fly.create:
+    alias: ibexa.user.on_the_fly.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user_on_the_fly.edit:
+    alias: ibexa.user.on_the_fly.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user_on_the_fly.has_access:
+    alias: ibexa.user.on_the_fly.has_access
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.groups.list:
+    alias: ibexa.object_state.groups.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.group.add:
+    alias: ibexa.object_state.group.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.group.update:
+    alias: ibexa.object_state.group.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.group.delete:
+    alias: ibexa.object_state.group.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.group.bulk_delete:
+    alias: ibexa.object_state.group.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.group.view:
+    alias: ibexa.object_state.group.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.state.add:
+    alias: ibexa.object_state.state.add
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.state.view:
+    alias: ibexa.object_state.state.view
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.state.update:
+    alias: ibexa.object_state.state.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.state.delete:
+    alias: ibexa.object_state.state.delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.state.bulk_delete:
+    alias: ibexa.object_state.state.bulk_delete
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.object_state.contentstate.update:
+    alias: ibexa.object_state.content_state.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.udw.location.data:
+    alias: ibexa.udw.location.data
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.udw.locations.data:
+    alias: ibexa.udw.locations.data
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.udw.location_gridview.data:
+    alias: ibexa.udw.location.gridview.data
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.udw.accordion.data:
+    alias: ibexa.udw.accordion.data
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.udw.accordion_gridview.data:
+    alias: ibexa.udw.accordion.gridview.data
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.bookmark.list:
+    alias: ibexa.bookmark.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.bookmark.remove:
+    alias: ibexa.bookmark.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_draft.list:
+    alias: ibexa.content_draft.list
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content_draft.remove:
+    alias: ibexa.content_draft.remove
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.notifications.get:
+    alias: ibexa.notifications.get
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.notifications.render.page:
+    alias: ibexa.notifications.render.page
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.notifications.count:
+    alias: ibexa.notifications.count
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.notifications.mark_as_read:
+    alias: ibexa.notifications.mark_as_read
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.asset.upload_image:
+    alias: ibexa.asset.upload_image
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.bulk_operation:
+    alias: ibexa.rest.bulk_operation
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.tree.load_children:
+    alias: ibexa.rest.location.tree.load_children
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.location.tree.load_subtree:
+    alias: ibexa.rest.location.tree.load_subtree
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.create_no_draft:
+    alias: ibexa.content.create_no_draft
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.draft.edit:
+    alias: ibexa.content.draft.edit
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.content.draft.create:
+    alias: ibexa.content.draft.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user.create:
+    alias: ibexa.user.create
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+ezplatform.user.update:
+    alias: ibexa.user.update
+    deprecated:
+        package: ibexa/admin-ui
+        version: 4.0.0
+
+_ez_user_hash:
+    alias: ibexa.user_hash
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+_ez_content_translation_view:
+    alias: ibexa.content.translation.view
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+_ez_content_view:
+    alias: ibexa.content.view
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+_ezpublishPreviewContent:
+    alias: ibexa.version.preview
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+_ezpublishPreviewContentDefaultSa:
+    alias: ibexa.content.preview.default
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+ez_content_download:
+    alias: ibexa.content.download
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+ez_content_download_field_id:
+    alias: ibexa.content.download.field_id
+    deprecated:
+        package: ibexa/core
+        version: 4.0.0
+
+ezpublish_rest_ezcontentquery_field_results:
+    alias: ibexa.query.rest.field_results
+    deprecated:
+        package: ibexa/fieldtype-query
+        version: 4.0.0
+
+ezplatform.httpcache.invalidatetoken:
+    alias: ibexa.http_cache.invalidate_token
+    deprecated:
+        package: ibexa/http-cache
+        version: 4.0.0
+
+ezpublish_rest_loadRootResource:
+    alias: ibexa.rest.load_root_resource
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listSections:
+    alias: ibexa.rest.list_sections
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createSection:
+    alias: ibexa.rest.create_section
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadSection:
+    alias: ibexa.rest.load_section
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateSection:
+    alias: ibexa.rest.update_section
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteSection:
+    alias: ibexa.rest.delete_section
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_redirectContent:
+    alias: ibexa.rest.redirect_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createContent:
+    alias: ibexa.rest.create_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateContentMetadata:
+    alias: ibexa.rest.update_content_metadata
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContent:
+    alias: ibexa.rest.load_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContent:
+    alias: ibexa.rest.delete_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_copyContent:
+    alias: ibexa.rest.copy_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContentTranslation:
+    alias: ibexa.rest.delete_content_translation
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_redirectCurrentVersionRelations:
+    alias: ibexa.rest.redirect_current_version_relations
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentVersions:
+    alias: ibexa.rest.load_content_versions
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadVersionRelations:
+    alias: ibexa.rest.load_version_relations
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createRelation:
+    alias: ibexa.rest.create_relation
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadVersionRelation:
+    alias: ibexa.rest.load_version_relation
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_removeRelation:
+    alias: ibexa.rest.remove_relation
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentInVersion:
+    alias: ibexa.rest.load_content_in_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateVersion:
+    alias: ibexa.rest.update_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContentVersion:
+    alias: ibexa.rest.delete_content_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteTranslationFromDraft:
+    alias: ibexa.rest.delete_translation_from_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createDraftFromVersion:
+    alias: ibexa.rest.create_draft_from_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_publishVersion:
+    alias: ibexa.rest.publish_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_redirectCurrentVersion:
+    alias: ibexa.rest.redirect_current_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createDraftFromCurrentVersion:
+    alias: ibexa.rest.create_draft_from_current_version
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_hideContent:
+    alias: ibexa.rest.hide_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_revealContent:
+    alias: ibexa.rest.reveal_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createContentView:
+    alias: ibexa.rest.create_content_view
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_views_create:
+    alias: ibexa.rest.views.create
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_views_list:
+    alias: ibexa.rest.views.list
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_views_load:
+    alias: ibexa.rest.views.load
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_views_load_results:
+    alias: ibexa.rest.views.load.results
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadObjectStateGroups:
+    alias: ibexa.rest.load_object_state_groups
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createObjectStateGroup:
+    alias: ibexa.rest.create_object_state_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadObjectStateGroup:
+    alias: ibexa.rest.load_object_state_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateObjectStateGroup:
+    alias: ibexa.rest.update_object_state_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteObjectStateGroup:
+    alias: ibexa.rest.delete_object_state_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadObjectStates:
+    alias: ibexa.rest.load_object_states
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createObjectState:
+    alias: ibexa.rest.create_object_state
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadObjectState:
+    alias: ibexa.rest.load_object_state
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateObjectState:
+    alias: ibexa.rest.update_object_state
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteObjectState:
+    alias: ibexa.rest.delete_object_state
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_getObjectStatesForContent:
+    alias: ibexa.rest.get_object_states_for_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_setObjectStatesForContent:
+    alias: ibexa.rest.set_object_states_for_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_redirectLocation:
+    alias: ibexa.rest.redirect_location
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadLocation:
+    alias: ibexa.rest.load_location
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateLocation:
+    alias: ibexa.rest.update_location
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteSubtree:
+    alias: ibexa.rest.delete_subtree
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_copySubtree:
+    alias: ibexa.rest.copy_subtree
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_moveSubtree:
+    alias: ibexa.rest.move_subtree
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_swapLocation:
+    alias: ibexa.rest.swap_location
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadLocationChildren:
+    alias: ibexa.rest.load_location_children
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadLocationsForContent:
+    alias: ibexa.rest.load_locations_for_content
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createLocation:
+    alias: ibexa.rest.create_location
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeGroupList:
+    alias: ibexa.rest.load_content_type_group_list
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createContentTypeGroup:
+    alias: ibexa.rest.create_content_type_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeGroup:
+    alias: ibexa.rest.load_content_type_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateContentTypeGroup:
+    alias: ibexa.rest.update_content_type_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContentTypeGroup:
+    alias: ibexa.rest.delete_content_type_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listContentTypesForGroup:
+    alias: ibexa.rest.list_content_types_for_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createContentType:
+    alias: ibexa.rest.create_content_type
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listContentTypes:
+    alias: ibexa.rest.list_content_types
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_copyContentType:
+    alias: ibexa.rest.copy_content_type
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentType:
+    alias: ibexa.rest.load_content_type
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createContentTypeDraft:
+    alias: ibexa.rest.create_content_type_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContentType:
+    alias: ibexa.rest.delete_content_type
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteContentTypeDraft:
+    alias: ibexa.rest.delete_content_type_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeFieldDefinitionList:
+    alias: ibexa.rest.load_content_type_field_definition_list
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeFieldDefinition:
+    alias: ibexa.rest.load_content_type_field_definition
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeDraft:
+    alias: ibexa.rest.load_content_type_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateContentTypeDraft:
+    alias: ibexa.rest.update_content_type_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_publishContentTypeDraft:
+    alias: ibexa.rest.publish_content_type_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeDraftFieldDefinitionList:
+    alias: ibexa.rest.load_content_type_draft_field_definition_list
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_addContentTypeDraftFieldDefinition:
+    alias: ibexa.rest.add_content_type_draft_field_definition
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadContentTypeDraftFieldDefinition:
+    alias: ibexa.rest.load_content_type_draft_field_definition
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateContentTypeDraftFieldDefinition:
+    alias: ibexa.rest.update_content_type_draft_field_definition
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_removeContentTypeDraftFieldDefinition:
+    alias: ibexa.rest.remove_content_type_draft_field_definition
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadGroupsOfContentType:
+    alias: ibexa.rest.load_groups_of_content_type
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_linkContentTypeToGroup:
+    alias: ibexa.rest.link_content_type_to_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_unlinkContentTypeFromGroup:
+    alias: ibexa.rest.unlink_content_type_from_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadTrashItems:
+    alias: ibexa.rest.load_trash_items
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_emptyTrash:
+    alias: ibexa.rest.empty_trash
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadTrashItem:
+    alias: ibexa.rest.load_trash_item
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteTrashItem:
+    alias: ibexa.rest.delete_trash_item
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_restoreTrashItem:
+    alias: ibexa.rest.restore_trash_item
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listURLWildcards:
+    alias: ibexa.rest.list_url_wildcards
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createURLWildcard:
+    alias: ibexa.rest.create_url_wildcard
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadURLWildcard:
+    alias: ibexa.rest.load_url_wildcard
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteURLWildcard:
+    alias: ibexa.rest.delete_url_wildcard
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listPoliciesForUser:
+    alias: ibexa.rest.list_policies_for_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listRoles:
+    alias: ibexa.rest.list_roles
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createRole:
+    alias: ibexa.rest.create_role
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createRoleDraft:
+    alias: ibexa.rest.create_role_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRole:
+    alias: ibexa.rest.load_role
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRoleDraft:
+    alias: ibexa.rest.load_role_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateRole:
+    alias: ibexa.rest.update_role
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateRoleDraft:
+    alias: ibexa.rest.update_role_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_publishRoleDraft:
+    alias: ibexa.rest.publish_role_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteRole:
+    alias: ibexa.rest.delete_role
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteRoleDraft:
+    alias: ibexa.rest.delete_role_draft
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadPolicies:
+    alias: ibexa.rest.load_policies
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_addPolicy:
+    alias: ibexa.rest.add_policy
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deletePolicies:
+    alias: ibexa.rest.delete_policies
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadPolicy:
+    alias: ibexa.rest.load_policy
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updatePolicy:
+    alias: ibexa.rest.update_policy
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deletePolicy:
+    alias: ibexa.rest.delete_policy
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_verifyUsers:
+    alias: ibexa.rest.verify_users
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUsers:
+    alias: ibexa.rest.load_users
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUser:
+    alias: ibexa.rest.load_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateUser:
+    alias: ibexa.rest.update_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteUser:
+    alias: ibexa.rest.delete_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUserGroupsOfUser:
+    alias: ibexa.rest.load_user_groups_of_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_assignUserToUserGroup:
+    alias: ibexa.rest.assign_user_to_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_unassignUserFromUserGroup:
+    alias: ibexa.rest.unassign_user_from_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUserDrafts:
+    alias: ibexa.rest.load_user_drafts
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRoleAssignmentsForUser:
+    alias: ibexa.rest.load_role_assignments_for_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_assignRoleToUser:
+    alias: ibexa.rest.assign_role_to_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRoleAssignmentForUser:
+    alias: ibexa.rest.load_role_assignment_for_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_unassignRoleFromUser:
+    alias: ibexa.rest.unassign_role_from_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUserGroups:
+    alias: ibexa.rest.load_user_groups
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRootUserGroup:
+    alias: ibexa.rest.load_root_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createRootUserGroup:
+    alias: ibexa.rest.create_root_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUserGroup:
+    alias: ibexa.rest.load_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_updateUserGroup:
+    alias: ibexa.rest.update_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteUserGroup:
+    alias: ibexa.rest.delete_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_moveUserGroup:
+    alias: ibexa.rest.move_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadSubUserGroups:
+    alias: ibexa.rest.load_sub_user_groups
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createUserGroup:
+    alias: ibexa.rest.create_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadUsersFromGroup:
+    alias: ibexa.rest.load_users_from_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createUser:
+    alias: ibexa.rest.create_user
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRoleAssignmentsForUserGroup:
+    alias: ibexa.rest.load_role_assignments_for_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_assignRoleToUserGroup:
+    alias: ibexa.rest.assign_role_to_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadRoleAssignmentForUserGroup:
+    alias: ibexa.rest.load_role_assignment_for_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_unassignRoleFromUserGroup:
+    alias: ibexa.rest.unassign_role_from_user_group
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createSession:
+    alias: ibexa.rest.create_session
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteSession:
+    alias: ibexa.rest.delete_session
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_refreshSession:
+    alias: ibexa.rest.refresh_session
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listGlobalURLAliases:
+    alias: ibexa.rest.list_global_url_aliases
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_listLocationURLAliases:
+    alias: ibexa.rest.list_location_url_aliases
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createURLAlias:
+    alias: ibexa.rest.create_url_alias
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadURLAlias:
+    alias: ibexa.rest.load_url_alias
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteURLAlias:
+    alias: ibexa.rest.delete_url_alias
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadCountryList:
+    alias: ibexa.rest.load_country_list
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_createBookmark:
+    alias: ibexa.rest.create_bookmark
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_deleteBookmark:
+    alias: ibexa.rest.delete_bookmark
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_isBookmarked:
+    alias: ibexa.rest.is_bookmarked
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezpublish_rest_loadBookmarks:
+    alias: ibexa.rest.load_bookmarks
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ibexa.platform.rest.create_token:
+    alias: ibexa.rest.create_token
+    deprecated:
+        package: ibexa/rest
+        version: 4.0.0
+
+ezplatform.search:
+    alias: ibexa.search
+    deprecated:
+        package: ibexa/search
+        version: 4.0.0
+
+ezplatform.user_profile.change_password:
+    alias: ibexa.user_profile.change_password
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.forgot_password:
+    alias: ibexa.user.forgot_password
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.forgot_password.migration:
+    alias: ibexa.user.forgot_password.migration
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.forgot_password.login:
+    alias: ibexa.user.forgot_password.login
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.reset_password:
+    alias: ibexa.user.reset_password
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.register:
+    alias: ibexa.user.register
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.user_register:
+    alias: ibexa.user.user_register
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.register_confirmation:
+    alias: ibexa.user.register_confirmation
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user.user_register_confirmation:
+    alias: ibexa.user.user_register_confirmation
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user_settings.list:
+    alias: ibexa.user_settings.list
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
+
+ezplatform.user_settings.update:
+    alias: ibexa.user_settings.update
+    deprecated:
+        package: ibexa/user
+        version: 4.0.0
