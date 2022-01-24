@@ -16,6 +16,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
 use Ibexa\CompatibilityLayer\Parser\ClassNameVisitor;
 use Ibexa\CompatibilityLayer\Parser\DocblockVisitor;
 use Ibexa\CompatibilityLayer\Parser\ExtensionVisitor;
+use Ibexa\CompatibilityLayer\Parser\RouteNameVisitor;
 use PhpParser\Lexer;
 use PhpParser\Lexer\Emulative;
 use PhpParser\NodeTraverser;
@@ -38,6 +39,10 @@ class PhpRebranding implements RebrandingInterface
 
     private array $extensionMap;
 
+    private array $routeNamesMap;
+
+    private array $servicesMap;
+
     public function __construct()
     {
         $this->nameResolver = new AggregateResolver([
@@ -54,6 +59,8 @@ class PhpRebranding implements RebrandingInterface
         $this->parser = (new ParserFactory())->create(ParserFactory::ONLY_PHP7, $this->lexer);
         $this->printer = new Standard();
         $this->extensionMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-extension-name-map.php';
+        $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
+        $this->servicesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'services-to-fqcn-map.php';
     }
 
     public function rebrand(string $input): string
@@ -66,6 +73,7 @@ class PhpRebranding implements RebrandingInterface
         $traverser->addVisitor(new ExtensionVisitor($this->extensionMap));
         $traverser->addVisitor(new ClassNameVisitor($this->nameResolver));
         $traverser->addVisitor(new DocblockVisitor($this->nameResolver));
+        $traverser->addVisitor(new RouteNameVisitor($this->routeNamesMap));
 
         try {
             $parsed = $this->parser->parse($input);
@@ -79,6 +87,8 @@ class PhpRebranding implements RebrandingInterface
             $this->lexer->getTokens()
         );
 
+        $output = $this->rebrandServices($output);
+
         return $output;
     }
 
@@ -87,5 +97,28 @@ class PhpRebranding implements RebrandingInterface
         return [
             '*.php',
         ];
+    }
+
+    private function rebrandServices(string $input): string
+    {
+        $output = $input;
+
+        foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
+            if (class_exists($newServiceName)) {
+                $output = preg_replace(
+                    '/(?<!\.|_)' . '\'' . preg_quote($oldServiceName) . '\'' . '/',
+                    '${1}' . '\\' . $newServiceName . '::class',
+                    $output
+                );
+            } else {
+                $output = preg_replace(
+                    '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\'\":]|$)/m',
+                    '${1}' . $newServiceName,
+                    $output
+                );
+            }
+        }
+
+        return $output;
     }
 }

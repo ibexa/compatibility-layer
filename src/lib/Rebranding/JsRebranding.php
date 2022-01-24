@@ -22,6 +22,7 @@ class JsRebranding extends ResourceRebranding
             );
         }
 
+        $output = str_replace(array_keys($this->routeNamesMap), array_values($this->routeNamesMap), $output);
         $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
 
         return $output;

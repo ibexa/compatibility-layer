@@ -11,7 +11,7 @@ namespace Ibexa\CompatibilityLayer\Rebranding;
 class ComposerRebranding implements RebrandingInterface
 {
     protected const REPOSITORY_MAP = [
-        'ezsystems/behatbundle' => 'ibexa/behat',
+        // 'ezsystems/behatbundle' => 'ibexa/behat',
         'ezsystems/ezplatform-automated-translation' => 'ibexa/automated-translation',
         'ezsystems/ezplatform-core' => 'ibexa/core-extensions',
         'ezsystems/ezplatform-i18n' => 'ibexa/i18n',
@@ -84,7 +84,7 @@ class ComposerRebranding implements RebrandingInterface
 
         $output = preg_replace(
             '/"php": ".+"/',
-            '"php": "^7.4"',
+            '"php": "^7.4 || ^8.0"',
             $output
         );
 

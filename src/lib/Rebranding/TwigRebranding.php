@@ -22,6 +22,7 @@ class TwigRebranding extends ResourceRebranding
         $output = parent::rebrand($input);
 
         $output = preg_replace('/@ezdesign\//', '@ibexadesign/', $output);
+        $output = str_replace(array_keys($this->routeNamesMap), array_values($this->routeNamesMap), $output);
 
         return $output;
     }
