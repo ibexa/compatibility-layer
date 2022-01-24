@@ -1,0 +1,203 @@
+ezplatform.form_builder.form.preview_form:
+    alias: ibexa.form_builder.form.preview_form
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.submission.remove:
+    alias: ibexa.submission.remove
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.submission.download:
+    alias: ibexa.submission.download
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.form_builder.form.preview_form_field:
+    alias: ibexa.form_builder.form.preview_form_field
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.form_builder.field.request_configuration_form:
+    alias: ibexa.form_builder.field.request_configuration_form
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.form_builder.field.configure:
+    alias: ibexa.form_builder.field.configure
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.form_builder.captcha.get_url:
+    alias: ibexa.form_builder.captcha.get_url
+    deprecated:
+        package: ibexa/form-builder
+        version: 4.0.0
+
+ezplatform.page_builder.edit:
+    alias: ibexa.page_builder.edit
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.create:
+    alias: ibexa.page_builder.create
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.layout:
+    alias: ibexa.page_builder.layout
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.block.request_configuration_form:
+    alias: ibexa.page_builder.block.request_configuration_form
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.block.configure:
+    alias: ibexa.page_builder.block.configure
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.block.siteaccess_preview:
+    alias: ibexa.page_builder.block.siteaccess_preview
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.site.preview:
+    alias: ibexa.page_builder.site.preview
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page.block.schedule_block.list_content:
+    alias: ibexa.page.block.schedule_block.list_content
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezplatform.page_builder.timeline.events.get:
+    alias: ibexa.page_builder.timeline.events.get
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+page_builder_content_preview:
+    alias: ibexa.page_builder.content.preview
+    deprecated:
+        package: ibexa/page-builder
+        version: 4.0.0
+
+ezpublish_landing_page_block_render:
+    alias: ibexa.page.block.render
+    deprecated:
+        package: ibexa/fieldtype-page
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.list:
+    alias: ibexa.segmentation.group.list
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.view:
+    alias: ibexa.segmentation.group.view
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.create:
+    alias: ibexa.segmentation.group.create
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.update:
+    alias: ibexa.segmentation.group.update
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.delete:
+    alias: ibexa.segmentation.group.delete
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.group.bulk_delete:
+    alias: ibexa.segmentation.group.bulk_delete
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.segment.create:
+    alias: ibexa.segmentation.segment.create
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.segment.update:
+    alias: ibexa.segmentation.segment.update
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ibexa.platform.segmentation.segment.bulk_delete:
+    alias: ibexa.segmentation.segment.bulk_delete
+    deprecated:
+        package: ibexa/segmentation
+        version: 4.0.0
+
+ezplatform.site_factory.grid:
+    alias: ibexa.site_factory.grid
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.list:
+    alias: ibexa.site_factory.list
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.create:
+    alias: ibexa.site_factory.create
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.delete:
+    alias: ibexa.site_factory.delete
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.bulk_delete:
+    alias: ibexa.site_factory.bulk_delete
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.edit:
+    alias: ibexa.site_factory.edit
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
+
+ezplatform.site_factory.view:
+    alias: ibexa.site_factory.view
+    deprecated:
+        package: ibexa/site-factory
+        version: 4.0.0
