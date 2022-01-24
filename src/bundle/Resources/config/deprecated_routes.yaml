@@ -749,19 +749,19 @@ ezplatform.asset.upload_image:
         version: 4.0.0
 
 ezplatform.bulk_operation:
-    alias: ibexa.bulk_operation
+    alias: ibexa.rest.bulk_operation
     deprecated:
         package: ibexa/admin-ui
         version: 4.0.0
 
 ezplatform.location.tree.load_children:
-    alias: ibexa.location.tree.load_children
+    alias: ibexa.rest.location.tree.load_children
     deprecated:
         package: ibexa/admin-ui
         version: 4.0.0
 
 ezplatform.location.tree.load_subtree:
-    alias: ibexa.location.tree.load_subtree
+    alias: ibexa.rest.location.tree.load_subtree
     deprecated:
         package: ibexa/admin-ui
         version: 4.0.0
