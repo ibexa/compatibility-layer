@@ -95,6 +95,7 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
+        $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
 
         return $output;
     }
