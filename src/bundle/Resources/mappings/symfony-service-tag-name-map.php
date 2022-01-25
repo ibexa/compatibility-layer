@@ -21,6 +21,7 @@ return [
     'ezplatform.calendar.event_type.future_hide.action' => 'ibexa.calendar.event.type.action.future_hide',
     'ezplatform.calendar.event_type.future_publication.action' => 'ibexa.calendar.event.type.action.future_publication',
     'ezplatform.calendar.event_type.page_block_reveal.action' => 'ibexa.calendar.event.type.action.page_block_reveal',
+    'ezplatform.calendar.event_type.page_block_hide.action' => 'ibexa.calendar.event.type.action.page_block_hide',
     'ezplatform.calendar.event_type' => 'ibexa.calendar.event.type',
     'ezplatform.cron.job' => 'ibexa.cron.job',
     'ezplatform.ezrichtext.configuration.provider' => 'ibexa.field_type.richtext.configuration.provider',
