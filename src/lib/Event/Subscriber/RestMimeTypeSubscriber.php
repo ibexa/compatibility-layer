@@ -8,7 +8,7 @@ declare(strict_types=1);
 
 namespace Ibexa\CompatibilityLayer\Event\Subscriber;
 
-use Ibexa\Contracts\Rest\Event\DispatchParsingData;
+use Ibexa\Contracts\Rest\Event\BeforeParseEvent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\RequestEvent;
 
@@ -23,7 +23,7 @@ final class RestMimeTypeSubscriber implements EventSubscriberInterface
     {
         return [
             RequestEvent::class => ['onKernelRequest', 1000],
-            DispatchParsingData::class => ['onDispatchParsing', 0],
+            BeforeParseEvent::class => ['onDispatchParsing', 0],
         ];
     }
 
@@ -44,7 +44,7 @@ final class RestMimeTypeSubscriber implements EventSubscriberInterface
         }
     }
 
-    public function onDispatchParsing(DispatchParsingData $dispatchParsingEvent): void
+    public function onDispatchParsing(BeforeParseEvent $dispatchParsingEvent): void
     {
         $dispatchParsingEvent->setMediaType(
             str_replace(
