@@ -492,4 +492,5 @@ return [
     '_ez_user_hash' => 'ibexa.user_hash',
     'ibexa_stored_baskets_list_data => ibexa.commerce.basket.list_data',
     'ibexa_add_to_basket_data => ibexa.commerce.basket.add_data',
+    'ez_urlalias' => 'ibexa.url.alias',
 ];
