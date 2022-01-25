@@ -88,6 +88,7 @@ class PhpRebranding implements RebrandingInterface
         );
 
         $output = $this->rebrandServices($output);
+        $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
 
         return $output;
     }
