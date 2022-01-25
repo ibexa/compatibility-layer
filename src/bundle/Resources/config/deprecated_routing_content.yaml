@@ -124,12 +124,6 @@ ez_recommendation.export.download:
         package: ibexa/personalization
         version: 4.0.0
 
-ez_recommendation.export.export:
-    alias: ibexa.personalization.export.export
-    deprecated:
-        package: ibexa/personalization
-        version: 4.0.0
-
 ezplatform.version.side_by_side_comparison:
     alias: ibexa.version.side_by_side_comparison
     deprecated:
