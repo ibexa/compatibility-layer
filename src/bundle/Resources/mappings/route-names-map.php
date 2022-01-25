@@ -165,7 +165,6 @@ return [
     'ez_recommendation.content_type.get_content' => 'ibexa.personalization.content_type.get_content',
     'ez_recommendation.content_type.get_content_type' => 'ibexa.personalization.content_type.get_content_type',
     'ez_recommendation.export.download' => 'ibexa.personalization.export.download',
-    'ez_recommendation.export.export' => 'ibexa.personalization.export.export',
     'ezpublish_rest_loadRootResource' => 'ibexa.rest.load_root_resource',
     'ezpublish_rest_listSections' => 'ibexa.rest.list_sections',
     'ezpublish_rest_createSection' => 'ibexa.rest.create_section',
