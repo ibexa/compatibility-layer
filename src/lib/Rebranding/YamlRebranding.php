@@ -16,6 +16,7 @@ class YamlRebranding extends ResourceRebranding
 
         $output = $this->rebrandExtension($output);
         $output = $this->rebrandRouteNames($output);
+        $output = $this->rebrandServiceTagNames($output);
 
         return $output;
     }
@@ -41,8 +42,23 @@ class YamlRebranding extends ResourceRebranding
 
         foreach ($this->routeNamesMap as $oldRouteName => $newRouteName) {
             $output = preg_replace(
-                '/^' . $oldRouteName . ':$/m',
+                '/^' . preg_quote($oldRouteName) . ':$/m',
                 $newRouteName . ':',
+                $output
+            );
+        }
+
+        return $output;
+    }
+
+    protected function rebrandServiceTagNames(string $input): string
+    {
+        $output = $input;
+
+        foreach ($this->serviceTagNamesMap as $oldServiceTagName => $newServiceTagName) {
+            $output = preg_replace(
+                '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName) . '([^a-zA-Z0-9\._])/',
+                '${1}' . $newServiceTagName . '${2}',
                 $output
             );
         }
