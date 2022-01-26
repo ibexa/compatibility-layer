@@ -477,7 +477,6 @@ return [
     'ibexa.platform.segmentation.segment.create' => 'ibexa.segmentation.segment.create',
     'ibexa.platform.segmentation.segment.update' => 'ibexa.segmentation.segment.update',
     'ibexa.platform.segmentation.segment.bulk_delete' => 'ibexa.segmentation.segment.bulk_delete',
-    'SilversolutionsEshopBundle' => 'ibexa.commerce.catalog.show',
     'page_builder_content_preview' => 'ibexa.page_builder.content.preview',
     'datebasedpublisher_content_schedule_hide' => 'ibexa.scheduler.content.schedule.hide',
     'datebasedpublisher_content_schedule_hide_cancel' => 'ibexa.scheduler.content.schedule.hide.cancel',
@@ -492,4 +491,7 @@ return [
     'ibexa_stored_baskets_list_data' => 'ibexa.commerce.basket.list_data',
     'ibexa_add_to_basket_data' => 'ibexa.commerce.basket.add_data',
     'ez_urlalias' => 'ibexa.url.alias',
+
+    /* Disabled intentionally, do not uncomment unless neccessary */
+    // 'SilversolutionsEshopBundle' => 'ibexa.commerce.catalog.show',
 ];
