@@ -489,7 +489,7 @@ return [
     'datebasedpublisher_rest_getScheduledVersions' => 'ibexa.scheduler.rest.get_scheduled_versions',
     'datebasedpublisher_rest_getUserScheduledVersions' => 'ibexa.scheduler.rest.get_user_scheduled_versions',
     '_ez_user_hash' => 'ibexa.user_hash',
-    'ibexa_stored_baskets_list_data => ibexa.commerce.basket.list_data',
-    'ibexa_add_to_basket_data => ibexa.commerce.basket.add_data',
+    'ibexa_stored_baskets_list_data' => 'ibexa.commerce.basket.list_data',
+    'ibexa_add_to_basket_data' => 'ibexa.commerce.basket.add_data',
     'ez_urlalias' => 'ibexa.url.alias',
 ];

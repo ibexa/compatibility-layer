@@ -11,6 +11,7 @@ namespace Ibexa\CompatibilityLayer\Parser;
 use PhpParser\Comment;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\UseUse;
+use function Symfony\Component\DependencyInjection\Loader\Configurator\iterator;
 
 class DocblockVisitor extends RebrandingVisitor
 {
@@ -27,6 +28,10 @@ class DocblockVisitor extends RebrandingVisitor
         }
 
         if (isset($node->getAttributes()['comments'])) {
+            if ($node instanceof Node\AttributeGroup) {
+                return;
+            }
+
             $comments = $node->getAttributes()['comments'];
 
             /** @var \PhpParser\Comment $comment */
@@ -39,7 +44,7 @@ class DocblockVisitor extends RebrandingVisitor
                 }
 
                 foreach ($lines as &$line) {
-                    preg_match('/(\/\*\*|\s\*) @(var|param|see|throws|return) ([a-zA-Z0-9\\\\\\|]+)(.*)/', $line, $match);
+                    preg_match('/(\s*\/\*\*|\s*\*) @(var|param|see|throws|return) ([a-zA-Z0-9\\\\\\|]+)(.*)/', $line, $match);
 
                     if (!empty($match)) {
                         $types = explode('|', $match[3]);
@@ -59,8 +64,15 @@ class DocblockVisitor extends RebrandingVisitor
                         $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $types), $match[4]);
                     }
                 }
+                $newComment = new Comment\Doc(
+                    implode("\n", $lines),
+                    $comment->getStartLine(), $comment->getStartFilePos(), $comment->getStartTokenPos(),
+                    $comment->getEndLine(), $comment->getEndFilePos(), $comment->getEndTokenPos()
+                );
 
-                $comment = new Comment\Doc(implode("\n", $lines));
+                if ($comment->getText() !== $newComment->getText()) {
+                     $comment = $newComment;
+                }
             }
 
             $node->setAttribute('comments', $comments);
