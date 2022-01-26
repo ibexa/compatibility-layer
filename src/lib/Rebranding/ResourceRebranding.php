@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Ibexa\CompatibilityLayer\Rebranding;
 
 use Ibexa\Bundle\CompatibilityLayer\IbexaCompatibilityLayerBundle;
+use Ibexa\CompatibilityLayer\Event\Subscriber\RestPrefixSubscriber;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
@@ -96,6 +97,7 @@ abstract class ResourceRebranding implements RebrandingInterface
 
         $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
+        $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
 
         return $output;
     }

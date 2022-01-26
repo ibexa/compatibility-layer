@@ -42,3 +42,7 @@ services:
     Ibexa\CompatibilityLayer\Event\Subscriber\RestMimeTypeSubscriber:
         tags:
             - { name: kernel.event_subscriber }
+
+    Ibexa\CompatibilityLayer\Event\Subscriber\RestPrefixSubscriber:
+        tags:
+            - { name: kernel.event_subscriber }

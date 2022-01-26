@@ -10,6 +10,7 @@ namespace Ibexa\CompatibilityLayer\Rebranding;
 
 use Exception;
 use Ibexa\Bundle\CompatibilityLayer\IbexaCompatibilityLayerBundle;
+use Ibexa\CompatibilityLayer\Event\Subscriber\RestPrefixSubscriber;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
@@ -89,6 +90,7 @@ class PhpRebranding implements RebrandingInterface
 
         $output = $this->rebrandServices($output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
+        $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
 
         return $output;
     }
