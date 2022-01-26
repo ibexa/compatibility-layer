@@ -64,11 +64,7 @@ class DocblockVisitor extends RebrandingVisitor
                         $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $types), $match[4]);
                     }
                 }
-                $newComment = new Comment\Doc(
-                    implode("\n", $lines),
-                    $comment->getStartLine(), $comment->getStartFilePos(), $comment->getStartTokenPos(),
-                    $comment->getEndLine(), $comment->getEndFilePos(), $comment->getEndTokenPos()
-                );
+                $newComment = new Comment\Doc(implode("\n", $lines));
 
                 if ($comment->getText() !== $newComment->getText()) {
                      $comment = $newComment;
