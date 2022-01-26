@@ -14,8 +14,8 @@ use Symfony\Component\HttpKernel\HttpKernelInterface;
 
 final class RestPrefixSubscriber implements EventSubscriberInterface
 {
-    private const LEGACY_REST_PREFIX = '/api/ezp/v2';
-    private const IBEXA_REST_PREFIX = '/api/ibexa/v2';
+    public const LEGACY_REST_PREFIX = '/api/ezp/v2';
+    public const IBEXA_REST_PREFIX = '/api/ibexa/v2';
 
     private HttpKernelInterface $kernel;
 
@@ -47,7 +47,7 @@ final class RestPrefixSubscriber implements EventSubscriberInterface
                         self::LEGACY_REST_PREFIX,
                         self::IBEXA_REST_PREFIX,
                         $request->getRequestUri()
-                    )
+                    ),
                 ])
             );
             $event->setResponse(
