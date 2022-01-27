@@ -49,19 +49,19 @@ class YamlRebranding extends ResourceRebranding
             );
 
             $output = preg_replace(
-                "/^\\s*" . preg_quote($classParameter) . ":.*\n/m",
+                '/^\\s*' . preg_quote($classParameter) . ":.*\n/m",
                 '',
                 $output
             );
 
             $output = preg_replace(
-                "/^(\\s+)" . preg_quote($fqcn) . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn) . "\n/m",
+                '/^(\\s+)' . preg_quote($fqcn) . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn) . "\n/m",
                 '${1}' . $fqcn . ":\n" . '${2}',
                 $output
             );
 
             $output = preg_replace(
-                "/^(\\s+)" . preg_quote($fqcn) . ":\n\n/m",
+                '/^(\\s+)' . preg_quote($fqcn) . ":\n\n/m",
                 '${1}' . $fqcn . ": ~\n\n",
                 $output
             );

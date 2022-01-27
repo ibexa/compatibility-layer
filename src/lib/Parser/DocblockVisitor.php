@@ -63,7 +63,7 @@ class DocblockVisitor extends RebrandingVisitor
                                 }
                             }
 
-                            $orType = implode("&", $andTypes);
+                            $orType = implode('&', $andTypes);
                         }
 
                         $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $orTypes), $match[4]);
