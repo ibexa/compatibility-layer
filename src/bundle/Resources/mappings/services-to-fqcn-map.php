@@ -128,7 +128,7 @@ return [
     'ezplatform.form_builder.attribute_form_type_mapper.string' => 'ibexa.form_builder.attribute_form_type_mapper.string',
     'ezplatform.form_builder.attribute_form_type_mapper.text' => 'ibexa.form_builder.attribute_form_type_mapper.text',
     'ezplatform.form_builder.attribute_form_type_mapper.url' => 'ibexa.form_builder.attribute_form_type_mapper.url',
-    'ezplatform.form_builder.block.attribue_subscriber.embed_form' => 'Ibexa\\FieldTypePage\\Event\\Subscriber\\EmbedAttributeSubscriber',
+    'ezplatform.form_builder.block.attribue_subscriber.embed_form' => 'ibexa.form_builder.block.attribute_subscriber.embed_form',
     'ezplatform.form_builder.block.attribute_form_type_mapper.embed_form' => 'ibexa.form_builder.block.attribute_form_type_mapper.embed_form',
     'ezplatform.form_builder.field_submission_converter.checkbox' => 'Ibexa\\FormBuilder\\FormSubmission\\Converter\\BooleanFieldSubmissionConverter',
     'ezplatform.form_builder.field_submission_converter.checkbox_list' => 'Ibexa\\FormBuilder\\FormSubmission\\Converter\\ArrayFieldSubmissionConverter',
