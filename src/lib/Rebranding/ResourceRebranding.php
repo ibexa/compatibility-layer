@@ -31,6 +31,8 @@ abstract class ResourceRebranding implements RebrandingInterface
 
     protected array $serviceTagNamesMap;
 
+    protected array $classParametersMap;
+
     public function __construct()
     {
         $classMapResolver = new ClassMapResolver();
@@ -46,6 +48,7 @@ abstract class ResourceRebranding implements RebrandingInterface
         $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
         $this->servicesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'services-to-fqcn-map.php';
         $this->serviceTagNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-service-tag-name-map.php';
+        $this->classParametersMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'class-parameters-map.php';
     }
 
     public function rebrand(string $input): string
