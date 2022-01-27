@@ -98,6 +98,7 @@ abstract class ResourceRebranding implements RebrandingInterface
             );
         }
 
+        $output = preg_replace('/@ezdesign\//', '@ibexadesign/', $output);
         $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
