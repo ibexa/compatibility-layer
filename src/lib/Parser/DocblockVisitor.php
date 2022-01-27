@@ -11,7 +11,6 @@ namespace Ibexa\CompatibilityLayer\Parser;
 use PhpParser\Comment;
 use PhpParser\Node;
 use PhpParser\Node\Stmt\UseUse;
-use function Symfony\Component\DependencyInjection\Loader\Configurator\iterator;
 
 class DocblockVisitor extends RebrandingVisitor
 {
@@ -67,7 +66,7 @@ class DocblockVisitor extends RebrandingVisitor
                 $newComment = new Comment\Doc(implode("\n", $lines));
 
                 if ($comment->getText() !== $newComment->getText()) {
-                     $comment = $newComment;
+                    $comment = $newComment;
                 }
             }
 
