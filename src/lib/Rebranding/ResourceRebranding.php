@@ -50,7 +50,7 @@ abstract class ResourceRebranding implements RebrandingInterface
 
     public function rebrand(string $input): string
     {
-        $pattern = '/([\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*(\\\\|))+)/m';
+        $pattern = '/([>\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*(\\\\|))+)/m';
 
         preg_match_all($pattern, $input, $matches);
 

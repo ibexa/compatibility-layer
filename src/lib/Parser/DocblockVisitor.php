@@ -43,24 +43,30 @@ class DocblockVisitor extends RebrandingVisitor
                 }
 
                 foreach ($lines as &$line) {
-                    preg_match('/(\s*\/\*\*|\s*\*) @(var|param|see|throws|return) ([a-zA-Z0-9\\\\\\|]+)(.*)/', $line, $match);
+                    preg_match('/(\s*\/\*\*|\s*\*) @(var|param|see|throws|return) ([a-zA-Z0-9\\\\\\|&]+)(.*)/', $line, $match);
 
                     if (!empty($match)) {
-                        $types = explode('|', $match[3]);
+                        $orTypes = explode('|', $match[3]);
 
-                        foreach ($types as &$type) {
-                            if (isset($this->resolvedUses[$type])) {
-                                $type = '\\' . $this->resolvedUses[$type];
-                            } else {
-                                $resolvedType = $this->nameResolver->resolve(ltrim($type, '\\'));
+                        foreach ($orTypes as &$orType) {
+                            $andTypes = explode('&', $orType);
 
-                                if ($resolvedType !== null) {
-                                    $type = '\\' . $resolvedType;
+                            foreach ($andTypes as &$andType) {
+                                if (isset($this->resolvedUses[$andType])) {
+                                    $andType = '\\' . $this->resolvedUses[$andType];
+                                } else {
+                                    $resolvedType = $this->nameResolver->resolve(ltrim($andType, '\\'));
+
+                                    if ($resolvedType !== null) {
+                                        $andType = '\\' . $resolvedType;
+                                    }
                                 }
                             }
+
+                            $orType = implode("&", $andTypes);
                         }
 
-                        $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $types), $match[4]);
+                        $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $orTypes), $match[4]);
                     }
                 }
                 $newComment = new Comment\Doc(implode("\n", $lines));
