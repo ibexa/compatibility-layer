@@ -10,6 +10,7 @@ namespace Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler;
 
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 use Ibexa\CompatibilityLayer\ServiceResolver\ServiceNameResolver;
+use Symfony\Component\DependencyInjection\Alias;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Definition;
@@ -32,7 +33,7 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
 
     public function process(ContainerBuilder $container): void
     {
-        foreach ($container->getAliases() as $name => $definition) {
+        foreach ($container->getAliases() as $name => $alias) {
             $oldClassName = $this->fqcnNameResolver->resolve($name);
 
             if (!empty($oldClassName) && !$container->hasAlias($oldClassName)) {
@@ -42,7 +43,7 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
             $oldServiceName = $this->serviceNameResolver->resolve($name);
 
             if (!empty($oldServiceName) && !$container->hasAlias($oldServiceName)) {
-                $container->setAlias($oldServiceName, $name);
+                $container->setAlias($oldServiceName, $alias);
             }
         }
 
@@ -52,7 +53,14 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
 
             $oldServiceName = $this->serviceNameResolver->resolve($name);
             if ($oldServiceName !== null) {
-                $container->setAlias($oldServiceName, $name);
+                if ($this->isController($definition) || $definition->isPublic()) {
+                    $alias = new Alias($name, true);
+                    $container->setAlias($oldServiceName, $alias);
+
+                } else {
+                    $container->setAlias($oldServiceName, $name);
+                }
+
             }
         }
     }
@@ -82,9 +90,20 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
                 }
             }
 
+            if ($this->isController($definition) || $definition->isPublic()) {
+                $alias = new Alias($name, true);
+                $container->setAlias($oldClassName, $alias);
+                return;
+            }
+
             if (!$container->hasDefinition($oldClassName)) {
                 $container->setAlias($oldClassName, $name);
             }
         }
+    }
+
+    private function isController(Definition $definition): bool
+    {
+        return $definition->hasTag('controller.service_arguments');
     }
 }
