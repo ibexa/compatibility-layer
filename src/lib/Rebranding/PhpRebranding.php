@@ -101,6 +101,7 @@ class PhpRebranding implements RebrandingInterface
         $output = $this->rebrandServices($output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
+        $output = preg_replace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
 
         return $output;
     }
