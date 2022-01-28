@@ -13,8 +13,8 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 use Ibexa\CompatibilityLayer\ServiceResolver\ServiceNameResolver;
-use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
 
 class ControllerResolver implements ControllerResolverInterface
 {
@@ -49,6 +49,7 @@ class ControllerResolver implements ControllerResolverInterface
             if (isset($controller[0]) && \is_string($controller[0]) && isset($controller[1])) {
                 $controller[0] = $this->getNewControllerName($controller[0]);
                 $request->attributes->set('_controller', $controller);
+
                 return $this->controllerResolver->getController($request);
             }
         }

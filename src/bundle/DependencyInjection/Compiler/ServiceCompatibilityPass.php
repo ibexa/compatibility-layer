@@ -56,11 +56,9 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
                 if ($this->isController($definition) || $definition->isPublic()) {
                     $alias = new Alias($name, true);
                     $container->setAlias($oldServiceName, $alias);
-
                 } else {
                     $container->setAlias($oldServiceName, $name);
                 }
-
             }
         }
     }
@@ -93,6 +91,7 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
             if ($this->isController($definition) || $definition->isPublic()) {
                 $alias = new Alias($name, true);
                 $container->setAlias($oldClassName, $alias);
+
                 return;
             }
 
