@@ -17,6 +17,7 @@ class YamlRebranding extends ResourceRebranding
         $output = $this->rebrandExtension($output);
         $output = $this->rebrandRouteNames($output);
         $output = $this->rebrandServiceTagNames($output);
+        $output = $this->replaceClassParameters($output);
 
         return $output;
     }
@@ -29,6 +30,39 @@ class YamlRebranding extends ResourceRebranding
             $output = preg_replace(
                 '/^' . $oldExtension . ':$/m',
                 $newExtension . ':',
+                $output
+            );
+        }
+
+        return $output;
+    }
+
+    protected function replaceClassParameters(string $input): string
+    {
+        $output = $input;
+
+        foreach ($this->classParametersMap as $classParameter => $fqcn) {
+            $output = preg_replace(
+                '/["\']%' . preg_quote($classParameter) . '%["\']/',
+                $fqcn,
+                $output
+            );
+
+            $output = preg_replace(
+                '/^\\s*' . preg_quote($classParameter) . ":.*\n/m",
+                '',
+                $output
+            );
+
+            $output = preg_replace(
+                '/^(\\s+)' . preg_quote($fqcn) . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn) . "\n/m",
+                '${1}' . $fqcn . ":\n" . '${2}',
+                $output
+            );
+
+            $output = preg_replace(
+                '/^(\\s+)' . preg_quote($fqcn) . ":\n\n/m",
+                '${1}' . $fqcn . ": ~\n\n",
                 $output
             );
         }

@@ -15,6 +15,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\AggregateResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
 use Ibexa\CompatibilityLayer\Parser\ClassNameVisitor;
+use Ibexa\CompatibilityLayer\Parser\ClassParameterVisitor;
 use Ibexa\CompatibilityLayer\Parser\DocblockVisitor;
 use Ibexa\CompatibilityLayer\Parser\ExtensionVisitor;
 use Ibexa\CompatibilityLayer\Parser\RouteNameVisitor;
@@ -47,6 +48,8 @@ class PhpRebranding implements RebrandingInterface
 
     private array $serviceTagNamesMap;
 
+    private array $classParametersMap;
+
     public function __construct()
     {
         $this->nameResolver = new AggregateResolver([
@@ -66,6 +69,7 @@ class PhpRebranding implements RebrandingInterface
         $this->routeNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'route-names-map.php';
         $this->servicesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'services-to-fqcn-map.php';
         $this->serviceTagNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-service-tag-name-map.php';
+        $this->classParametersMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'class-parameters-map.php';
     }
 
     public function rebrand(string $input): string
@@ -80,6 +84,7 @@ class PhpRebranding implements RebrandingInterface
         $traverser->addVisitor(new DocblockVisitor($this->nameResolver));
         $traverser->addVisitor(new RouteNameVisitor($this->routeNamesMap));
         $traverser->addVisitor(new ServiceTagNameVisitor($this->serviceTagNamesMap));
+        $traverser->addVisitor(new ClassParameterVisitor($this->classParametersMap));
 
         try {
             $parsed = $this->parser->parse($input);
