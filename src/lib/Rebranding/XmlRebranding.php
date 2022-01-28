@@ -16,7 +16,6 @@ class XmlRebranding extends ResourceRebranding
 
         $output = $this->replace($this->routeNamesMap, $output);
         $output = $this->replace($this->serviceTagNamesMap, $output);
-        $output = str_replace(array_keys($this->routeNamesMap), array_values($this->routeNamesMap), $output);
 
         foreach ($this->classParametersMap as $classParameter => $fqcn) {
             $output = preg_replace(
