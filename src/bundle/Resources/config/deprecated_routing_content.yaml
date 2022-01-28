@@ -1,3 +1,6 @@
+ibexa.compatibility_layer.oss:
+    resource: 'deprecated_routing_oss.yaml'
+
 datebasedpublisher_content_schedule_hide:
     alias: ibexa.scheduler.content.schedule.hide
     deprecated:

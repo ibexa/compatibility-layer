@@ -1,3 +1,6 @@
+ibexa.compatibility_layer.content:
+    resource: 'deprecated_routing_content.yaml'
+
 ezplatform.form_builder.form.preview_form:
     alias: ibexa.form_builder.form.preview_form
     deprecated:

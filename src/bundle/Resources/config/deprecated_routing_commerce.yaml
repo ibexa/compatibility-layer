@@ -1,3 +1,6 @@
+ibexa.compatibility_layer.experience:
+    resource: 'deprecated_routing_experience.yaml'
+
 silver_eshop_rest.dashboard_charts:
     alias: ibexa.commerce.rest.dashboard.charts
     deprecated:
