@@ -46,3 +46,8 @@ services:
     Ibexa\CompatibilityLayer\Event\Subscriber\RestPrefixSubscriber:
         tags:
             - { name: kernel.event_subscriber }
+
+    Ibexa\CompatibilityLayer\HttpKernel\Controller\ControllerResolver:
+        decorates: controller_resolver
+        arguments:
+            $controllerResolver: '@Ibexa\CompatibilityLayer\HttpKernel\Controller\ControllerResolver.inner'
