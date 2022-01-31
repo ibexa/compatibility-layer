@@ -597,7 +597,7 @@ return [
   'eZ\\Publish\\Core\\Repository\\ProxyFactory\\ProxyGeneratorInterface' => 'Ibexa\\Core\\Repository\\ProxyFactory\\ProxyGeneratorInterface',
   'eZ\\Publish\\Core\\Repository\\ProxyFactory\\ProxyDomainMapperInterface' => 'Ibexa\\Core\\Repository\\ProxyFactory\\ProxyDomainMapperInterface',
   'eZ\\Publish\\Core\\MVC\\RepositoryAwareInterface' => 'Ibexa\\Core\\MVC\\RepositoryAwareInterface',
-  'eZ\\Publish\\Core\\MVC\\ConfigResolverInterface' => 'Ibexa\\Core\\MVC\\ConfigResolverInterface',
+  'eZ\\Publish\\Core\\MVC\\ConfigResolverInterface' => 'Ibexa\\Contracts\\Core\\SiteAccess\\ConfigResolverInterface',
   'eZ\\Publish\\Core\\MVC\\Symfony\\Configuration\\VersatileScopeInterface' => 'Ibexa\\Core\\MVC\\Symfony\\Configuration\\VersatileScopeInterface',
   'eZ\\Publish\\Core\\MVC\\Symfony\\Locale\\LocaleConverterInterface' => 'Ibexa\\Core\\MVC\\Symfony\\Locale\\LocaleConverterInterface',
   'eZ\\Publish\\Core\\MVC\\Symfony\\Locale\\UserLanguagePreferenceProviderInterface' => 'Ibexa\\Core\\MVC\\Symfony\\Locale\\UserLanguagePreferenceProviderInterface',
