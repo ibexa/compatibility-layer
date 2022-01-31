@@ -18,6 +18,8 @@ class YamlRebranding extends ResourceRebranding
         $output = $this->rebrandRouteNames($output);
         $output = $this->rebrandServiceTagNames($output);
         $output = $this->replaceClassParameters($output);
+        $output = $this->replaceContainerParameters($output);
+        $output = $this->replaceConfigResolverNamespaces($output);
 
         return $output;
     }
@@ -70,13 +72,33 @@ class YamlRebranding extends ResourceRebranding
         return $output;
     }
 
+    protected function replaceContainerParameters(string $input): string
+    {
+        $output = $input;
+        foreach ($this->containerParametersMap as $legacyParameter => $newParameter) {
+            $output = preg_replace(
+                '/%' . preg_quote($legacyParameter, '/') . '%/',
+                "%$newParameter%",
+                $output
+            );
+
+            $output = preg_replace(
+                '/' . preg_quote($legacyParameter, '/') . ':/',
+                "$newParameter:",
+                $output
+            );
+        }
+
+        return $output;
+    }
+
     protected function rebrandRouteNames(string $input): string
     {
         $output = $input;
 
         foreach ($this->routeNamesMap as $oldRouteName => $newRouteName) {
             $output = preg_replace(
-                '/^' . preg_quote($oldRouteName) . ':$/m',
+                '/^' . preg_quote($oldRouteName, '/') . ':$/m',
                 $newRouteName . ':',
                 $output
             );
@@ -91,8 +113,24 @@ class YamlRebranding extends ResourceRebranding
 
         foreach ($this->serviceTagNamesMap as $oldServiceTagName => $newServiceTagName) {
             $output = preg_replace(
-                '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName) . '([^a-zA-Z0-9\._])/',
+                '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName, '/') . '([^a-zA-Z0-9\._])/',
                 '${1}' . $newServiceTagName . '${2}',
+                $output
+            );
+        }
+
+        return $output;
+    }
+
+    private function replaceConfigResolverNamespaces(string $input): string
+    {
+        $output = $input;
+        foreach ($this->configResolverNamespacesMap as $legacyNamespace => $newNamespace) {
+            // pattern <spaces><legacy_namespace>.<any_site_access_string>.
+            // edge-case: default config resolver parameters are grouped under namespace key param
+            $output = preg_replace(
+                '/( +|%)' . preg_quote($legacyNamespace, '/') . '(\.[a-zA-Z0-9_-]+\.|:)/',
+                '${1}' . $newNamespace . '${2}',
                 $output
             );
         }

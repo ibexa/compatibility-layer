@@ -23,6 +23,14 @@ class TwigRebranding extends ResourceRebranding
 
         $output = str_replace(array_keys($this->routeNamesMap), array_values($this->routeNamesMap), $output);
 
+        foreach ($this->configResolverNamespacesMap as $legacyNamespace => $newNamespace) {
+            $output = preg_replace(
+                '/\'' . preg_quote($legacyNamespace, '/') . '([.:])/',
+                "'" . $newNamespace . '${1}',
+                $output
+            );
+        }
+
         return $output;
     }
 }

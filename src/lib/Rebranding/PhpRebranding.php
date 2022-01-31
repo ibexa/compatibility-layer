@@ -16,6 +16,8 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
 use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
 use Ibexa\CompatibilityLayer\Parser\ClassNameVisitor;
 use Ibexa\CompatibilityLayer\Parser\ClassParameterVisitor;
+use Ibexa\CompatibilityLayer\Parser\ConfigResolverNamespaceVisitor;
+use Ibexa\CompatibilityLayer\Parser\ContainerParameterVisitor;
 use Ibexa\CompatibilityLayer\Parser\DocblockVisitor;
 use Ibexa\CompatibilityLayer\Parser\ExtensionVisitor;
 use Ibexa\CompatibilityLayer\Parser\RouteNameVisitor;
@@ -50,6 +52,10 @@ class PhpRebranding implements RebrandingInterface
 
     private array $classParametersMap;
 
+    private array $parametersMap;
+
+    private array $configResolverNamespacesMap;
+
     public function __construct()
     {
         $this->nameResolver = new AggregateResolver([
@@ -70,6 +76,8 @@ class PhpRebranding implements RebrandingInterface
         $this->servicesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'services-to-fqcn-map.php';
         $this->serviceTagNamesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'symfony-service-tag-name-map.php';
         $this->classParametersMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'class-parameters-map.php';
+        $this->parametersMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'container-parameters-map.php';
+        $this->configResolverNamespacesMap = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'config-resolver-namespaces-map.php';
     }
 
     public function rebrand(string $input): string
@@ -85,6 +93,13 @@ class PhpRebranding implements RebrandingInterface
         $traverser->addVisitor(new RouteNameVisitor($this->routeNamesMap));
         $traverser->addVisitor(new ServiceTagNameVisitor($this->serviceTagNamesMap));
         $traverser->addVisitor(new ClassParameterVisitor($this->classParametersMap));
+        $traverser->addVisitor(new ContainerParameterVisitor($this->parametersMap));
+        $traverser->addVisitor(
+            new ConfigResolverNamespaceVisitor(
+                $this->configResolverNamespacesMap,
+                $this->parametersMap
+            )
+        );
 
         try {
             $parsed = $this->parser->parse($input);
