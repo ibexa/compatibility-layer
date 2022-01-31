@@ -75,12 +75,21 @@ class IbexaRebrandingCommand extends Command
         $progressBar->display();
 
         foreach ($files as $file) {
-            if (strpos($file->getPathname(), 'vendor/ibexa/compatibility-layer/') === 0) {
+            $pathname = $file->getPathname();
+            if (strpos($pathname, 'vendor/ibexa/compatibility-layer/') === 0) {
                 $progressBar->advance();
                 continue;
             }
             $input = file_get_contents($file->getPathname());
-            $output = $rebranding->rebrand($input);
+            try {
+                $output = $rebranding->rebrand($input);
+            } catch (\Exception $e) {
+                $msg = sprintf('In file "%s": %s - %s', $pathname, get_class($e), $e->getMessage());
+                if ($this->style->isVerbose()) {
+                    $msg .= "\nStack Trace:\n" . $e->getTraceAsString();
+                }
+                $this->style->error($msg);
+            }
 
             if (!$dryRun) {
                 file_put_contents($file->getPathname(), $output);
