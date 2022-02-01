@@ -58,17 +58,22 @@ class ControllerResolver implements ControllerResolverInterface
             return $this->controllerResolver->getController($request);
         }
 
-        if (1 === substr_count($controller, ':')) {
-            $controller = str_replace(':', '::', $controller);
-        }
         $method = null;
+        $separator = '';
         if (str_contains($controller, '::')) {
-            [$class, $method] = explode('::', $controller, 2);
+            $separator = '::';
+        } elseif (str_contains($controller, ':')) {
+            $separator = ':';
+        }
+
+        if ($separator !== '') {
+            [$class, $method] = explode($separator, $controller, 2);
         } else {
             $class = $controller;
         }
+
         $newName = $this->getNewControllerName($class);
-        $controller = implode('::', $method ? [$newName, $method] : [$newName]);
+        $controller = implode($separator, $method ? [$newName, $method] : [$newName]);
         $request->attributes->set('_controller', $controller);
 
         return $this->controllerResolver->getController($request);
