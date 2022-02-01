@@ -30,9 +30,18 @@ final class IbexaCompatibilityLayerExtension extends Extension implements Prepen
 
         $loader->load('services.yaml');
 
-        if ($container->getParameter('ezpublish.url_wildcards.enabled')) {
+        if ($this->areUrlWildcardsEnabled($container)) {
             $loader->load('conditional/url_wildcard.yaml');
         }
+    }
+
+    private function areUrlWildcardsEnabled(ContainerBuilder $container): bool
+    {
+        if ($container->hasParameter('ibexa.url_wildcards.enabled')) {
+            return $container->getParameter('ibexa.url_wildcards.enabled');
+        }
+
+        return $container->getParameter('ezpublish.url_wildcards.enabled');
     }
 
     public function prepend(ContainerBuilder $container): void
