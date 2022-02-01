@@ -45,7 +45,7 @@ return [
     'page_builder.token_authorized_router.routes_map' => 'ibexa.page_builder.token_authorized_router.routes_map',
     'ezplatform.content_forms.form_processor.content_type.options' => 'ibexa.content_forms.form_processor.content_type.options',
     'ezplatform.content_forms.form_processor.content_type.options.redirect_route_after_publish' => 'ibexa.content_forms.form_processor.content_type.options.redirect_route_after_publish',
-    'ezplatform.content_forms.limitation.form_mapper.parent_depth.max_depth' => 'ibexa.content_forms.form_processor.content_type.options.redirect_route_after_publish',
+    'ezplatform.content_forms.limitation.form_mapper.parent_depth.max_depth' => 'ibexa.content_forms.limitation.form_mapper.parent_depth.max_depth',
     'ezplatform.content_forms.limitation.multiple_selection.template' => 'ibexa.content_forms.limitation.multiple_selection.template',
     'ezplatform.content_forms.limitation.null.template' => 'ibexa.content_forms.limitation.null.template',
     'ezplatform.content_forms.limitation.udw.template' => 'ibexa.content_forms.limitation.udw.template',
