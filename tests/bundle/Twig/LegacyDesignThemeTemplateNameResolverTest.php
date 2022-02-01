@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Ibexa\Tests\Bundle\CompatibilityLayer\Twig;
 
 use Ibexa\Bundle\CompatibilityLayer\Twig\LegacyDesignThemeTemplateNameResolver;
-use Ibexa\Core\MVC\ConfigResolverInterface;
+use Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface;
 use PHPUnit\Framework\TestCase;
 
 final class LegacyDesignThemeTemplateNameResolverTest extends TestCase
