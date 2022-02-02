@@ -75,7 +75,8 @@ class IbexaRebrandingCommand extends Command
         $progressBar->display();
 
         foreach ($files as $file) {
-            if (strpos($file->getPathname(), 'vendor/ibexa/compatibility-layer/') === 0) {
+            if (strpos($file->getPathname(), 'vendor/ibexa/compatibility-layer/') === 0
+                || strpos($file->getPathname(), 'vendor/ibexa/admin-ui-assets/') === 0) {
                 $progressBar->advance();
                 continue;
             }
