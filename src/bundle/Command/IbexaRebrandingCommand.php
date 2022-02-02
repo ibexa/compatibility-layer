@@ -75,8 +75,7 @@ class IbexaRebrandingCommand extends Command
         $progressBar->display();
 
         foreach ($files as $file) {
-            if (strpos($file->getPathname(), 'vendor/ibexa/compatibility-layer/') === 0
-                || strpos($file->getPathname(), 'vendor/ibexa/admin-ui-assets/') === 0) {
+            if (!$this->isValid($file->getPathname())) {
                 $progressBar->advance();
                 continue;
             }
@@ -89,5 +88,21 @@ class IbexaRebrandingCommand extends Command
 
             $progressBar->advance();
         }
+    }
+
+    private function isValid(string $path): bool
+    {
+        $ignoredPaths = [
+            '/ibexa/compatibility-layer/',
+            '/ibexa/admin-ui-assets/',
+        ];
+
+        foreach ($ignoredPaths as $ignoredPath) {
+            if (strpos($path, $ignoredPath) !== false) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

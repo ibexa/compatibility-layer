@@ -53,17 +53,24 @@ abstract class ResourceRebranding implements RebrandingInterface
 
     public function rebrand(string $input): string
     {
-        $pattern = '/([>\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*(\\\\|))+)/m';
-
-        preg_match_all($pattern, $input, $matches);
-
-        sort($matches[2]);
-        $possibleClassNames = array_unique(array_reverse($matches[2]));
-
         $output = $input;
-        foreach ($possibleClassNames as $possibleClassName) {
-            if ($newClassName = $this->nameResolver->resolve($possibleClassName)) {
-                $output = preg_replace('/' . preg_quote($possibleClassName) . '/', $newClassName, $output);
+
+        $pattern = '/([{<>\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*((\\\\)+|))+)/m';
+        preg_match_all($pattern, $output, $matches);
+
+        if (!empty($matches[2])) {
+            sort($matches[2]);
+
+            $possibleClassNames = array_unique(array_reverse($matches[2]));
+
+            foreach ($possibleClassNames as $possibleClassName) {
+                $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
+                if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
+                    if ($normalizedClassName !== $possibleClassName) {
+                        $newClassName = str_replace('\\', '\\\\', $newClassName);
+                    }
+                    $output = str_replace($possibleClassName, $newClassName, $output);
+                }
             }
         }
 

@@ -18,6 +18,7 @@ use Ibexa\CompatibilityLayer\Parser\ClassNameVisitor;
 use Ibexa\CompatibilityLayer\Parser\ClassParameterVisitor;
 use Ibexa\CompatibilityLayer\Parser\DocblockVisitor;
 use Ibexa\CompatibilityLayer\Parser\ExtensionVisitor;
+use Ibexa\CompatibilityLayer\Parser\ParentVisitor;
 use Ibexa\CompatibilityLayer\Parser\RouteNameVisitor;
 use Ibexa\CompatibilityLayer\Parser\ServiceTagNameVisitor;
 use PhpParser\Lexer;
@@ -79,6 +80,8 @@ class PhpRebranding implements RebrandingInterface
         $traverser->addVisitor(new NameResolver(null, [
             'preserveOriginalNames' => true,
         ]));
+        $traverser->addVisitor(new ParentVisitor());
+
         $traverser->addVisitor(new ExtensionVisitor($this->extensionMap));
         $traverser->addVisitor(new ClassNameVisitor($this->nameResolver));
         $traverser->addVisitor(new DocblockVisitor($this->nameResolver));
