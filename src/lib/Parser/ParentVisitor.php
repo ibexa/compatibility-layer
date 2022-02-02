@@ -23,7 +23,7 @@ class ParentVisitor extends NodeVisitorAbstract
     public function enterNode(Node $node)
     {
         if (!empty($this->stack)) {
-            $node->setAttribute('parent', $this->stack[count($this->stack) -1 ]);
+            $node->setAttribute('parent', $this->stack[count($this->stack) - 1]);
         }
 
         $this->stack[] = $node;
