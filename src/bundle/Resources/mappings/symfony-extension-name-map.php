@@ -24,7 +24,7 @@ return [
     'ezrecommendation' => 'ibexa_personalization',
     'ezrichtext' => 'ibexa_fieldtype_richtext',
     'ez_platform_version_comparison' => 'ibexa_version_comparison',
-    'ez_publish_rest' => 'ibexa_rest',
+    'ibexa_rest' => 'ibexa_rest',
     'ez_search_engine_legacy' => 'ibexa_legacy_search_engine',
     'ez_search_engine_solr' => 'ibexa_solr',
     'ez_systems_date_based_publisher' => 'ibexa_scheduler',
