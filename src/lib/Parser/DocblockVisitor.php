@@ -43,7 +43,7 @@ class DocblockVisitor extends RebrandingVisitor
                 }
 
                 foreach ($lines as &$line) {
-                    preg_match('/(\s*\/\*\*|\s*\*) @(var|param|see|throws|return) ([a-zA-Z0-9\\\\\\|&]+)(.*)/', $line, $match);
+                    preg_match('/(\s*\/\*\*|\s*\*) @(var|param|see|throws|return|property|covers) ([a-zA-Z0-9\\\\\\|&]+)(.*)/', $line, $match);
 
                     if (!empty($match)) {
                         $orTypes = explode('|', $match[3]);
@@ -67,6 +67,23 @@ class DocblockVisitor extends RebrandingVisitor
                         }
 
                         $line = sprintf('%s @%s %s%s', $match[1], $match[2], implode('|', $orTypes), $match[4]);
+                    }
+
+                    $pattern = '/([{<>\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*((\\\\)+|))+)/m';
+
+                    preg_match_all($pattern, $line, $matches);
+                    sort($matches[2]);
+
+                    $possibleClassNames = array_unique(array_reverse($matches[2]));
+
+                    foreach ($possibleClassNames as $possibleClassName) {
+                        $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
+                        if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
+                            if ($normalizedClassName !== $possibleClassName) {
+                                $newClassName = str_replace('\\', '\\\\', $newClassName);
+                            }
+                            $line = str_replace($possibleClassName, $newClassName, $line);
+                        }
                     }
                 }
                 $newComment = new Comment\Doc(implode("\n", $lines));
