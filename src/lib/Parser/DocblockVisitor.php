@@ -70,19 +70,21 @@ class DocblockVisitor extends RebrandingVisitor
                     }
 
                     $pattern = '/([{<>\\s@(\[\\\\"\'])(([a-zA-Z_][a-zA-Z0-9_]*((\\\\)+|))+)/m';
-
                     preg_match_all($pattern, $line, $matches);
-                    sort($matches[2]);
 
-                    $possibleClassNames = array_unique(array_reverse($matches[2]));
+                    if (!empty($matches[2])) {
+                        sort($matches[2]);
 
-                    foreach ($possibleClassNames as $possibleClassName) {
-                        $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
-                        if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
-                            if ($normalizedClassName !== $possibleClassName) {
-                                $newClassName = str_replace('\\', '\\\\', $newClassName);
+                        $possibleClassNames = array_unique(array_reverse($matches[2]));
+
+                        foreach ($possibleClassNames as $possibleClassName) {
+                            $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
+                            if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
+                                if ($normalizedClassName !== $possibleClassName) {
+                                    $newClassName = str_replace('\\', '\\\\', $newClassName);
+                                }
+                                $line = str_replace($possibleClassName, $newClassName, $line);
                             }
-                            $line = str_replace($possibleClassName, $newClassName, $line);
                         }
                     }
                 }
