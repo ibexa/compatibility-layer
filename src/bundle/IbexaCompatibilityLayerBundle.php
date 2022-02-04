@@ -10,6 +10,7 @@ namespace Ibexa\Bundle\CompatibilityLayer;
 
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AliasDecoratorCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\AssetThemeCompatibilityPass;
+use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ContainerParameterCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\FormTypeExtensionCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceCompatibilityPass;
 use Ibexa\Bundle\CompatibilityLayer\DependencyInjection\Compiler\ServiceTagCompatibilityPass;
@@ -86,6 +87,12 @@ final class IbexaCompatibilityLayerBundle extends Bundle
             new ServiceTagCompatibilityPass(),
             PassConfig::TYPE_BEFORE_OPTIMIZATION,
             255
+        );
+
+        $container->addCompilerPass(
+            new ContainerParameterCompatibilityPass(),
+            PassConfig::TYPE_BEFORE_OPTIMIZATION,
+            -1000
         );
 
         /** @var \Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension $securityExtension */
