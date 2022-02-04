@@ -33,6 +33,11 @@ final class IbexaCompatibilityLayerExtension extends Extension implements Prepen
         if ($this->areUrlWildcardsEnabled($container)) {
             $loader->load('conditional/url_wildcard.yaml');
         }
+
+        $bundles = $container->getParameter('kernel.bundles');
+        if (isset($bundles['IbexaSiteFactoryBundle'])) {
+            $loader->load('conditional/site_factory.yaml');
+        }
     }
 
     private function areUrlWildcardsEnabled(ContainerBuilder $container): bool

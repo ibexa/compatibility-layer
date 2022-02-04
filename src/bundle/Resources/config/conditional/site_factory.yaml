@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Ibexa\Bundle\CompatibilityLayer\Command\SiteFactoryRebrandingCommand:
+        arguments:
+            $gateway: '@Ibexa\SiteFactory\Persistence\Site\Gateway\DoctrineGateway'
+            $siteMapper: '@Ibexa\SiteFactory\SiteDomainMapper'
+        tags:
+            - { name: console.command }

@@ -17,6 +17,14 @@ services:
 
     Ibexa\Bundle\CompatibilityLayer\Twig\LegacyDesignThemeTemplateNameResolver: ~
 
+    Ibexa\Bundle\CompatibilityLayer\Command\CommerceSettingRebrandingCommand:
+        arguments:
+            $settingService: '@Ibexa\Contracts\Core\Repository\SettingService'
+            $permissionResolver: '@Ibexa\Contracts\Core\Repository\PermissionResolver'
+            $userService: '@Ibexa\Contracts\Core\Repository\UserService'
+        tags:
+            - { name: console.command }
+
     ibexa.compatibility.design_engine.legacy_twig_theme_loader:
         class: Ibexa\DesignEngine\Templating\Twig\TwigThemeLoader
         public: false
