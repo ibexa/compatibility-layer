@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Ibexa\Bundle\CompatibilityLayer\Command;
 
 use Ibexa\Bundle\CompatibilityLayer\IbexaCompatibilityLayerBundle;
-use Ibexa\CompatibilityLayer\Parser\ConfigResolverNamespaceVisitor;
 use Ibexa\Contracts\SiteFactory\Values\Query\Criterion\MatchAll;
 use Ibexa\Contracts\SiteFactory\Values\Site\PublicAccess;
 use Ibexa\Contracts\SiteFactory\Values\Site\SiteQuery;
@@ -109,18 +108,22 @@ class SiteFactoryRebrandingCommand extends Command
         foreach ($config as $param => $value) {
             if (array_key_exists($param, $this->containerParametersMap)) {
                 $newConfig[$this->containerParametersMap[$param]] = $value;
-            } elseif (strpos($param, ConfigResolverNamespaceVisitor::CORE_CONFIG_RESOLVER_NAMESPACE) === 0) {
-                $newParam = str_replace(
-                    ConfigResolverNamespaceVisitor::CORE_CONFIG_RESOLVER_NAMESPACE,
-                    $this->configResolverNamespacesMap[ConfigResolverNamespaceVisitor::CORE_CONFIG_RESOLVER_NAMESPACE],
-                    $param
-                );
-                $newConfig[$newParam] = $value;
             } else {
-                $newConfig[$param] = $value;
+                $newConfig[$this->replaceNamespaces($param)] = $value;
             }
         }
 
         return json_encode($newConfig);
+    }
+
+    private function replaceNamespaces(string $parameterName): string
+    {
+        foreach ($this->configResolverNamespacesMap as $oldNamespace => $newNamespace) {
+            if ((strpos($parameterName, $oldNamespace) === 0)) {
+                return str_replace($oldNamespace, $newNamespace, $parameterName);
+            }
+        }
+
+        return $parameterName;
     }
 }
