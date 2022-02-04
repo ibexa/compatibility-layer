@@ -51,3 +51,8 @@ services:
         decorates: controller_resolver
         arguments:
             $controllerResolver: '@Ibexa\CompatibilityLayer\HttpKernel\Controller\ControllerResolver.inner'
+
+    Ibexa\CompatibilityLayer\ConfigResolver\BackwardCompatibleConfigResolver:
+        decorates: Ibexa\Bundle\Core\DependencyInjection\Configuration\ChainConfigResolver
+        arguments:
+            $chainConfigResolver: '@.inner'
