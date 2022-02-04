@@ -17,6 +17,7 @@ return [
     'ses_wishlist' => 'ibexa.commerce.site_access.config.wishlist',
     'silver_content' => 'ibexa.commerce.site_access.config.content',
     'silver_econtent' => 'ibexa.commerce.site_access.config.econtent',
+    'siso_basket' => 'ibexa.commerce.site_access.config.basket',
     'siso_checkout' => 'ibexa.commerce.site_access.config.checkout',
     'siso_control_center' => 'ibexa.commerce.site_access.config.control_center',
     'siso_comparison' => 'ibexa.commerce.site_access.config.comparison',
