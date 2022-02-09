@@ -985,7 +985,7 @@ return [
     'ezpublish.search.solr.query.location.criterion_visitor.parent_location_id_in' => 'Ibexa\\Solr\\Query\\Location\\CriterionVisitor\\ParentLocationIdIn',
     'ezpublish.search.solr.query.location.criterion_visitor.priority_between' => 'Ibexa\\Solr\\Query\\Location\\CriterionVisitor\\Location\\PriorityBetween',
     'ezpublish.search.solr.query.location.criterion_visitor.priority_in' => 'Ibexa\\Solr\\Query\\Location\\CriterionVisitor\\Location\\PriorityIn',
-    'ezpublish.search.solr.query.location.criterion_visitor.subtree_in' => 'Ibexa\\Bundle\\Commerce\\Search\\Service\\Ezp\\SubtreeInVisitor',
+    'ezpublish.search.solr.query.location.criterion_visitor.subtree_in' => 'Ibexa\\Solr\\Query\\Location\\CriterionVisitor\\SubtreeIn',
     'ezpublish.search.solr.query.location.criterion_visitor.visibility' => 'Ibexa\\Solr\\Query\\Location\\CriterionVisitor\\Visibility',
     'ezpublish.search.solr.query.location.facet_builder_visitor.aggregate' => 'ibexa.solr.query.location.facet_builder_visitor.aggregate',
     'ezpublish.search.solr.query.location.sort_clause_visitor.aggregate' => 'ibexa.solr.query.location.sort_clause_visitor.aggregate',
