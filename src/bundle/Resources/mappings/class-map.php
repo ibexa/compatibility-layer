@@ -2990,4 +2990,7 @@ return [
   'EzSystems\\EzPlatformAutomatedTranslationBundle\\EzPlatformAutomatedTranslationBundle' => 'Ibexa\\Bundle\\AutomatedTranslation\\IbexaAutomatedTranslationBundle',
   'EzSystems\\EzPlatformAutomatedTranslationBundle\\DependencyInjection\\EzPlatformAutomatedTranslationExtension' => 'Ibexa\\Bundle\\AutomatedTranslation\\DependencyInjection\\IbexaAutomatedTranslationExtension',
   'EzSystems\\EzPlatformAutomatedTranslationBundle\\Tests\\DependencyInjection\\EzPlatformAutomatedTranslationExtensionTest' => 'Ibexa\\Tests\\Bundle\\AutomatedTranslation\\DependencyInjection\\IbexaAutomatedTranslationExtensionTest',
+  'EzSystems\\BehatBundle\\EzSystemsBehatBundle' => 'Ibexa\\Bundle\\Behat\\IbexaBehatBundle',
+  'EzSystems\\BehatBundle\\BehatExtension' => 'Ibexa\\Bundle\\Behat\\IbexaExtension',
+  'EzSystems\\BehatBundle\\DependencyInjection\\eZBehatExtension' => 'Ibexa\\Bundle\\Behat\\DependencyInjection\\IbexaBehatExtension',
 ];
