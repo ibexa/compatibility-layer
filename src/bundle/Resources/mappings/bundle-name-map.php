@@ -84,5 +84,5 @@ return [
     'SisoTestTools' => 'IbexaCommerceTestTools',
     'SisoVoucher' => 'IbexaCommerceVoucher',
     'EzPlatformAutomatedTranslation' => 'IbexaAutomatedTranslation',
-    'eZBehatBundle' => 'IbexaBehatBundle',
+    'eZBehat' => 'IbexaBehat',
 ];
