@@ -2984,4 +2984,10 @@ return [
   'Ibexa\\Platform\\Assets\\Resolver\\IconPathResolverInterface' => 'Ibexa\\Contracts\\AdminUi\\Resolver\\IconPathResolverInterface',
   'Ibexa\\Platform\\Assets\\Resolver\\IconPathResolver' => 'Ibexa\\AdminUi\\Resolver\\IconPathResolver',
   'EzSystems\\EzPlatformEncoreBundle\\Command\\CompileAssetsCommand' => 'Ibexa\\Bundle\\AdminUi\\Command\\CompileAssetsCommand',
+  'EzSystems\\EzPlatformAutomatedTranslation\\Encoder\\Field\\FieldEncoderInterface' => 'Ibexa\\Contracts\\AutomatedTranslation\\Encoder\\Field\\FieldEncoderInterface',
+  'EzSystems\\EzPlatformAutomatedTranslation\\Encoder\\BlockAttribute\\BlockAttributeEncoderInterface' => 'Ibexa\\Contracts\\AutomatedTranslation\\Encoder\\BlockAttribute\\BlockAttributeEncoderInterface',
+  'EzSystems\\EzPlatformAutomatedTranslation\\Client\\ClientInterface' => 'Ibexa\\Contracts\\AutomatedTranslation\\Client\\ClientInterface',
+  'EzSystems\\EzPlatformAutomatedTranslationBundle\\EzPlatformAutomatedTranslationBundle' => 'Ibexa\\Bundle\\AutomatedTranslation\\IbexaAutomatedTranslationBundle',
+  'EzSystems\\EzPlatformAutomatedTranslationBundle\\DependencyInjection\\EzPlatformAutomatedTranslationExtension' => 'Ibexa\\Bundle\\AutomatedTranslation\\DependencyInjection\\IbexaAutomatedTranslationExtension',
+  'EzSystems\\EzPlatformAutomatedTranslationBundle\\Tests\\DependencyInjection\\EzPlatformAutomatedTranslationExtensionTest' => 'Ibexa\\Tests\\Bundle\\AutomatedTranslation\\DependencyInjection\\IbexaAutomatedTranslationExtensionTest',
 ];

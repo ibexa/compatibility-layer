@@ -53,4 +53,5 @@ return [
     'siso_test' => 'ibexa_commerce_test_tools',
     'siso_tools' => 'ibexa_commerce_tools',
     'siso_voucher' => 'ibexa_commerce_voucher',
+    'ez_platform_automated_translation' => 'ibexa_automated_translation',
 ];
