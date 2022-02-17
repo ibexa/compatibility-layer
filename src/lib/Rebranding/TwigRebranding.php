@@ -16,6 +16,11 @@ class TwigRebranding extends ResourceRebranding
 
     private array $twigFilters;
 
+    private array $wildcardFunctions = [
+        'ez_render_(.*?)_query_(.*?)' => 'ibexa_render_${1}_query_${2}',
+        'ez_render_(.*?)_query' => 'ibexa_render_${1}_query',
+    ];
+
     public function __construct()
     {
         parent::__construct();
@@ -50,8 +55,16 @@ class TwigRebranding extends ResourceRebranding
     {
         foreach ($this->twigFunctions as $oldFunction => $newFunction) {
             $output = preg_replace(
-                '/' . $oldFunction . '\(/m',
+                '/(?<!_)' . $oldFunction . '\(/m',
                 '${1}' . $newFunction . '(',
+                $output
+            );
+        }
+
+        foreach ($this->wildcardFunctions as $matchOld => $matchNew) {
+            $output = preg_replace(
+                '/' . $matchOld . '\(/m',
+                $matchNew . '(',
                 $output
             );
         }
@@ -64,7 +77,7 @@ class TwigRebranding extends ResourceRebranding
         foreach ($this->twigFilters as $oldFilter => $newFilter) {
             $output = preg_replace(
                 '/\|' . $oldFilter . '/m',
-                '${1}' . '|' .$newFilter ,
+                '${1}' . '|' . $newFilter,
                 $output
             );
         }

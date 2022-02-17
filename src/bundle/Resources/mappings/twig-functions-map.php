@@ -75,4 +75,6 @@ return [
     'st_imageconverter' => 'ibexa_commerce_imageconverter',
     'st_siteaccess_lang' => 'ibexa_commerce_siteaccess_lang',
     'st_tag' => 'ibexa_commerce_tag',
+//  'ez_render_*_query_*' => 'ibexa_render_*_query_',
+//  'ez_render_*_query' => 'ibexa_render_*_query',
 ];
