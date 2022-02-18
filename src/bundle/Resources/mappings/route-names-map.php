@@ -163,7 +163,6 @@ return [
     'ezplatform.page.block.schedule_block.list_content' => 'ibexa.page.block.schedule_block.list_content',
     'ezplatform.page_builder.timeline.events.get' => 'ibexa.page_builder.timeline.events.get',
     'ez_recommendation.content_type.get_content' => 'ibexa.personalization.content_type.get_content',
-    'ez_recommendation.content_type.get_content_type' => 'ibexa.personalization.content_type.get_content_type',
     'ez_recommendation.export.download' => 'ibexa.personalization.export.download',
     'ezpublish_rest_loadRootResource' => 'ibexa.rest.load_root_resource',
     'ezpublish_rest_listSections' => 'ibexa.rest.list_sections',
