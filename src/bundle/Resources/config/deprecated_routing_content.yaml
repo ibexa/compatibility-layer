@@ -115,12 +115,6 @@ ez_recommendation.content_type.get_content:
         package: ibexa/personalization
         version: 4.0.0
 
-ez_recommendation.content_type.get_content_type:
-    alias: ibexa.personalization.content_type.get_content_type
-    deprecated:
-        package: ibexa/personalization
-        version: 4.0.0
-
 ez_recommendation.export.download:
     alias: ibexa.personalization.export.download
     deprecated:
