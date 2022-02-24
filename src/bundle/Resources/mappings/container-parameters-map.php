@@ -248,5 +248,5 @@ return [
     'siso_tools.mailer.logging.entity' => 'ibexa.commerce.tools.mailer.logging.entity',
     'ibexa.testing.override_configuration' => 'ibexa.behat.override_configuration',
     'ibexa.testing.browser.enabled' => 'ibexa.behat.browser.enabled',
-    'ibexa.testing.behat.browser.debug.interactive.enabled' => 'ibexa.behat.browser.debug.interactive.enabled'
+    'ibexa.testing.behat.browser.debug.interactive.enabled' => 'ibexa.behat.browser.debug.interactive.enabled',
 ];

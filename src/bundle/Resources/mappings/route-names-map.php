@@ -491,7 +491,7 @@ return [
     'ibexa_add_to_basket_data' => 'ibexa.commerce.basket.add_data',
     'ez_urlalias' => 'ibexa.url.alias',
     'ez_platform_behat_repository_unauthorized_exception' => 'ibexa.behat.repository_unauthorized_exception',
-    'ibexa_testing_current_user_data' => 'ibexa.behat.current_user_data'
+    'ibexa_testing_current_user_data' => 'ibexa.behat.current_user_data',
 
     /* Disabled intentionally, do not uncomment unless neccessary */
     // 'SilversolutionsEshopBundle' => 'ibexa.commerce.catalog.show',

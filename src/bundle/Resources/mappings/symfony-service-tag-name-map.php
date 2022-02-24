@@ -148,5 +148,5 @@ return [
     'ibexa.testing.browser.page' => 'ibexa.behat.browser.page',
     'ibexa.testing.browser.page_preview' => 'ibexa.behat.browser.page_preview',
     'ezplatform.behat.fieldtype_data_provider' => 'ibexa.behat.fieldtype_data_provider',
-    'ezplatform.behat.limitation_parser' => 'ibexa.behat.limitation_parser'
+    'ezplatform.behat.limitation_parser' => 'ibexa.behat.limitation_parser',
 ];
