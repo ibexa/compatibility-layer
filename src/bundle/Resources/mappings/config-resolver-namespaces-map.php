@@ -37,4 +37,5 @@ return [
     'silver_tools' => 'ibexa.commerce.site_access.config.tools',
     'siso_voucher' => 'ibexa.commerce.site_access.config.voucher',
     'st_ez_helper_create_user' => 'ibexa.commerce.site_access.config.create_user',
+    'ez_platform_automated_translation' => 'ibexa.automated_translation.site_access.config',
 ];

@@ -83,4 +83,5 @@ return [
     'SisoTelecashPayment' => 'IbexaCommerceTelecashPayment',
     'SisoTestTools' => 'IbexaCommerceTestTools',
     'SisoVoucher' => 'IbexaCommerceVoucher',
+    'EzPlatformAutomatedTranslation' => 'IbexaAutomatedTranslation',
 ];

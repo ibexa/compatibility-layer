@@ -141,4 +141,7 @@ return [
     'siso_tools.content_modification_processor' => 'ibexa.commerce.content.modification.processor',
     'support_tools.system_info.collector' => 'ibexa.system_info.collector',
     'support_tools.system_info.output_format' => 'ibexa.system_info.output.format',
+    'ezplatform.automated_translation.client' => 'ibexa.automated_translation.client',
+    'ezplatform.automated_translation.field_encoder' => 'ibexa.automated_translation.field_encoder',
+    'ezplatform.automated_translation.block_attribute_encoder' => 'ibexa.automated_translation.block_attribute_encoder',
 ];

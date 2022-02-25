@@ -215,4 +215,8 @@ return [
   'Siso\\Bundle\\TelecashPaymentBundle\\' => 'Ibexa\\Bundle\\Commerce\\TelecashPayment\\',
   'Siso\\Bundle\\TestToolsBundle\\' => 'Ibexa\\Bundle\\Commerce\\TestTools\\',
   'Siso\\Bundle\\VoucherBundle\\' => 'Ibexa\\Bundle\\Commerce\\Voucher\\',
+  'EzSystems\\EzPlatformAutomatedTranslationBundle\\' => 'Ibexa\\Bundle\\AutomatedTranslation\\',
+  'EzSystems\\EzPlatformAutomatedTranslation\\' => 'Ibexa\\AutomatedTranslation\\',
+  'EzSystems\\EzPlatformAutomatedTranslationBundle\\Tests\\' => 'Ibexa\\Tests\\Bundle\\AutomatedTranslation\\',
+  'EzSystems\\EzPlatformAutomatedTranslation\\Tests\\' => 'Ibexa\\Tests\\AutomatedTranslation\\',
 ];
