@@ -144,4 +144,9 @@ return [
     'ezplatform.automated_translation.client' => 'ibexa.automated_translation.client',
     'ezplatform.automated_translation.field_encoder' => 'ibexa.automated_translation.field_encoder',
     'ezplatform.automated_translation.block_attribute_encoder' => 'ibexa.automated_translation.block_attribute_encoder',
+    'ibexa.testing.browser.component' => 'ibexa.behat.browser.component',
+    'ibexa.testing.browser.page' => 'ibexa.behat.browser.page',
+    'ibexa.testing.browser.page_preview' => 'ibexa.behat.browser.page_preview',
+    'ezplatform.behat.fieldtype_data_provider' => 'ibexa.behat.fieldtype_data_provider',
+    'ezplatform.behat.limitation_parser' => 'ibexa.behat.limitation_parser',
 ];

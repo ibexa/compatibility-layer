@@ -219,4 +219,7 @@ return [
   'EzSystems\\EzPlatformAutomatedTranslation\\' => 'Ibexa\\AutomatedTranslation\\',
   'EzSystems\\EzPlatformAutomatedTranslationBundle\\Tests\\' => 'Ibexa\\Tests\\Bundle\\AutomatedTranslation\\',
   'EzSystems\\EzPlatformAutomatedTranslation\\Tests\\' => 'Ibexa\\Tests\\AutomatedTranslation\\',
+  'EzSystems\\BehatBundle\\' => 'Ibexa\\Bundle\\Behat\\',
+  'EzSystems\\Behat\\' => 'Ibexa\\Behat\\',
+  'EzSystems\\Behat\\Test\\' => 'Ibexa\\Tests\\Behat\\',
 ];
