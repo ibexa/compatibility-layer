@@ -109,14 +109,20 @@ ibexa.platform.connector.dam.asset_variation:
         package: ibexa/connector-dam
         version: 4.0.0
 
-ez_recommendation.content_type.get_content:
-    alias: ibexa.personalization.content_type.get_content
+ez_recommendation.rest.content.get_by_id:
+    alias: ibexa.personalization.rest.content.get_by_id
     deprecated:
         package: ibexa/personalization
         version: 4.0.0
 
-ez_recommendation.export.download:
-    alias: ibexa.personalization.export.download
+ez_recommendation.rest.content.get_by_remote_id:
+    alias: ibexa.personalization.rest.content.get_by_remote_id
+    deprecated:
+        package: ibexa/personalization
+        version: 4.0.0
+
+ez_recommendation.rest.export.download:
+    alias: ibexa.personalization.rest.export.download
     deprecated:
         package: ibexa/personalization
         version: 4.0.0
