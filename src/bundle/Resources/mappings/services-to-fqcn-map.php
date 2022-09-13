@@ -606,7 +606,7 @@ return [
     'ezpublish.fieldType.validator.black_list' => 'Ibexa\\Core\\FieldType\\Validator\\FileExtensionBlackListValidator',
     'ezpublish.fieldType.validator.image' => 'Ibexa\\Core\\FieldType\\Validator\\ImageValidator',
     'ezpublish.field_helper' => 'Ibexa\\Core\\Helper\\FieldHelper',
-    'ezpublish.fields_groups.list' => 'Ibexa\\Core\\Helper\\FieldsGroups\\ArrayTranslatorFieldsGroupsList',
+    'ezpublish.fields_groups.list' => 'Ibexa\\Core\\Helper\\FieldsGroups\\FieldsGroupsList',
     'ezpublish.fields_groups.list.repository_settings_factory' => 'Ibexa\\Core\\Helper\\FieldsGroups\\RepositoryConfigFieldsGroupsListFactory',
     'ezpublish.fieldtype.ezlandingpage' => 'ibexa.field_type.ezlandingpage',
     'ezpublish.fieldtype.ezlandingpage.json_converter' => 'ibexa.field_type.ezlandingpage.json_converter',
