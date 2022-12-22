@@ -1,0 +1,392 @@
+ibexa.compatibility_layer.content:
+    resource: 'deprecated_routing_experience_legacy_commerce.yaml.yaml'
+
+silver_eshop_rest.dashboard_charts:
+    alias: ibexa.commerce.rest.dashboard.charts
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.dashboard_overview:
+    alias: ibexa.commerce.rest.dashboard.overview
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.dashboard_panel:
+    alias: ibexa.commerce.rest.dashboard.panel
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.dashboard_tab:
+    alias: ibexa.commerce.rest.dashboard.tab
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.dashboard_summary:
+    alias: ibexa.commerce.rest.dashboard.summary
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.currency_list:
+    alias: ibexa.commerce.rest.currency.list
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.shop_ids_list:
+    alias: ibexa.commerce.rest.shop_ids.list
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.top_search:
+    alias: ibexa.commerce.rest.top_search
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.less_search:
+    alias: ibexa.commerce.rest.less_search
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.last_orders:
+    alias: ibexa.commerce.rest.last_orders
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.best_clients:
+    alias: ibexa.commerce.rest.best_clients
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.transfer_lostorder_erp:
+    alias: ibexa.commerce.rest.lost_order.transfer_erp
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+silver_eshop_rest.remove_lostorder:
+    alias: ibexa.commerce.rest.lost_order.remove
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_start_indexer:
+    alias: ibexa.commerce.admin.content.start.indexer
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_start_export:
+    alias: ibexa.commerce.admin.content.start.export
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_start_import:
+    alias: ibexa.commerce.admin.content.start.import
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_backuplist:
+    alias: ibexa.commerce.admin.content.backup_list
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_swap:
+    alias: ibexa.commerce.admin.content.swap
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_admin_econtent_info:
+    alias: ibexa.commerce.admin.content.info
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_shop_price_engine_price_download:
+    alias: ibexa.commerce.price_engine.price.download
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_shop_price_engine_price_upload:
+    alias: ibexa.commerce.price_engine.price.upload
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_shop_price_engine_stock_download:
+    alias: ibexa.commerce.price_engine.stock.download
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_shop_price_engine_stock_upload:
+    alias: ibexa.commerce.price_engine.stock.upload
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_menu_admin_price_stock_management:
+    alias: ibexa.commerce.menu.admin.price_stock_management
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_menu_admin_fetch_shipping_costs:
+    alias: ibexa.commerce.menu.admin.shipping_costs.fetch
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_menu_admin_update_shipping_costs:
+    alias: ibexa.commerce.menu.admin.shipping.costs.update
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_menu_admin_forecast:
+    alias: ibexa.commerce.menu.admin.forecast
+    deprecated:
+        package: ibexa/commerce-admin-ui
+        version: 4.0.0
+
+siso_order_history_list:
+    alias: ibexa.commerce.order_history
+    deprecated:
+        package: ibexa/commerce-order-history
+        version: 4.0.0
+
+siso_order_history_detail:
+    alias: ibexa.commerce.order_history.detail
+    deprecated:
+        package: ibexa/commerce-order-history
+        version: 4.0.0
+
+ezpublish_rest_siso_get_basket:
+    alias: ibexa.commerce.rest.get_basket
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_get_basket_list:
+    alias: ibexa.commerce.rest.get_basket_list
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_read_basket_by_id:
+    alias: ibexa.commerce.rest.read_basket_by_id
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_delete_basket_by_id:
+    alias: ibexa.commerce.rest.delete_basket_by_id
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_get_shipping_methods:
+    alias: ibexa.commerce.rest.get_shipping_methods
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_get_payment_methods:
+    alias: ibexa.commerce.rest.get_payment_methods
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_get_shipping_addresses:
+    alias: ibexa.commerce.rest.get_shipping_addresses
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_get_country_selection:
+    alias: ibexa.commerce.rest.get_country_selection
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_shippingmethod:
+    alias: ibexa.commerce.rest.update_basket_shipping_method
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_paymentmethod:
+    alias: ibexa.commerce.rest.update_basket_payment_method
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_party:
+    alias: ibexa.commerce.rest.update_basket_party
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_voucher:
+    alias: ibexa.commerce.rest.update_basket_voucher
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_add_to_basket:
+    alias: ibexa.commerce.rest.add_to_basket
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_add_to_stored_basket:
+    alias: ibexa.commerce.rest.add_to_stored_basket
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_header_name:
+    alias: ibexa.commerce.rest.update_basket_header_name
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_update_basket_header_note:
+    alias: ibexa.commerce.rest.update_basket_header_note
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_check_sku_file:
+    alias: ibexa.commerce.rest.check_sku_file
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_remove_line_from_basket:
+    alias: ibexa.commerce.rest.remove_line_from_basket
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_save_reference_number:
+    alias: ibexa.commerce.rest.save_reference_number
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_save_remark:
+    alias: ibexa.commerce.rest.save_remark
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_copy_to_current:
+    alias: ibexa.commerce.rest.copy_to_current
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_create_empty_stored_basket:
+    alias: ibexa.commerce.rest.create_empty_stored_basket
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+ezpublish_rest_siso_customer_price:
+    alias: ibexa.commerce.rest.customer_price
+    deprecated:
+        package: ibexa/commerce-rest
+        version: 4.0.0
+
+silversolutions_comparison_public_list_show:
+    alias: ibexa.commerce.comparison.public_list
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+silversolutions_comparison_list_show:
+    alias: ibexa.commerce.comparison_list
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_quick_order:
+    alias: ibexa.commerce.quick_order
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_quick_order_upload:
+    alias: ibexa.commerce.quick_order.upload
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_quick_textarea:
+    alias: ibexa.commerce.quick.textarea
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_quick_order_autosuggest:
+    alias: ibexa.commerce.quick_order.auto_suggest
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_local_order_management_show_invoice:
+    alias: ibexa.commerce.local_order.management.show_invoice
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_menu_admin_order_management:
+    alias: ibexa.commerce.menu.admin.order_management
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_menu_admin_order_management_invoice:
+    alias: ibexa.commerce.menu.admin.order_management.invoice
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_menu_admin_lostorders:
+    alias: ibexa.commerce.menu.admin.lost_orders
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_menu_admin_lost_order_process:
+    alias: ibexa.commerce.menu.admin.lost_order.process
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+siso_menu_admin_lost_order_delete:
+    alias: ibexa.commerce.menu.admin.lost_order.delete
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
+
+silversolutions_session_basket_data:
+    alias: ibexa.commerce.session.basket_data
+    deprecated:
+        package: ibexa/commerce-transaction
+        version: 4.0.0
