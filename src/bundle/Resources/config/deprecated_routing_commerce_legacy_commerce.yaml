@@ -1,5 +1,5 @@
 ibexa.compatibility_layer.content:
-    resource: 'deprecated_routing_experience_legacy_commerce.yaml.yaml'
+    resource: 'deprecated_routing_experience_legacy_commerce.yaml'
 
 silver_eshop_rest.dashboard_charts:
     alias: ibexa.commerce.rest.dashboard.charts
