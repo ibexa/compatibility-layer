@@ -1,0 +1,405 @@
+ibexa_stored_baskets_list_data:
+    alias: ibexa.commerce.basket.list_data
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+ibexa_add_to_basket_data:
+    alias: ibexa.commerce.basket.add_data
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_homepage:
+    alias: ibexa.commerce.checkout.homepage
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_invoice:
+    alias: ibexa.commerce.checkout.invoice
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_delivery:
+    alias: ibexa.commerce.checkout.delivery
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_shipping_payment:
+    alias: ibexa.commerce.checkout.shipping_payment
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_summary:
+    alias: ibexa.commerce.checkout.summary
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_existing_delivery:
+    alias: ibexa.commerce.checkout.existing_delivery
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_validate_step:
+    alias: ibexa.commerce.checkout.validate_step
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_confirmation:
+    alias: ibexa.commerce.checkout.confirmation
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_lost_order_process:
+    alias: ibexa.commerce.checkout.lost_order.process
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_checkout_lost_order_delete:
+    alias: ibexa.commerce.checkout.lost_order.delete
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_wish_list_show:
+    alias: ibexa.commerce.wishlist.show
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_stored_basket_show:
+    alias: ibexa.commerce.stored.basket.show
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_basket_show:
+    alias: ibexa.commerce.basket.show
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_add_to_basket:
+    alias: ibexa.commerce.basket.add
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_basket_update:
+    alias: ibexa.commerce.basket.update
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_basket_delete:
+    alias: ibexa.commerce.basket.delete
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_stored_baskets_list:
+    alias: ibexa.commerce.stored_baskets
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_remove_stored_basket:
+    alias: ibexa.commerce.stored.basket.remove
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_stored_basket_delete:
+    alias: ibexa.commerce.stored_basket.delete
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_remove__basket:
+    alias: ibexa.commerce.basket.remove
+    deprecated:
+        package: ibexa/commerce-checkout
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_phalanx:
+    alias: ibexa.commerce.phalanx
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_phalanx_admin:
+    alias: ibexa.commerce.phalanx.admin
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutionsCustomerDetail:
+    alias: ibexa.commerce.customer.detail
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutionsCustomerLogout:
+    alias: ibexa.commerce.customer.logout
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_address_book_list:
+    alias: ibexa.commerce.address.book.list
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_address_book_delete:
+    alias: ibexa.commerce.address.book.delete
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_address_book_form:
+    alias: ibexa.commerce.address.book.form
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_forms:
+    alias: ibexa.commerce.forms
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_profile:
+    alias: ibexa.commerce.profile
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_service:
+    alias: ibexa.commerce.service
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_forms_user_choice:
+    alias: ibexa.commerce.forms.user_choice
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_process_token:
+    alias: ibexa.commerce.process.token
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_secure_area:
+    alias: ibexa.commerce.secure.area
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_password_change:
+    alias: ibexa.commerce.password_change
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_language_switcher:
+    alias: ibexa.commerce.language_switcher
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_admin_configuration:
+    alias: ibexa.commerce.admin.configuration
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_admin_cockpit:
+    alias: ibexa.commerce.admin.cockpit
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_admin_ratereview_hide_comment:
+    alias: ibexa.commerce.admin.rate_review.hide_comment
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_admin_ratereview_show_comment:
+    alias: ibexa.commerce.admin.rate_review.show_comment
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_configuration_settings:
+    alias: ibexa.commerce.menu.admin.configuration.settings
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_rating_review:
+    alias: ibexa.commerce.menu.admin.rating_review
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_bestsellers:
+    alias: ibexa.commerce.bestsellers
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_ez_content_render_view:
+    alias: ibexa.commerce.content.render.view
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_session_data:
+    alias: ibexa.commerce.session.data
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_delegate:
+    alias: ibexa.commerce.delegate
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_undelegate:
+    alias: ibexa.commerce.undelegate
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_fetch_prices:
+    alias: ibexa.commerce.menu.admin.fetch_prices
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_update_prices:
+    alias: ibexa.commerce.menu.admin.update_prices
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_fetch_stock:
+    alias: ibexa.commerce.menu.admin.fetch_stock
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_menu_admin_update_stock:
+    alias: ibexa.commerce.menu.admin.update_stock
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_last_viewed_products_block:
+    alias: ibexa.commerce.last_viewed_products_block
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+silversolutions_translation_homepage:
+    alias: ibexa.commerce.translation.homepage
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_global_search:
+    alias: ibexa.commerce.global_search
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_auto_suggest:
+    alias: ibexa.commerce.auto_suggest
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+siso_post_auto_suggest:
+    alias: ibexa.commerce.post.auto_suggest
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
+
+SilversolutionsEshopBundle:
+    alias: ibexa.commerce.catalog.show
+    deprecated:
+        package: ibexa/commerce-shop
+        version: 4.0.0
+        message: 'The "%alias_id%" route alias is deprecated. You should stop using it, as it will be removed in 5.0.'
