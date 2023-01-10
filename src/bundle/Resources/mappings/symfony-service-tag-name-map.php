@@ -76,6 +76,7 @@ return [
     'ezplatform.search.solr.query.location.aggregation_result_extractor' => 'ibexa.search.solr.query.location.aggregation.result.extractor',
     'ezplatform.search.solr.query.location.aggregation_visitor' => 'ibexa.search.solr.query.location.aggregation.visitor',
     'ezplatform.siteaccess.provider' => 'ibexa.site_access.provider',
+    'ezplatform.siteaccess.matcher' => 'ibexa.site_access.matcher',
     'ezplatform.spi.content.thumbnail_strategy' => 'ibexa.repository.thumbnail.strategy.content',
     'ezplatform.spi.content.validator' => 'ibexa.repository.content.validator',
     'ezplatform.spi.field.thumbnail_strategy' => 'ibexa.repository.thumbnail.strategy.field',
