@@ -10,6 +10,6 @@ namespace Ibexa\CompatibilityLayer\Event\Subscriber;
 
 use Ibexa\Bundle\Core\EventListener\RoutingListener as CoreRoutingListener;
 
-class RoutingListener extends CoreRoutingListener
+final class RoutingListener extends CoreRoutingListener
 {
 }
