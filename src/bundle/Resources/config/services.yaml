@@ -64,3 +64,11 @@ services:
         decorates: Ibexa\Bundle\Core\DependencyInjection\Configuration\ChainConfigResolver
         arguments:
             $chainConfigResolver: '@.inner'
+
+    Ibexa\CompatibilityLayer\Event\Subscriber\RoutingListener:
+        arguments:
+            $configResolver: '@ibexa.config.resolver'
+            $urlAliasRouter: '@Ibexa\CompatibilityLayer\Routing\UrlAliasRouter'
+            $urlAliasGenerator: '@Ibexa\Core\MVC\Symfony\Routing\Generator\UrlAliasGenerator'
+        tags:
+            - { name: kernel.event_subscriber }
