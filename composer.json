@@ -33,11 +33,11 @@
     "require-dev": {
         "symfony/var-dumper": "^5.0",
         "ibexa/code-style": "^1.0",
-        "ibexa/design-engine": "~4.5.0@dev",
-        "ibexa/core": "~4.5.0@dev",
-        "ibexa/doctrine-schema": "~4.5.0@dev",
+        "ibexa/design-engine": "~4.5.0",
+        "ibexa/core": "~4.5.0",
+        "ibexa/doctrine-schema": "~4.5.0",
         "matthiasnoback/symfony-dependency-injection-test": "^4.3",
-        "phpunit/phpunit":  "^9.5.10",
+        "phpunit/phpunit": "^9.5.10",
         "phpstan/phpstan": "^0.12.99"
     },
     "scripts": {
