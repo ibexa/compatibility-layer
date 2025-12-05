@@ -1,6 +1,7 @@
 {
     "name": "ibexa/compatibility-layer",
     "description": "Compatibility layer between old code from organisation ezsystems and version 4.0 code from organisation ibexa",
+    "license": "(GPL-2.0-only or proprietary)",
     "autoload": {
         "psr-4": {
             "Ibexa\\Bundle\\CompatibilityLayer\\": "src/bundle/",
