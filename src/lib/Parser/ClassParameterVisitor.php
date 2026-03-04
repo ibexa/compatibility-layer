@@ -13,8 +13,10 @@ use PhpParser\NodeVisitorAbstract;
 
 class ClassParameterVisitor extends NodeVisitorAbstract
 {
+    /** @var array<string, string> */
     private array $classParametersMap;
 
+    /** @param array<string, string> $classParametersMap */
     public function __construct(array $classParametersMap)
     {
         $this->classParametersMap = $classParametersMap;

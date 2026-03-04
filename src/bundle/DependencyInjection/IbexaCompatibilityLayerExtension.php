@@ -17,6 +17,8 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 final class IbexaCompatibilityLayerExtension extends Extension implements PrependExtensionInterface
 {
     /**
+     * @param array<int, array<string, mixed>> $configs
+     *
      * @throws \Exception
      */
     public function load(
@@ -34,6 +36,7 @@ final class IbexaCompatibilityLayerExtension extends Extension implements Prepen
             $loader->load('conditional/url_wildcard.yaml');
         }
 
+        /** @var array<string, mixed> $bundles */
         $bundles = $container->getParameter('kernel.bundles');
         if (isset($bundles['IbexaSiteFactoryBundle'])) {
             $loader->load('conditional/site_factory.yaml');
@@ -43,10 +46,16 @@ final class IbexaCompatibilityLayerExtension extends Extension implements Prepen
     private function areUrlWildcardsEnabled(ContainerBuilder $container): bool
     {
         if ($container->hasParameter('ibexa.url_wildcards.enabled')) {
-            return $container->getParameter('ibexa.url_wildcards.enabled');
+            /** @var bool $areUrlWildcardsEnabled */
+            $areUrlWildcardsEnabled = $container->getParameter('ibexa.url_wildcards.enabled');
+
+            return $areUrlWildcardsEnabled;
         }
 
-        return $container->getParameter('ezpublish.url_wildcards.enabled');
+        /** @var bool $areUrlWildcardsEnabled */
+        $areUrlWildcardsEnabled = $container->getParameter('ezpublish.url_wildcards.enabled');
+
+        return $areUrlWildcardsEnabled;
     }
 
     public function prepend(ContainerBuilder $container): void

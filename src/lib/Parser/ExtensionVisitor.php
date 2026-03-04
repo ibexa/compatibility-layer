@@ -13,8 +13,10 @@ use PhpParser\NodeVisitorAbstract;
 
 class ExtensionVisitor extends NodeVisitorAbstract
 {
+    /** @var array<string, string> */
     private array $extensionMap;
 
+    /** @param array<string, string> $extensionMap */
     public function __construct(array $extensionMap)
     {
         $this->extensionMap = $extensionMap;
@@ -33,6 +35,7 @@ class ExtensionVisitor extends NodeVisitorAbstract
                     return $node;
                 }
 
+                /** @var \PhpParser\Node\Arg $extension */
                 $extension = $node->args[0];
                 if ($extension->value instanceof Node\Scalar\String_) {
                     $extensionName = $this->getExtensionName($extension->value->value);
@@ -41,9 +44,14 @@ class ExtensionVisitor extends NodeVisitorAbstract
                     }
                 }
 
-                if (isset($node->args[1]) && $node->args[1]->value instanceof Node\Expr\ArrayDimFetch) {
+                if (isset($node->args[1])) {
+                    /** @var \PhpParser\Node\Arg $arg */
+                    $arg = $node->args[1];
+                }
+
+                if (isset($arg) && $arg->value instanceof Node\Expr\ArrayDimFetch) {
                     /** @var \PhpParser\Node\Expr\ArrayDimFetch $arrayDimFetch */
-                    $arrayDimFetch = $node->args[1]->value;
+                    $arrayDimFetch = $arg->value;
 
                     if ($arrayDimFetch->dim instanceof Node\Scalar\String_) {
                         $extensionName = $this->getExtensionName($arrayDimFetch->dim->value);

@@ -18,26 +18,26 @@ class XmlRebranding extends ResourceRebranding
         $output = $this->replace($this->serviceTagNamesMap, $output);
 
         foreach ($this->classParametersMap as $classParameter => $fqcn) {
-            $output = preg_replace(
-                '/%' . preg_quote($classParameter) . '%/',
+            $output = $this->pregReplace(
+                '/%' . preg_quote($classParameter, '/') . '%/',
                 $fqcn,
                 $output
             );
 
-            $output = preg_replace(
-                "/^\\s*<parameter key=[\"']" . preg_quote($classParameter) . "[\"']>.*<\/parameter>\n/m",
+            $output = $this->pregReplace(
+                "/^\\s*<parameter key=[\"']" . preg_quote($classParameter, '/') . "[\"']>.*<\/parameter>\n/m",
                 '',
                 $output
             );
 
-            $output = preg_replace(
+            $output = $this->pregReplace(
                 "/^\\s*<parameters>\\s*<\/parameters>\n/m",
                 '',
                 $output
             );
 
-            $output = preg_replace(
-                "/^(\\s*)<service id=([\"'])" . preg_quote($fqcn) . "[\"']([^>]*) class=[\"']" . preg_quote($fqcn) . "[\"'](\n|)(\\s|)\\s*(>|)/m",
+            $output = $this->pregReplace(
+                "/^(\\s*)<service id=([\"'])" . preg_quote($fqcn, '/') . "[\"']([^>]*) class=[\"']" . preg_quote($fqcn, '/') . "[\"'](\n|)(\\s|)\\s*(>|)/m",
                 '${1}<service id=${2}' . $fqcn . '${2}${3}${5}${6}',
                 $output
             );
@@ -46,6 +46,7 @@ class XmlRebranding extends ResourceRebranding
         return $output;
     }
 
+    /** @return list<string> */
     public function getFileNamePatterns(): array
     {
         return [
@@ -63,6 +64,9 @@ class XmlRebranding extends ResourceRebranding
         return '"' . $subject . '"';
     }
 
+    /**
+     * @param array<string, string> $map
+     */
     protected function replace(array $map, string $input): string
     {
         return str_replace(

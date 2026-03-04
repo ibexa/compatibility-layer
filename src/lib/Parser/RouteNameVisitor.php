@@ -13,8 +13,10 @@ use PhpParser\NodeVisitorAbstract;
 
 class RouteNameVisitor extends NodeVisitorAbstract
 {
+    /** @var array<string, string> */
     private array $routeNamesMap;
 
+    /** @param array<string, string> $routeNamesMap */
     public function __construct(array $routeNamesMap)
     {
         $this->routeNamesMap = $routeNamesMap;

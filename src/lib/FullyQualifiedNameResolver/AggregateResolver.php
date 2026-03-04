@@ -13,8 +13,8 @@ use RuntimeException;
 
 final class AggregateResolver implements FullyQualifiedNameResolverInterface
 {
-    /** @var \Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface[]|iterable */
-    private $resolvers;
+    /** @var iterable<\Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface> */
+    private iterable $resolvers;
 
     /**
      * @param \Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface[] $resolvers
@@ -36,6 +36,7 @@ final class AggregateResolver implements FullyQualifiedNameResolverInterface
         return null;
     }
 
+    /** @return array<string, string> */
     public function getMap(): array
     {
         throw new RuntimeException("Can't call method on aggregate.");

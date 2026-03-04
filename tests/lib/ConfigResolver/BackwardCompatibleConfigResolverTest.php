@@ -23,11 +23,12 @@ final class BackwardCompatibleConfigResolverTest extends TestCase
         'ses_wishlist' => 'ibexa.commerce.site_access.config.wishlist',
     ];
 
-    /** @var \Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface|\PHPUnit\Framework\MockObject\MockObject */
+    /** @var \Ibexa\Contracts\Core\SiteAccess\ConfigResolverInterface&\PHPUnit\Framework\MockObject\MockObject */
     private MockObject $chainConfigResolverMock;
 
     private BackwardCompatibleConfigResolver $resolver;
 
+    /** @return iterable<string, array{string, ?string, ?string, string}> */
     public function getDataForTestGetParameter(): iterable
     {
         yield 'description_limit for a default scope in the ses_wishlist namespace' => [

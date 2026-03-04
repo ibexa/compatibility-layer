@@ -27,8 +27,8 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->extensionMap as $oldExtension => $newExtension) {
-            $output = preg_replace(
-                '/^' . $oldExtension . ':$/m',
+            $output = $this->pregReplace(
+                '/^' . preg_quote($oldExtension, '/') . ':$/m',
                 $newExtension . ':',
                 $output
             );
@@ -42,26 +42,26 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->classParametersMap as $classParameter => $fqcn) {
-            $output = preg_replace(
-                '/["\']%' . preg_quote($classParameter) . '%["\']/',
+            $output = $this->pregReplace(
+                '/["\']%' . preg_quote($classParameter, '/') . '%["\']/',
                 $fqcn,
                 $output
             );
 
-            $output = preg_replace(
-                '/^\\s*' . preg_quote($classParameter) . ":.*\n/m",
+            $output = $this->pregReplace(
+                '/^\\s*' . preg_quote($classParameter, '/') . ":.*\n/m",
                 '',
                 $output
             );
 
-            $output = preg_replace(
-                '/^(\\s+)' . preg_quote($fqcn) . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn) . "\n/m",
+            $output = $this->pregReplace(
+                '/^(\\s+)' . preg_quote($fqcn, '/') . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn, '/') . "\n/m",
                 '${1}' . $fqcn . ":\n" . '${2}',
                 $output
             );
 
-            $output = preg_replace(
-                '/^(\\s+)' . preg_quote($fqcn) . ":\n\n/m",
+            $output = $this->pregReplace(
+                '/^(\\s+)' . preg_quote($fqcn, '/') . ":\n\n/m",
                 '${1}' . $fqcn . ": ~\n\n",
                 $output
             );
@@ -75,8 +75,8 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->routeNamesMap as $oldRouteName => $newRouteName) {
-            $output = preg_replace(
-                '/^' . preg_quote($oldRouteName) . ':$/m',
+            $output = $this->pregReplace(
+                '/^' . preg_quote($oldRouteName, '/') . ':$/m',
                 $newRouteName . ':',
                 $output
             );
@@ -90,8 +90,8 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->serviceTagNamesMap as $oldServiceTagName => $newServiceTagName) {
-            $output = preg_replace(
-                '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName) . '([^a-zA-Z0-9\._])/',
+            $output = $this->pregReplace(
+                '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName, '/') . '([^a-zA-Z0-9\._])/',
                 '${1}' . $newServiceTagName . '${2}',
                 $output
             );

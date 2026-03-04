@@ -67,6 +67,7 @@ class ValueObjectVisitorTagCompatibilityPassTest extends AbstractCompilerPassTes
         );
     }
 
+    /** @return iterable<string, array{string, string}> */
     public function getDataForTestProcess(): iterable
     {
         yield 'from class-map' => [

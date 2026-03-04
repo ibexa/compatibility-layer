@@ -1,1 +1,25 @@
 parameters:
+	ignoreErrors:
+		-
+			message: '#^Class Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDebugCommand extends @final class Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand\.$#'
+			identifier: class.extendsFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDebugCommand\:\:\$defaultName overrides @final property Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand\:\:\$defaultName\.$#'
+			identifier: property.parentPropertyFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Class Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDumpReferenceCommand extends @final class Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand\.$#'
+			identifier: class.extendsFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDumpReferenceCommand\:\:\$defaultName overrides @final property Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand\:\:\$defaultName\.$#'
+			identifier: property.parentPropertyFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php

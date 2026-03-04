@@ -13,24 +13,34 @@ use PhpParser\NodeVisitorAbstract;
 
 class ParentVisitor extends NodeVisitorAbstract
 {
+    /** @var list<Node> */
     private array $stack;
 
+    /**
+     * @param array<Node> $nodes
+     */
     public function beginTraverse(array $nodes)
     {
         $this->stack = [];
+
+        return null;
     }
 
-    public function enterNode(Node $node)
+    public function enterNode(Node $node): ?Node
     {
         if (!empty($this->stack)) {
             $node->setAttribute('parent', $this->stack[count($this->stack) - 1]);
         }
 
         $this->stack[] = $node;
+
+        return null;
     }
 
-    public function leaveNode(Node $node)
+    public function leaveNode(Node $node): ?Node
     {
         array_pop($this->stack);
+
+        return null;
     }
 }

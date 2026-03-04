@@ -41,14 +41,19 @@ class PhpRebranding implements RebrandingInterface
 
     private AggregateResolver $nameResolver;
 
+    /** @var array<string, string> */
     private array $extensionMap;
 
+    /** @var array<string, string> */
     private array $routeNamesMap;
 
+    /** @var array<string, string> */
     private array $servicesMap;
 
+    /** @var array<string, string> */
     private array $serviceTagNamesMap;
 
+    /** @var array<string, string> */
     private array $classParametersMap;
 
     public function __construct()
@@ -90,6 +95,7 @@ class PhpRebranding implements RebrandingInterface
         $traverser->addVisitor(new ClassParameterVisitor($this->classParametersMap));
 
         try {
+            /** @var array<\PhpParser\Node> $parsed */
             $parsed = $this->parser->parse($input);
         } catch (Exception $exception) {
             return $input;
@@ -104,11 +110,12 @@ class PhpRebranding implements RebrandingInterface
         $output = $this->rebrandServices($output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
-        $output = preg_replace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
+        $output = $this->pregReplace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
 
         return $output;
     }
 
+    /** @return list<string> */
     public function getFileNamePatterns(): array
     {
         return [
@@ -122,19 +129,27 @@ class PhpRebranding implements RebrandingInterface
 
         foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
             if (class_exists($newServiceName)) {
-                $output = preg_replace(
-                    '/(?<!\.|_)' . '\'' . preg_quote($oldServiceName) . '\'' . '/',
+                $output = $this->pregReplace(
+                    '/(?<!\.|_)' . '\'' . preg_quote($oldServiceName, '/') . '\'' . '/',
                     '${1}' . '\\' . $newServiceName . '::class',
                     $output
                 );
             } else {
-                $output = preg_replace(
-                    '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\'\":]|$)/m',
+                $output = $this->pregReplace(
+                    '/(?<!\.|_)' . preg_quote($oldServiceName, '/') . '(?=[\'\":]|$)/m',
                     '${1}' . $newServiceName,
                     $output
                 );
             }
         }
+
+        return $output;
+    }
+
+    private function pregReplace(string $pattern, string $replacement, string $subject): string
+    {
+        /** @var string $output */
+        $output = preg_replace($pattern, $replacement, $subject);
 
         return $output;
     }

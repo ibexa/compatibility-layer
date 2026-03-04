@@ -31,8 +31,10 @@ class SiteFactoryRebrandingCommand extends Command
 
     private SiteDomainMapper $siteMapper;
 
+    /** @var array<string, string> */
     private array $configResolverNamespacesMap;
 
+    /** @var array<string, string> */
     private array $containerParametersMap;
 
     public function __construct(
@@ -103,6 +105,7 @@ class SiteFactoryRebrandingCommand extends Command
 
     public function replaceOldParameters(string $json): string
     {
+        /** @var array<string, mixed> $config */
         $config = json_decode($json, true);
         $newConfig = [];
         foreach ($config as $param => $value) {
@@ -113,7 +116,9 @@ class SiteFactoryRebrandingCommand extends Command
             }
         }
 
-        return json_encode($newConfig);
+        $encoded = json_encode($newConfig);
+
+        return $encoded === false ? $json : $encoded;
     }
 
     private function replaceNamespaces(string $parameterName): string

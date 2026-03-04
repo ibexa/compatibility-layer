@@ -32,13 +32,18 @@ class CommerceSettingRebrandingCommand extends Command
 
     private UserService $userService;
 
+    /** @var array<string, string> */
     private array $containerParametersMap;
 
+    /** @var array<string, string> */
     private array $configResolverNamespacesMap;
 
     private AggregateResolver $nameResolver;
 
+    /** @var array<string, string> */
     private array $servicesMap;
+
+    private SymfonyStyle $style;
 
     public function __construct(
         SettingService $settingService,
@@ -62,7 +67,7 @@ class CommerceSettingRebrandingCommand extends Command
         $this->userService = $userService;
     }
 
-    protected function initialize(InputInterface $input, OutputInterface $output)
+    protected function initialize(InputInterface $input, OutputInterface $output): void
     {
         parent::initialize($input, $output);
 
@@ -71,7 +76,7 @@ class CommerceSettingRebrandingCommand extends Command
         );
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->addOption(
@@ -111,6 +116,11 @@ class CommerceSettingRebrandingCommand extends Command
         return Command::SUCCESS;
     }
 
+    /**
+     * @param array<string, mixed> $config
+     *
+     * @return array<string, mixed>
+     */
     public function replaceKeysAndValues(array $config): array
     {
         $newConfig = [];
@@ -151,6 +161,11 @@ class CommerceSettingRebrandingCommand extends Command
         return $parameterName;
     }
 
+    /**
+     * @param mixed $singleValue
+     *
+     * @return mixed
+     */
     private function replaceValue($singleValue)
     {
         if (!is_string($singleValue) || $singleValue === '') {

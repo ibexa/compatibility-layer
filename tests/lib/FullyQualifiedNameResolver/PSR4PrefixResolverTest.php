@@ -15,6 +15,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
  */
 class PSR4PrefixResolverTest extends BaseResolverTest
 {
+    /** @return iterable<mixed, array{string, string}> */
     public function getDataForTestResolve(): iterable
     {
         yield [

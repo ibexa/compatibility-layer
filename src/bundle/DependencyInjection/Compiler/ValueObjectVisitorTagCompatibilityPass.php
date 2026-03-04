@@ -34,7 +34,8 @@ final class ValueObjectVisitorTagCompatibilityPass implements CompilerPassInterf
         }
     }
 
-    private function processServiceTags($serviceTags, Definition $definition): void
+    /** @param iterable<array<string, mixed>> $serviceTags */
+    private function processServiceTags(iterable $serviceTags, Definition $definition): void
     {
         foreach ($serviceTags as $serviceTag) {
             $newName = isset($serviceTag['type'])

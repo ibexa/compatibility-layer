@@ -15,6 +15,7 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\ClassMapResolver;
  */
 class ClassMapResolverTest extends BaseResolverTest
 {
+    /** @return iterable<mixed, array{string, string}> */
     public function getDataForTestResolve(): iterable
     {
         yield [

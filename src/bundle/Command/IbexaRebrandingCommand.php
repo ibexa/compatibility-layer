@@ -32,7 +32,7 @@ class IbexaRebrandingCommand extends Command
 
     private SymfonyStyle $style;
 
-    protected function configure()
+    protected function configure(): void
     {
         $this->addArgument('sourcePath', InputArgument::REQUIRED);
     }
@@ -79,6 +79,7 @@ class IbexaRebrandingCommand extends Command
                 $progressBar->advance();
                 continue;
             }
+            /** @var string $input */
             $input = file_get_contents($file->getPathname());
             $output = $rebranding->rebrand($input);
 

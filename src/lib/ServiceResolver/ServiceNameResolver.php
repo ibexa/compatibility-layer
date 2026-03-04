@@ -28,6 +28,7 @@ final class ServiceNameResolver
         return $this->serviceNamesMap[$name] ?? null;
     }
 
+    /** @return array<string, string> */
     public function getMap(): array
     {
         return $this->serviceNamesMap;

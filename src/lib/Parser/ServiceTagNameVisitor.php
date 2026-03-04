@@ -13,8 +13,10 @@ use PhpParser\NodeVisitorAbstract;
 
 class ServiceTagNameVisitor extends NodeVisitorAbstract
 {
+    /** @var array<string, string> */
     private array $serviceTagNamesMap;
 
+    /** @param array<string, string> $serviceTagNamesMap */
     public function __construct(array $serviceTagNamesMap)
     {
         $this->serviceTagNamesMap = $serviceTagNamesMap;

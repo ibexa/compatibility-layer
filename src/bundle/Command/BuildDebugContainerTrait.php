@@ -23,8 +23,6 @@ use Symfony\Component\HttpKernel\KernelInterface;
  */
 trait BuildDebugContainerTrait
 {
-    protected $containerBuilder;
-
     /**
      * Loads the ContainerBuilder from the cache.
      *
@@ -36,18 +34,24 @@ trait BuildDebugContainerTrait
             return $this->containerBuilder;
         }
 
-        if (!$kernel->isDebug() || !(new ConfigCache($kernel->getContainer()->getParameter('debug.container.dump'), true))->isFresh()) {
+        /** @var string $debugContainerDump */
+        $debugContainerDump = $kernel->getContainer()->getParameter('debug.container.dump');
+
+        /** @var \Symfony\Component\HttpKernel\KernelInterface&\Ibexa\CompatibilityLayer\PHPStan\DebugContainerKernelInterface $debugKernel */
+        $debugKernel = $kernel;
+
+        if (!$debugKernel->isDebug() || !(new ConfigCache($debugContainerDump, true))->isFresh()) {
             $buildContainer = \Closure::bind(function () {
                 $this->initializeBundles();
 
                 return $this->buildContainer();
-            }, $kernel, \get_class($kernel));
+            }, $debugKernel, \get_class($debugKernel));
             $container = $buildContainer();
             $container->getCompilerPassConfig()->setRemovingPasses([]);
             $container->getCompilerPassConfig()->setAfterRemovingPasses([]);
             $container->compile();
         } else {
-            (new XmlFileLoader($container = new ContainerBuilder(), new FileLocator()))->load($kernel->getContainer()->getParameter('debug.container.dump'));
+            (new XmlFileLoader($container = new ContainerBuilder(), new FileLocator()))->load($debugContainerDump);
             $locatorPass = new ServiceLocatorTagPass();
             $locatorPass->process($container);
         }
