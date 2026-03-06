@@ -18,8 +18,10 @@ class ParentVisitor extends NodeVisitorAbstract
 
     /**
      * @param array<Node> $nodes
+     *
+     * @return array<Node>|null
      */
-    public function beginTraverse(array $nodes)
+    public function beginTraverse(array $nodes): ?array
     {
         $this->stack = [];
 

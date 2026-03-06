@@ -83,11 +83,11 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         foreach ($this->bundleMap as $oldBundle => $newBundle) {
-            $output = $this->pregReplace('/([^[a-zA-Z0-9\\\\\/])' . preg_quote($oldBundle, '/') . '/', '${1}' . $newBundle, $output);
+            $output = RegexReplace::replace('/([^[a-zA-Z0-9\\\\\/])' . preg_quote($oldBundle, '/') . '/', '${1}' . $newBundle, $output);
         }
 
         foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {
-            $output = $this->pregReplace('/([^[a-zA-Z0-9\\\\])' . preg_quote($oldBundleName, '/') . '/', '${1}' . $newBundleName, $output);
+            $output = RegexReplace::replace('/([^[a-zA-Z0-9\\\\])' . preg_quote($oldBundleName, '/') . '/', '${1}' . $newBundleName, $output);
         }
 
         foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {
@@ -99,25 +99,25 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/(?<!\.|_)' . preg_quote($oldServiceName, '/') . '(?=[\':]|$)/m',
                 '${1}' . $newServiceName,
                 $output
             );
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/"@' . preg_quote($oldServiceName, '/') . '"/m',
                 '\'@${1}' . $newServiceName . '\'',
                 $output
             );
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/id="' . preg_quote($oldServiceName, '/') . '"/m',
                 'id="${1}' . $newServiceName . '"',
                 $output
             );
         }
 
-        $output = $this->pregReplace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
-        $output = $this->pregReplace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
+        $output = RegexReplace::replace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
+        $output = RegexReplace::replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
 
@@ -157,13 +157,5 @@ abstract class ResourceRebranding implements RebrandingInterface
         $bundleName = preg_replace('/Bundle$/', '', $className);
 
         return $bundleName;
-    }
-
-    protected function pregReplace(string $pattern, string $replacement, string $subject): string
-    {
-        /** @var string $output */
-        $output = preg_replace($pattern, $replacement, $subject);
-
-        return $output;
     }
 }

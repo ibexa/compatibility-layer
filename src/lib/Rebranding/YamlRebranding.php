@@ -27,7 +27,7 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->extensionMap as $oldExtension => $newExtension) {
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/^' . preg_quote($oldExtension, '/') . ':$/m',
                 $newExtension . ':',
                 $output
@@ -42,25 +42,25 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->classParametersMap as $classParameter => $fqcn) {
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/["\']%' . preg_quote($classParameter, '/') . '%["\']/',
                 $fqcn,
                 $output
             );
 
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/^\\s*' . preg_quote($classParameter, '/') . ":.*\n/m",
                 '',
                 $output
             );
 
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/^(\\s+)' . preg_quote($fqcn, '/') . ":\n((\\s+:[^\n]+)*)(\\s+)class: " . preg_quote($fqcn, '/') . "\n/m",
                 '${1}' . $fqcn . ":\n" . '${2}',
                 $output
             );
 
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/^(\\s+)' . preg_quote($fqcn, '/') . ":\n\n/m",
                 '${1}' . $fqcn . ": ~\n\n",
                 $output
@@ -75,7 +75,7 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->routeNamesMap as $oldRouteName => $newRouteName) {
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/^' . preg_quote($oldRouteName, '/') . ':$/m',
                 $newRouteName . ':',
                 $output
@@ -90,7 +90,7 @@ class YamlRebranding extends ResourceRebranding
         $output = $input;
 
         foreach ($this->serviceTagNamesMap as $oldServiceTagName => $newServiceTagName) {
-            $output = $this->pregReplace(
+            $output = RegexReplace::replace(
                 '/([^%@a-zA-Z0-9\._])' . preg_quote($oldServiceTagName, '/') . '([^a-zA-Z0-9\._])/',
                 '${1}' . $newServiceTagName . '${2}',
                 $output
