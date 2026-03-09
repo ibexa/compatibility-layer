@@ -110,7 +110,7 @@ class PhpRebranding implements RebrandingInterface
         $output = $this->rebrandServices($output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
-        $output = RegexReplace::replace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
+        $output = $this->pregReplace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
 
         return $output;
     }
@@ -129,19 +129,27 @@ class PhpRebranding implements RebrandingInterface
 
         foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
             if (class_exists($newServiceName)) {
-                $output = RegexReplace::replace(
+                $output = $this->pregReplace(
                     '/(?<!\.|_)' . '\'' . preg_quote($oldServiceName, '/') . '\'' . '/',
                     '${1}' . '\\' . $newServiceName . '::class',
                     $output
                 );
             } else {
-                $output = RegexReplace::replace(
+                $output = $this->pregReplace(
                     '/(?<!\.|_)' . preg_quote($oldServiceName, '/') . '(?=[\'\":]|$)/m',
                     '${1}' . $newServiceName,
                     $output
                 );
             }
         }
+
+        return $output;
+    }
+
+    private function pregReplace(string $pattern, string $replacement, string $subject): string
+    {
+        /** @var string $output */
+        $output = preg_replace($pattern, $replacement, $subject);
 
         return $output;
     }

@@ -58,7 +58,7 @@ class TwigRebranding extends ResourceRebranding
     private function rebrandTwigFunctions(string $output): string
     {
         foreach ($this->twigFunctions as $oldFunction => $newFunction) {
-            $output = RegexReplace::replace(
+            $output = $this->pregReplace(
                 '/(?<!_)' . preg_quote($oldFunction, '/') . '\(/m',
                 $newFunction . '(',
                 $output
@@ -66,7 +66,7 @@ class TwigRebranding extends ResourceRebranding
         }
 
         foreach ($this->wildcardFunctions as $matchOld => $matchNew) {
-            $output = RegexReplace::replace(
+            $output = $this->pregReplace(
                 '/' . $matchOld . '\(/m',
                 $matchNew . '(',
                 $output
@@ -79,7 +79,7 @@ class TwigRebranding extends ResourceRebranding
     private function rebrandTwigFilters(string $output): string
     {
         foreach ($this->twigFilters as $oldFilter => $newFilter) {
-            $output = RegexReplace::replace(
+            $output = $this->pregReplace(
                 '/\|' . preg_quote($oldFilter, '/') . '/m',
                 '|' . $newFilter,
                 $output

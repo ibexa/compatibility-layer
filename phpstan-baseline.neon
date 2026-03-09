@@ -23,3 +23,27 @@ parameters:
 			identifier: property.parentPropertyFinalByPhpDoc
 			count: 1
 			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
+			message: '#^PHPDoc tag @var for variable \$debugKernel contains unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/bundle/Command/BuildDebugContainerTrait.php
+
+		-
+			message: '#^Call to method isDebug\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/bundle/Command/BuildDebugContainerTrait.php
+
+		-
+			message: '#^Call to method initializeBundles\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/bundle/Command/BuildDebugContainerTrait.php
+
+		-
+			message: '#^Call to method buildContainer\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
+			identifier: class.notFound
+			count: 2
+			path: src/bundle/Command/BuildDebugContainerTrait.php
