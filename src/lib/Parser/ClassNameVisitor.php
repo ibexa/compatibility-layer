@@ -13,7 +13,6 @@ use PhpParser\Node\Stmt\UseUse;
 
 class ClassNameVisitor extends RebrandingVisitor
 {
-    /** @var array<string, \PhpParser\Node\Name> */
     protected array $namespaceAliases = [];
 
     public function leaveNode(Node $node)
@@ -51,7 +50,6 @@ class ClassNameVisitor extends RebrandingVisitor
             $possibleClassNames = array_unique(array_reverse($matches[2]));
 
             foreach ($possibleClassNames as $possibleClassName) {
-                /** @var string $normalizedClassName */
                 $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
                 if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
                     if ($normalizedClassName !== $possibleClassName) {

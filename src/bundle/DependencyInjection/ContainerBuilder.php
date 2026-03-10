@@ -19,11 +19,11 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
  */
 final class ContainerBuilder extends SymfonyContainerBuilder
 {
-    /** @var array<string, string>|null */
-    private static $extensionNameMap = null;
+    /** @var array<string, string> */
+    private static $extensionNameMap;
 
-    /** @var array<string, string>|null */
-    private static $serviceNameMap = null;
+    /** @var array<string, string> */
+    private static $serviceNameMap;
 
     public function hasExtension(string $name): bool
     {

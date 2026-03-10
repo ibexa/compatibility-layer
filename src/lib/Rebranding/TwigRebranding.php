@@ -12,13 +12,10 @@ use Ibexa\Bundle\CompatibilityLayer\IbexaCompatibilityLayerBundle;
 
 class TwigRebranding extends ResourceRebranding
 {
-    /** @var array<string, string> */
     private array $twigFunctions;
 
-    /** @var array<string, string> */
     private array $twigFilters;
 
-    /** @var array<string, string> */
     private array $wildcardFunctions = [
         'ez_render_(.*?)_query_(.*?)' => 'ibexa_render_${1}_query_${2}',
         'ez_render_(.*?)_query' => 'ibexa_render_${1}_query',
@@ -31,7 +28,6 @@ class TwigRebranding extends ResourceRebranding
         $this->twigFilters = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'twig-filters-map.php';
     }
 
-    /** @return list<string> */
     public function getFileNamePatterns(): array
     {
         return [
@@ -58,15 +54,15 @@ class TwigRebranding extends ResourceRebranding
     private function rebrandTwigFunctions(string $output): string
     {
         foreach ($this->twigFunctions as $oldFunction => $newFunction) {
-            $output = $this->pregReplace(
-                '/(?<!_)' . preg_quote($oldFunction, '/') . '\(/m',
-                $newFunction . '(',
+            $output = preg_replace(
+                '/(?<!_)' . $oldFunction . '\(/m',
+                '${1}' . $newFunction . '(',
                 $output
             );
         }
 
         foreach ($this->wildcardFunctions as $matchOld => $matchNew) {
-            $output = $this->pregReplace(
+            $output = preg_replace(
                 '/' . $matchOld . '\(/m',
                 $matchNew . '(',
                 $output
@@ -79,9 +75,9 @@ class TwigRebranding extends ResourceRebranding
     private function rebrandTwigFilters(string $output): string
     {
         foreach ($this->twigFilters as $oldFilter => $newFilter) {
-            $output = $this->pregReplace(
-                '/\|' . preg_quote($oldFilter, '/') . '/m',
-                '|' . $newFilter,
+            $output = preg_replace(
+                '/\|' . $oldFilter . '/m',
+                '${1}' . '|' . $newFilter,
                 $output
             );
         }

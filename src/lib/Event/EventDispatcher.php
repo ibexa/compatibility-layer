@@ -31,14 +31,11 @@ class EventDispatcher implements EventDispatcherInterface
         ]);
     }
 
-    public function dispatch(object $event, ?string $eventName = null): object
+    public function dispatch(object $event, string $eventName = null): object
     {
         return $this->innerEventDispatcher->dispatch($event, $eventName);
     }
 
-    /**
-     * @param callable $listener
-     */
     public function addListener(string $eventName, $listener, int $priority = 0): void
     {
         $newEventName = $this->fullyQualifiedNameResolver->resolve($eventName);
@@ -63,20 +60,17 @@ class EventDispatcher implements EventDispatcherInterface
         $this->innerEventDispatcher->removeSubscriber($subscriber);
     }
 
-    public function getListeners(?string $eventName = null): array
+    public function getListeners(string $eventName = null): array
     {
         return $this->innerEventDispatcher->getListeners($eventName);
     }
 
-    /**
-     * @param callable $listener
-     */
     public function getListenerPriority(string $eventName, $listener): ?int
     {
         return $this->innerEventDispatcher->getListenerPriority($eventName, $listener);
     }
 
-    public function hasListeners(?string $eventName = null): bool
+    public function hasListeners(string $eventName = null): bool
     {
         return $this->innerEventDispatcher->hasListeners($eventName);
     }

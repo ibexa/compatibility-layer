@@ -13,8 +13,8 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 
 final class ClassMapResolver implements FullyQualifiedNameResolverInterface
 {
-    /** @var array<string, string> */
-    private array $classMap;
+    /** @var array */
+    private $classMap;
 
     public function __construct(bool $reverse = false)
     {
@@ -31,7 +31,6 @@ final class ClassMapResolver implements FullyQualifiedNameResolverInterface
         return $this->classMap[$fullyQualifiedName] ?? null;
     }
 
-    /** @return array<string, string> */
     public function getMap(): array
     {
         return $this->classMap;

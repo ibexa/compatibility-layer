@@ -33,7 +33,6 @@ final class ContainerBuilderTest extends TestCase
                 return ContainerBuilderTest::EXTENSION_ALIAS;
             }
 
-            /** @param array<int, array<string, mixed>> $configs */
             public function load(array $configs, SymfonyContainerBuilder $container): void
             {
                 // Nothing to do
@@ -45,7 +44,6 @@ final class ContainerBuilderTest extends TestCase
         $this->containerBuilder->loadFromExtension(self::EXTENSION_ALIAS, self::EXTENSION_CONFIG);
     }
 
-    /** @return iterable<int, array{string}> */
     public function getLegacyExtensionNames(): iterable
     {
         yield ['ezpublish'];

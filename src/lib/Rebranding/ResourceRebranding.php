@@ -19,25 +19,18 @@ abstract class ResourceRebranding implements RebrandingInterface
 {
     protected FullyQualifiedNameResolverInterface $nameResolver;
 
-    /** @var array<string, string> */
     protected array $bundleMap;
 
-    /** @var array<string, string> */
     protected array $bundleNameMap;
 
-    /** @var array<string, string> */
     protected array $extensionMap;
 
-    /** @var array<string, string> */
     protected array $routeNamesMap;
 
-    /** @var array<string, string> */
     protected array $servicesMap;
 
-    /** @var array<string, string> */
     protected array $serviceTagNamesMap;
 
-    /** @var array<string, string> */
     protected array $classParametersMap;
 
     public function __construct()
@@ -71,7 +64,6 @@ abstract class ResourceRebranding implements RebrandingInterface
             $possibleClassNames = array_unique(array_reverse($matches[2]));
 
             foreach ($possibleClassNames as $possibleClassName) {
-                /** @var string $normalizedClassName */
                 $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
                 if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
                     if ($normalizedClassName !== $possibleClassName) {
@@ -83,11 +75,11 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         foreach ($this->bundleMap as $oldBundle => $newBundle) {
-            $output = $this->pregReplace('/([^[a-zA-Z0-9\\\\\/])' . preg_quote($oldBundle, '/') . '/', '${1}' . $newBundle, $output);
+            $output = preg_replace('/([^[a-zA-Z0-9\\\\\/])' . preg_quote($oldBundle) . '/', '${1}' . $newBundle, $output);
         }
 
         foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {
-            $output = $this->pregReplace('/([^[a-zA-Z0-9\\\\])' . preg_quote($oldBundleName, '/') . '/', '${1}' . $newBundleName, $output);
+            $output = preg_replace('/([^[a-zA-Z0-9\\\\])' . preg_quote($oldBundleName) . '/', '${1}' . $newBundleName, $output);
         }
 
         foreach ($this->bundleNameMap as $oldBundleName => $newBundleName) {
@@ -99,36 +91,31 @@ abstract class ResourceRebranding implements RebrandingInterface
         }
 
         foreach ($this->servicesMap as $oldServiceName => $newServiceName) {
-            $output = $this->pregReplace(
-                '/(?<!\.|_)' . preg_quote($oldServiceName, '/') . '(?=[\':]|$)/m',
+            $output = preg_replace(
+                '/(?<!\.|_)' . preg_quote($oldServiceName) . '(?=[\':]|$)/m',
                 '${1}' . $newServiceName,
                 $output
             );
-            $output = $this->pregReplace(
-                '/"@' . preg_quote($oldServiceName, '/') . '"/m',
+            $output = preg_replace(
+                '/"@' . preg_quote($oldServiceName) . '"/m',
                 '\'@${1}' . $newServiceName . '\'',
                 $output
             );
-            $output = $this->pregReplace(
-                '/id="' . preg_quote($oldServiceName, '/') . '"/m',
+            $output = preg_replace(
+                '/id="' . preg_quote($oldServiceName) . '"/m',
                 'id="${1}' . $newServiceName . '"',
                 $output
             );
         }
 
-        $output = $this->pregReplace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
-        $output = $this->pregReplace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
+        $output = preg_replace('/@ezdesign([\/\\\\])/', '@ibexadesign${1}', $output);
+        $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
         $output = str_replace('vnd.ez.api', 'vnd.ibexa.api', $output);
         $output = str_replace(RestPrefixSubscriber::LEGACY_REST_PREFIX, RestPrefixSubscriber::IBEXA_REST_PREFIX, $output);
 
         return $output;
     }
 
-    /**
-     * @param array<string, string> $classMap
-     *
-     * @return array<string, string>
-     */
     protected function getBundleMap(array $classMap, bool $short = false): array
     {
         $bundleMap = [];
@@ -143,27 +130,13 @@ abstract class ResourceRebranding implements RebrandingInterface
         return $bundleMap;
     }
 
-    private function getBundleName(string $fullClassName, bool $short = false): string
+    private function getBundleName(string $fullClassName, bool $short = false)
     {
         $parts = explode('\\', $fullClassName);
-        /** @var string $className */
         $className = array_pop($parts);
 
-        if (!$short) {
-            return $className;
-        }
-
-        /** @var string $bundleName */
-        $bundleName = preg_replace('/Bundle$/', '', $className);
-
-        return $bundleName;
-    }
-
-    protected function pregReplace(string $pattern, string $replacement, string $subject): string
-    {
-        /** @var string $output */
-        $output = preg_replace($pattern, $replacement, $subject);
-
-        return $output;
+        return $short
+            ? preg_replace('/Bundle$/', '', $className)
+            : $className;
     }
 }

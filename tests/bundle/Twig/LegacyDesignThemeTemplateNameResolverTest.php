@@ -43,7 +43,6 @@ final class LegacyDesignThemeTemplateNameResolverTest extends TestCase
         );
     }
 
-    /** @return iterable<string, array{string, bool}> */
     public function getDataForTestIsTemplateDesignNamespaced(): iterable
     {
         yield self::LEGACY_DESIGN => [

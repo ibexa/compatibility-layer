@@ -17,13 +17,6 @@
             "Ibexa\\Tests\\CompatibilityLayer\\": "tests/lib"
         }
     },
-    "repositories": [
-        {
-            "name": "ibexa",
-            "type": "composer",
-            "url": "https://updates.ibexa.co"
-        }
-    ],
     "require": {
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
@@ -36,8 +29,7 @@
         "symfony/http-kernel": "^5.0",
         "symfony/yaml": "^5.0",
         "symfony/process": "^5.3",
-        "symfony/form": "^5.0",
-        "ibexa/rest": "~4.6.0@dev"
+        "symfony/form": "^5.0"
     },
     "require-dev": {
         "symfony/var-dumper": "^5.0",
@@ -45,7 +37,6 @@
         "ibexa/design-engine": "~4.6.0@dev",
         "ibexa/core": "~4.6.0@dev",
         "ibexa/doctrine-schema": "~4.6.0@dev",
-        "ibexa/site-factory": "~4.6.0@dev",
         "matthiasnoback/symfony-dependency-injection-test": "^4.3",
         "phpunit/phpunit": "^9.5.10",
         "phpstan/phpstan": "^2.0"

@@ -63,7 +63,6 @@ class ComposerRebranding implements RebrandingInterface
         'ezsystems/ezplatform-connector-unsplash' => 'ibexa/connector-unsplash',
     ];
 
-    /** @return list<string> */
     public function getFileNamePatterns(): array
     {
         return [
@@ -76,32 +75,24 @@ class ComposerRebranding implements RebrandingInterface
         $output = $input;
 
         foreach (self::REPOSITORY_MAP as $old => $new) {
-            $output = $this->pregReplace(
+            $output = preg_replace(
                 sprintf('/"%s": "[a-zA-Z0-9@-^\.]+"/', preg_quote($old, '/')),
                 sprintf('"%s": "^4.0@dev"', $new),
                 $output
             );
         }
 
-        $output = $this->pregReplace(
+        $output = preg_replace(
             '/"php": ".+"/',
             '"php": "^7.4 || ^8.0"',
             $output
         );
 
-        $output = $this->pregReplace(
+        $output = preg_replace(
             '/"ezsystems\/ezplatform-code-style": ".+"/',
             '"ibexa/code-style": "^1.0"',
             $output
         );
-
-        return $output;
-    }
-
-    private function pregReplace(string $pattern, string $replacement, string $subject): string
-    {
-        /** @var string $output */
-        $output = preg_replace($pattern, $replacement, $subject);
 
         return $output;
     }

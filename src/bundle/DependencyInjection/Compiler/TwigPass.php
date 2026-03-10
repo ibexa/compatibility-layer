@@ -22,7 +22,7 @@ class TwigPass implements CompilerPassInterface
         $this->bundleNameResolver = $bundleNameResolver;
     }
 
-    public function process(ContainerBuilder $container): void
+    public function process(ContainerBuilder $container)
     {
         $loader = $container->getDefinition('twig.loader.native_filesystem');
 

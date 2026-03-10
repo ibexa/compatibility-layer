@@ -17,11 +17,11 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolver\PSR4PrefixResolver;
  */
 class AggregateResolverTest extends BaseResolverTest
 {
-    /** @return iterable<mixed, array{string, string}> */
     public function getDataForTestResolve(): iterable
     {
-        /** @var list<BaseResolverTest> $allResolversTests */
         $allResolversTests = [new ClassMapResolverTest(), new PSR4PrefixResolverTest()];
+
+        /** @var \Ibexa\Tests\CompatibilityLayer\FullyQualifiedNameResolver\BaseResolverTest $resolverTest */
         foreach ($allResolversTests as $resolverTest) {
             yield from $resolverTest->getDataForTestResolve();
         }

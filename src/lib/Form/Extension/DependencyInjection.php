@@ -23,22 +23,21 @@ use Symfony\Component\Form\FormTypeGuesserInterface;
  */
 final class DependencyInjection implements FormExtensionInterface
 {
-    private ?FormTypeGuesserInterface $guesser = null;
+    /** @var \Symfony\Component\Form\FormTypeGuesserInterface */
+    private $guesser;
 
-    private bool $guesserLoaded = false;
+    /** @var bool */
+    private $guesserLoaded = false;
 
-    private ContainerInterface $typeContainer;
+    /** @var \Psr\Container\ContainerInterface */
+    private $typeContainer;
 
-    /** @var array<string, \Traversable<int, object>> */
-    private array $typeExtensionServices;
+    /** @var iterable[] */
+    private $typeExtensionServices;
 
-    /** @var iterable<FormTypeGuesserInterface> */
-    private iterable $guesserServices;
+    /** @var iterable */
+    private $guesserServices;
 
-    /**
-     * @param array<string, \Traversable<int, object>> $typeExtensionServices
-     * @param iterable<FormTypeGuesserInterface> $guesserServices
-     */
     public function __construct(ContainerInterface $typeContainer, array $typeExtensionServices, iterable $guesserServices)
     {
         $this->typeContainer = $typeContainer;
@@ -66,8 +65,6 @@ final class DependencyInjection implements FormExtensionInterface
 
     /**
      * @see \Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionInterface::getTypeExtensions()
-     *
-     * @return array<int, object>
      */
     public function getTypeExtensions(string $name): array
     {

@@ -27,7 +27,7 @@ class CommerceSettingRebrandingCommandTest extends TestCase
         );
     }
 
-    public function testReplaceKeysAndValues(): void
+    public function testReplaceKeysAndValues()
     {
         $inputMap = [
             'siso_core.default.category_view' => 'product_list',

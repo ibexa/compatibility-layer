@@ -14,7 +14,6 @@ use PhpParser\Node\Stmt\UseUse;
 
 class DocblockVisitor extends RebrandingVisitor
 {
-    /** @var array<string, \PhpParser\Node\Name\FullyQualified> */
     private array $resolvedUses = [];
 
     public function leaveNode(Node $node)
@@ -23,13 +22,13 @@ class DocblockVisitor extends RebrandingVisitor
             if ($node->alias !== null) {
                 $this->resolvedUses[(string)$node->alias->name] = new Node\Name\FullyQualified($node->name->parts);
             } else {
-                $this->resolvedUses[(string) end($node->name->parts)] = new Node\Name\FullyQualified($node->name->parts);
+                $this->resolvedUses[end($node->name->parts)] = new Node\Name\FullyQualified($node->name->parts);
             }
         }
 
         if (isset($node->getAttributes()['comments'])) {
             if ($node instanceof Node\AttributeGroup) {
-                return null;
+                return;
             }
 
             $comments = $node->getAttributes()['comments'];
@@ -79,7 +78,6 @@ class DocblockVisitor extends RebrandingVisitor
                         $possibleClassNames = array_unique(array_reverse($matches[2]));
 
                         foreach ($possibleClassNames as $possibleClassName) {
-                            /** @var string $normalizedClassName */
                             $normalizedClassName = preg_replace('/\\\\+/', '\\', $possibleClassName);
                             if ($newClassName = $this->nameResolver->resolve($normalizedClassName)) {
                                 if ($normalizedClassName !== $possibleClassName) {

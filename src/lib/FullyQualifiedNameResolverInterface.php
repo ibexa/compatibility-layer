@@ -12,6 +12,5 @@ interface FullyQualifiedNameResolverInterface
 {
     public function resolve(string $fullyQualifiedName): ?string;
 
-    /** @return array<string, string> */
     public function getMap(): array;
 }

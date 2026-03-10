@@ -22,12 +22,11 @@ class CssRebranding extends ResourceRebranding
             );
         }
 
-        $output = $this->pregReplace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
+        $output = preg_replace('/(["\'])ez(publish|platform)(["\'])/', '${1}ibexa${3}', $output);
 
         return $output;
     }
 
-    /** @return list<string> */
     public function getFileNamePatterns(): array
     {
         return [

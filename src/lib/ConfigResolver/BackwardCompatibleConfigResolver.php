@@ -23,7 +23,7 @@ final class BackwardCompatibleConfigResolver implements ConfigResolverInterface
 
     private ConfigResolverInterface $chainConfigResolver;
 
-    /** @var array<string, string> */
+    /** @var array<string, string */
     private array $configResolverNamespacesMap;
 
     public function __construct(ConfigResolverInterface $chainConfigResolver)

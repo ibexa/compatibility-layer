@@ -8,7 +8,6 @@ declare(strict_types=1);
 
 namespace Ibexa\Tests\CompatibilityLayer\FullyQualifiedNameResolver;
 
-use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -16,9 +15,9 @@ use PHPUnit\Framework\TestCase;
  */
 abstract class BaseResolverTest extends TestCase
 {
-    protected FullyQualifiedNameResolverInterface $resolver;
+    /** @var \Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface */
+    protected $resolver;
 
-    /** @return iterable<mixed, array{string, string}> */
     abstract public function getDataForTestResolve(): iterable;
 
     /**

@@ -30,7 +30,7 @@ final class IbexaCompatibilityLayerBundle extends Bundle
 {
     public const MAPPINGS_PATH = __DIR__ . '/Resources/mappings';
 
-    public function build(ContainerBuilder $container): void
+    public function build(ContainerBuilder $container)
     {
         parent::build($container);
 

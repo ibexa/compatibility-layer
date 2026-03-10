@@ -13,8 +13,8 @@ use Ibexa\CompatibilityLayer\FullyQualifiedNameResolverInterface;
 
 final class PSR4PrefixResolver implements FullyQualifiedNameResolverInterface
 {
-    /** @var array<string, string> */
-    private array $psr4map;
+    /** @var array[] */
+    private $psr4map;
 
     public function __construct(bool $reverse = false)
     {
@@ -22,7 +22,6 @@ final class PSR4PrefixResolver implements FullyQualifiedNameResolverInterface
         $psr4map = require IbexaCompatibilityLayerBundle::MAPPINGS_PATH . \DIRECTORY_SEPARATOR . 'psr4-map.php';
 
         if ($reverse) {
-            /** @var array<string, string> $psr4map */
             $psr4map = array_flip($psr4map);
         }
 
@@ -48,7 +47,6 @@ final class PSR4PrefixResolver implements FullyQualifiedNameResolverInterface
         return null;
     }
 
-    /** @return array<string, string> */
     public function getMap(): array
     {
         return $this->psr4map;

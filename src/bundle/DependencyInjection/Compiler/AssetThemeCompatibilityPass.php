@@ -31,7 +31,7 @@ final class AssetThemeCompatibilityPass implements CompilerPassInterface
             ->addMethodCall(
                 'addPackage',
                 [
-                    LegacyDesignThemeTemplateNameResolver::LEGACY_DESIGN_NAMESPACE,
+                    LegacyDesignThemeTemplateNameResolver::DESIGN_NAMESPACE,
                     $definition,
                 ]
             );

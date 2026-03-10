@@ -1,8 +1,122 @@
 parameters:
 	ignoreErrors:
 		-
+			message: '#^Access to an undefined property Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:\$style\.$#'
+			identifier: property.notFound
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:configure\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:initialize\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:replaceKeysAndValues\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:replaceKeysAndValues\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:replaceValue\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:replaceValue\(\) has parameter \$singleValue with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:\$configResolverNamespacesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:\$containerParametersMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommand\:\:\$servicesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/CommerceSettingRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\IbexaRebrandingCommand\:\:configure\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/Command/IbexaRebrandingCommand.php
+
+		-
+			message: '#^Parameter \#1 \$input of method Ibexa\\CompatibilityLayer\\Rebranding\\RebrandingInterface\:\:rebrand\(\) expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/bundle/Command/IbexaRebrandingCommand.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\Command\\SiteFactoryRebrandingCommand\:\:replaceOldParameters\(\) should return string but returns string\|false\.$#'
+			identifier: return.type
+			count: 1
+			path: src/bundle/Command/SiteFactoryRebrandingCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SiteFactoryRebrandingCommand\:\:\$configResolverNamespacesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/SiteFactoryRebrandingCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SiteFactoryRebrandingCommand\:\:\$containerParametersMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/Command/SiteFactoryRebrandingCommand.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\HttpKernel\\KernelInterface\:\:buildContainer\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\HttpKernel\\KernelInterface\:\:initializeBundles\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
 			message: '#^Class Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDebugCommand extends @final class Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDebugCommand\.$#'
 			identifier: class.extendsFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Parameter \#1 \$file of class Symfony\\Component\\Config\\ConfigCache constructor expects string, array\|bool\|float\|int\|string\|UnitEnum\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDebugCommand\:\:\$containerBuilder overrides @final property Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand\:\:\$containerBuilder\.$#'
+			identifier: property.parentPropertyFinalByPhpDoc
 			count: 1
 			path: src/bundle/Command/SymfonyConfigDebugCommand.php
 
@@ -13,8 +127,38 @@ parameters:
 			path: src/bundle/Command/SymfonyConfigDebugCommand.php
 
 		-
+			message: '#^Property Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand\:\:\$containerBuilder has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDebugCommand.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\HttpKernel\\KernelInterface\:\:buildContainer\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
+			message: '#^Call to an undefined method Symfony\\Component\\HttpKernel\\KernelInterface\:\:initializeBundles\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
 			message: '#^Class Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDumpReferenceCommand extends @final class Symfony\\Bundle\\FrameworkBundle\\Command\\ConfigDumpReferenceCommand\.$#'
 			identifier: class.extendsFinalByPhpDoc
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
+			message: '#^Parameter \#1 \$file of class Symfony\\Component\\Config\\ConfigCache constructor expects string, array\|bool\|float\|int\|string\|UnitEnum\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
+
+		-
+			message: '#^Property Ibexa\\Bundle\\CompatibilityLayer\\Command\\SymfonyConfigDumpReferenceCommand\:\:\$containerBuilder overrides @final property Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand\:\:\$containerBuilder\.$#'
+			identifier: property.parentPropertyFinalByPhpDoc
 			count: 1
 			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
 
@@ -25,25 +169,667 @@ parameters:
 			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
 
 		-
-			message: '#^PHPDoc tag @var for variable \$debugKernel contains unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/bundle/Command/BuildDebugContainerTrait.php
+			message: '#^Property Symfony\\Bundle\\FrameworkBundle\\Command\\ContainerDebugCommand\:\:\$containerBuilder has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/bundle/Command/SymfonyConfigDumpReferenceCommand.php
 
 		-
-			message: '#^Call to method isDebug\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/bundle/Command/BuildDebugContainerTrait.php
+			message: '#^Negated boolean expression is always true\.$#'
+			identifier: booleanNot.alwaysTrue
+			count: 1
+			path: src/bundle/DependencyInjection/Compiler/ServiceCompatibilityPass.php
 
 		-
-			message: '#^Call to method initializeBundles\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
-			identifier: class.notFound
-			count: 2
-			path: src/bundle/Command/BuildDebugContainerTrait.php
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\Compiler\\TwigPass\:\:process\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/DependencyInjection/Compiler/TwigPass.php
 
 		-
-			message: '#^Call to method buildContainer\(\) on an unknown class Ibexa\\CompatibilityLayer\\PHPStan\\DebugContainerKernelInterface\.$#'
-			identifier: class.notFound
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\Compiler\\ValueObjectVisitorTagCompatibilityPass\:\:processServiceTags\(\) has parameter \$serviceTags with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/bundle/DependencyInjection/Compiler/ValueObjectVisitorTagCompatibilityPass.php
+
+		-
+			message: '#^Static property Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\ContainerBuilder\:\:\$extensionNameMap \(array\<string, string\>\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 1
+			path: src/bundle/DependencyInjection/ContainerBuilder.php
+
+		-
+			message: '#^Static property Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\ContainerBuilder\:\:\$serviceNameMap \(array\<string, string\>\) in isset\(\) is not nullable\.$#'
+			identifier: isset.property
+			count: 4
+			path: src/bundle/DependencyInjection/ContainerBuilder.php
+
+		-
+			message: '#^Cannot access offset ''IbexaSiteFactoryBundle'' on array\|bool\|float\|int\|string\|UnitEnum\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/bundle/DependencyInjection/IbexaCompatibilityLayerExtension.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\IbexaCompatibilityLayerExtension\:\:areUrlWildcardsEnabled\(\) should return bool but returns array\|bool\|float\|int\|string\|UnitEnum\|null\.$#'
+			identifier: return.type
 			count: 2
-			path: src/bundle/Command/BuildDebugContainerTrait.php
+			path: src/bundle/DependencyInjection/IbexaCompatibilityLayerExtension.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\DependencyInjection\\IbexaCompatibilityLayerExtension\:\:load\(\) has parameter \$configs with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/bundle/DependencyInjection/IbexaCompatibilityLayerExtension.php
+
+		-
+			message: '#^Method Ibexa\\Bundle\\CompatibilityLayer\\IbexaCompatibilityLayerBundle\:\:build\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/bundle/IbexaCompatibilityLayerBundle.php
+
+		-
+			message: '#^PHPDoc tag @var has invalid value \(array\<string, string\)\: Unexpected token "\*/", expected ''\>'' at offset 30 on line 1$#'
+			identifier: phpDoc.parseError
+			count: 1
+			path: src/lib/ConfigResolver/BackwardCompatibleConfigResolver.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\ConfigResolver\\BackwardCompatibleConfigResolver\:\:\$configResolverNamespacesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/ConfigResolver/BackwardCompatibleConfigResolver.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Event\\EventDispatcher\:\:addListener\(\) has parameter \$listener with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/lib/Event/EventDispatcher.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Event\\EventDispatcher\:\:getListenerPriority\(\) has parameter \$listener with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/lib/Event/EventDispatcher.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Form\\Extension\\DependencyInjection\:\:__construct\(\) has parameter \$guesserServices with no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Form/Extension/DependencyInjection.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Form\\Extension\\DependencyInjection\:\:__construct\(\) has parameter \$typeExtensionServices with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Form/Extension/DependencyInjection.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Form\\Extension\\DependencyInjection\:\:getTypeGuesser\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: src/lib/Form/Extension/DependencyInjection.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Form\\Extension\\DependencyInjection\:\:\$guesserServices type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Form/Extension/DependencyInjection.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Form\\Extension\\DependencyInjection\:\:\$typeExtensionServices type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Form/Extension/DependencyInjection.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolver\\AggregateResolver\:\:getMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/AggregateResolver.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolver\\ClassMapResolver\:\:getMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/ClassMapResolver.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolver\\ClassMapResolver\:\:\$classMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/ClassMapResolver.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolver\\PSR4PrefixResolver\:\:getMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/PSR4PrefixResolver.php
+
+		-
+			message: '#^Parameter \#1 \$string of function rtrim expects string, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/PSR4PrefixResolver.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolver\\PSR4PrefixResolver\:\:\$psr4map type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolver/PSR4PrefixResolver.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolverInterface\:\:getMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/FullyQualifiedNameResolverInterface.php
+
+		-
+			message: '#^Parameter \#1 \$fullyQualifiedName of method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolverInterface\:\:resolve\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/Parser/ClassNameVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\ClassNameVisitor\:\:\$namespaceAliases type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ClassNameVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ClassParameterVisitor\:\:__construct\(\) has parameter \$classParametersMap with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ClassParameterVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\ClassParameterVisitor\:\:\$classParametersMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ClassParameterVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\DocblockVisitor\:\:leaveNode\(\) should return array\<PhpParser\\Node\>\|int\|PhpParser\\Node\|null but empty return statement found\.$#'
+			identifier: return.empty
+			count: 1
+			path: src/lib/Parser/DocblockVisitor.php
+
+		-
+			message: '#^Parameter \#1 \$fullyQualifiedName of method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolverInterface\:\:resolve\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/Parser/DocblockVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\DocblockVisitor\:\:\$resolvedUses type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/DocblockVisitor.php
+
+		-
+			message: '#^Access to an undefined property PhpParser\\Node\\Arg\|PhpParser\\Node\\VariadicPlaceholder\:\:\$value\.$#'
+			identifier: property.notFound
+			count: 2
+			path: src/lib/Parser/ExtensionVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ExtensionVisitor\:\:__construct\(\) has parameter \$extensionMap with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ExtensionVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\ExtensionVisitor\:\:\$extensionMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ExtensionVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ParentVisitor\:\:beginTraverse\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/lib/Parser/ParentVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ParentVisitor\:\:beginTraverse\(\) has parameter \$nodes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ParentVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ParentVisitor\:\:enterNode\(\) should return int\|PhpParser\\Node\|null but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/lib/Parser/ParentVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ParentVisitor\:\:leaveNode\(\) should return array\<PhpParser\\Node\>\|int\|PhpParser\\Node\|null but return statement is missing\.$#'
+			identifier: return.missing
+			count: 1
+			path: src/lib/Parser/ParentVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\ParentVisitor\:\:\$stack type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ParentVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\RouteNameVisitor\:\:__construct\(\) has parameter \$routeNamesMap with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/RouteNameVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\RouteNameVisitor\:\:\$routeNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/RouteNameVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Parser\\ServiceTagNameVisitor\:\:__construct\(\) has parameter \$serviceTagNamesMap with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ServiceTagNameVisitor.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Parser\\ServiceTagNameVisitor\:\:\$serviceTagNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Parser/ServiceTagNameVisitor.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\ComposerRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ComposerRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\ComposerRebranding\:\:rebrand\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/ComposerRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/lib/Rebranding/ComposerRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\CssRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/CssRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\CssRebranding\:\:rebrand\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/CssRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\JsRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/JsRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\JsRebranding\:\:rebrand\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/JsRebranding.php
+
+		-
+			message: '#^Call to preg_quote\(\) is missing delimiter / to be effective\.$#'
+			identifier: argument.invalidPregQuote
+			count: 2
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:rebrand\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:rebrandServices\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Parameter \#1 \$nodes of method PhpParser\\NodeTraverser\:\:traverse\(\) expects array\<PhpParser\\Node\>, array\<PhpParser\\Node\\Stmt\>\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Parameter \#2 \$origStmts of method PhpParser\\PrettyPrinterAbstract\:\:printFormatPreserving\(\) expects array\<PhpParser\\Node\>, array\<PhpParser\\Node\\Stmt\>\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:\$classParametersMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:\$extensionMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:\$routeNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:\$serviceTagNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\PhpRebranding\:\:\$servicesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/PhpRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\RebrandingInterface\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/RebrandingInterface.php
+
+		-
+			message: '#^Call to preg_quote\(\) is missing delimiter / to be effective\.$#'
+			identifier: argument.invalidPregQuote
+			count: 5
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:getBundleMap\(\) has parameter \$classMap with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:getBundleMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:getBundleName\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Parameter \#1 \$fullyQualifiedName of method Ibexa\\CompatibilityLayer\\FullyQualifiedNameResolverInterface\:\:resolve\(\) expects string, string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 7
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function str_replace expects array\<string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$bundleMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$bundleNameMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$classParametersMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$extensionMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$routeNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$serviceTagNamesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\ResourceRebranding\:\:\$servicesMap type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/ResourceRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:rebrandTwigFilters\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:rebrandTwigFunctions\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:\$twigFilters type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:\$twigFunctions type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Property Ibexa\\CompatibilityLayer\\Rebranding\\TwigRebranding\:\:\$wildcardFunctions type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/TwigRebranding.php
+
+		-
+			message: '#^Call to preg_quote\(\) is missing delimiter / to be effective\.$#'
+			identifier: argument.invalidPregQuote
+			count: 4
+			path: src/lib/Rebranding/XmlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\XmlRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/XmlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\XmlRebranding\:\:rebrand\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/XmlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\XmlRebranding\:\:replace\(\) has parameter \$map with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/XmlRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 4
+			path: src/lib/Rebranding/XmlRebranding.php
+
+		-
+			message: '#^Call to preg_quote\(\) is missing delimiter / to be effective\.$#'
+			identifier: argument.invalidPregQuote
+			count: 7
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\YamlRebranding\:\:getFileNamePatterns\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\YamlRebranding\:\:rebrandExtension\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\YamlRebranding\:\:rebrandRouteNames\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\YamlRebranding\:\:rebrandServiceTagNames\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\Rebranding\\YamlRebranding\:\:replaceClassParameters\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function preg_replace expects array\<float\|int\|string\>\|string, string\|null given\.$#'
+			identifier: argument.type
+			count: 7
+			path: src/lib/Rebranding/YamlRebranding.php
+
+		-
+			message: '#^Method Ibexa\\CompatibilityLayer\\ServiceResolver\\ServiceNameResolver\:\:getMap\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/lib/ServiceResolver/ServiceNameResolver.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\Bundle\\CompatibilityLayer\\Command\\CommerceSettingRebrandingCommandTest\:\:testReplaceKeysAndValues\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: tests/bundle/Command/CommerceSettingRebrandingCommandTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\Bundle\\CompatibilityLayer\\DependencyInjection\\Compiler\\REST\\ValueObjectVisitorTagCompatibilityPassTest\:\:getDataForTestProcess\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/bundle/DependencyInjection/Compiler/ValueObjectVisitorTagCompatibilityPassTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\Bundle\\CompatibilityLayer\\Twig\\LegacyDesignThemeTemplateNameResolverTest\:\:getDataForTestIsTemplateDesignNamespaced\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/bundle/Twig/LegacyDesignThemeTemplateNameResolverTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\ConfigResolver\\BackwardCompatibleConfigResolverTest\:\:getDataForTestGetParameter\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/ConfigResolver/BackwardCompatibleConfigResolverTest.php
+
+		-
+			message: '#^PHPDoc tag @var for property Ibexa\\Tests\\CompatibilityLayer\\ConfigResolver\\BackwardCompatibleConfigResolverTest\:\:\$chainConfigResolverMock with type Ibexa\\Contracts\\Core\\SiteAccess\\ConfigResolverInterface\|PHPUnit\\Framework\\MockObject\\MockObject is not subtype of native type PHPUnit\\Framework\\MockObject\\MockObject\.$#'
+			identifier: property.phpDocType
+			count: 1
+			path: tests/lib/ConfigResolver/BackwardCompatibleConfigResolverTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\DependencyInjection\\ContainerBuilderTest\:\:getLegacyExtensionNames\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/DependencyInjection/ContainerBuilderTest.php
+
+		-
+			message: '#^Method Symfony\\Component\\DependencyInjection\\Extension\\Extension@anonymous/tests/lib/DependencyInjection/ContainerBuilderTest\.php\:30\:\:load\(\) has parameter \$configs with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/DependencyInjection/ContainerBuilderTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\AggregateResolverTest\:\:getDataForTestResolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/FullyQualifiedNameResolver/AggregateResolverTest.php
+
+		-
+			message: '#^PHPDoc tag @var with type Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\BaseResolverTest is not subtype of native type Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\ClassMapResolverTest\|Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\PSR4PrefixResolverTest\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: tests/lib/FullyQualifiedNameResolver/AggregateResolverTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\BaseResolverTest\:\:getDataForTestResolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/FullyQualifiedNameResolver/BaseResolverTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\ClassMapResolverTest\:\:getDataForTestResolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/FullyQualifiedNameResolver/ClassMapResolverTest.php
+
+		-
+			message: '#^Method Ibexa\\Tests\\CompatibilityLayer\\FullyQualifiedNameResolver\\PSR4PrefixResolverTest\:\:getDataForTestResolve\(\) return type has no value type specified in iterable type iterable\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: tests/lib/FullyQualifiedNameResolver/PSR4PrefixResolverTest.php

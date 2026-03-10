@@ -12,6 +12,5 @@ interface RebrandingInterface
 {
     public function rebrand(string $input): string;
 
-    /** @return list<string> */
     public function getFileNamePatterns(): array;
 }

@@ -74,38 +74,30 @@ final class ServiceCompatibilityPass implements CompilerPassInterface
         string $name,
         Definition $definition
     ): void {
-        if (empty($oldClassName)) {
-            return;
-        }
+        if (!empty($oldClassName) && !$container->hasDefinition($oldClassName)) {
+            if ($this->isFormType($name)) {
+                $classExists = class_exists($name) && class_exists($oldClassName, false);
+                if ($classExists) {
+                    if ($container->hasAlias($oldClassName)) {
+                        $container->removeAlias($oldClassName);
+                    }
 
-        $hasDefinition = $container->hasDefinition($oldClassName);
-        if ($hasDefinition) {
-            return;
-        }
-
-        if ($this->isFormType($name)) {
-            $classExists = class_exists($name) && class_exists($oldClassName, false);
-            if ($classExists) {
-                if ($container->hasAlias($oldClassName)) {
-                    $container->removeAlias($oldClassName);
+                    $newDefinition = clone $definition;
+                    $newDefinition->setClass($oldClassName);
+                    $container->setDefinition($oldClassName, $newDefinition);
                 }
-
-                $newDefinition = clone $definition;
-                $newDefinition->setClass($oldClassName);
-                $container->setDefinition($oldClassName, $newDefinition);
-                $hasDefinition = true;
             }
-        }
 
-        if ($this->isController($definition) || $definition->isPublic()) {
-            $alias = new Alias($name, true);
-            $container->setAlias($oldClassName, $alias);
+            if ($this->isController($definition) || $definition->isPublic()) {
+                $alias = new Alias($name, true);
+                $container->setAlias($oldClassName, $alias);
 
-            return;
-        }
+                return;
+            }
 
-        if (!$hasDefinition) {
-            $container->setAlias($oldClassName, $name);
+            if (!$container->hasDefinition($oldClassName)) {
+                $container->setAlias($oldClassName, $name);
+            }
         }
     }
 
