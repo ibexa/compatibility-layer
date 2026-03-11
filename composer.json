@@ -1,6 +1,7 @@
 {
     "name": "ibexa/compatibility-layer",
     "description": "Compatibility layer between old code from organisation ezsystems and version 4.0 code from organisation ibexa",
+    "license": "(GPL-2.0-only or proprietary)",
     "autoload": {
         "psr-4": {
             "Ibexa\\Bundle\\CompatibilityLayer\\": "src/bundle/",
@@ -38,7 +39,7 @@
         "ibexa/doctrine-schema": "~5.0.0@dev",
         "matthiasnoback/symfony-dependency-injection-test": "^4.3",
         "phpunit/phpunit": "^9.5.10",
-        "phpstan/phpstan": "^0.12.99"
+        "phpstan/phpstan": "^2.0"
     },
     "scripts": {
         "fix-cs": "php-cs-fixer fix --config=.php-cs-fixer.php -v --show-progress=dots",
@@ -53,7 +54,8 @@
     },
     "config": {
         "allow-plugins": {
-            "composer/package-versions-deprecated": true
+            "composer/package-versions-deprecated": true,
+            "php-http/discovery": false
         }
     }
 }
